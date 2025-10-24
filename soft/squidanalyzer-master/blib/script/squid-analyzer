@@ -1,0 +1,308 @@
+#!/usr/bin/env perl
+#
+# Perl frontend to SquidAnalyzer.pm.
+#
+#use lib "PERL5LIB"
+use strict;
+use SquidAnalyzer;
+use Getopt::Long qw(:config no_ignore_case bundling);
+use Benchmark;
+use POSIX ":sys_wait_h";
+use Time::Local;
+use File::Spec qw/ tmpdir /;
+use File::Temp qw/ tempfile /;
+
+$| = 1;
+
+my $DEFAULT_CONFFILE = '/etc/squidanalyzer/squidanalyzer.conf';
+
+my @logfile    = ();
+my $obsolete   = 0;
+my $configfile = '';
+my $help       = '';
+my $rebuild    = '';
+my $preserve   = '';
+my $debug      = 0;
+my $version    = 0;
+my $build_date = '';
+my $pid_dir    = File::Spec->tmpdir() || '/tmp';
+my $pidfile    = 'squid-analyzer.pid';
+my $queue_size = 0;
+my $timezone   = '';
+my $no_year_stat = 0;
+my $with_month_stat = 0;
+my $no_week_stat = 0;
+my $t0 = Benchmark->new;
+my $start_time = '';
+my $stop_time = '';
+my $start_date = '';
+my $stop_date = '';
+my $outputdir = '';
+my $skip_history = 0;
+my $override_history = 0;
+my $refresh_time = 0;
+
+# get the command line parameters
+my $result = GetOptions (
+	"c|configfile=s"       => \$configfile,
+	"b|build_date=s"       => \$build_date,
+	"d|debug!"             => \$debug,
+	"h|help"               => \$help,
+	"j|jobs=i"             => \$queue_size,
+	"l|logfile"            => \$obsolete,
+	"o|outputdir=s"        => \$outputdir,
+	"p|preserve=i"         => \$preserve,
+	"P|pid_dir=s"          => \$pid_dir,
+	"r|rebuild!"           => \$rebuild,
+	"R|refresh=i"          => \$refresh_time,
+	"s|start=s"            => \$start_time,
+	"S|stop=s"             => \$stop_time,
+	"t|timezone=s"         => \$timezone,
+	"v|version!"           => \$version,
+	"no-year-stat!"        => \$no_year_stat,
+	"no-week-stat!"        => \$no_week_stat,
+	"with-month-stat!"     => \$with_month_stat,
+	"startdate=s"          => \$start_date,
+	"stopdate=s"           => \$stop_date,
+	"skip-history!"        => \$skip_history,
+	"override-history!"    => \$override_history,
+); 
+
+# Show warning for obsolete options
+if ($obsolete) {
+	print STDERR "WARNING: use of obsolete -l option, log files must be given at command line arguments.\n"
+}
+
+# Show version and exit
+if ($version || $debug) {
+	print "SquidAnalyzer version $SquidAnalyzer::VERSION\n";
+	exit 0 if ($version);
+}
+
+if ($build_date) {
+	$rebuild = 1;
+	if ( ($build_date !~ /^\d{4}-\d{2}-\d{2}$/) && ($build_date !~ /^\d{4}-\d{2}$/) && ($build_date !~ /^\d{4}$/) ) {
+		die("FATAL: bad syntax for build_date, expecting format: yyyy-mm-dd, yyyy-mm or yyyy\n");
+		exit 0;
+	}
+}
+
+if ($start_time && $start_time !~ /^[0-2]\d:[0-5]\d$/) {
+	die("FATAL: bad format on start time, must be HH:MM.\n"); 
+}
+if ($stop_time && $stop_time !~ /^[0-2]\d:[0-5]\d$/) {
+	die("FATAL: bad format on stop time, must be HH:MM.\n");
+}
+if ($start_date && $start_date !~ /^\d{4}[-\\\/]?[0-1]\d[-\\\/]?[0-3]\d\s*[0-2]\d[-:]?[0-5]\d[-:]?[0-5]\d$/) {
+	die("FATAL: bad format on start date, must be YYYYMMDDHHMMSS.\n");
+}
+$start_date =~ s/[-\\\/:\s]//g if ($start_date);
+if ($stop_date && $stop_date !~ /^\d{4}[-\\\/]?[0-1]\d[-\\\/]?[0-3]\d\s*[0-2]\d[-:]?[0-5]\d[-:]?[0-5]\d$/) {
+	die("FATAL: bad format on stop date, must be YYYYMMDDHHMMSS.\n");
+}
+$stop_date =~ s/[-\\\/:\s]//g if ($stop_date);
+
+if ($override_history and ! $skip_history) {
+	die("FATAL: --override-history option can be used only with --skip-history.\nSee usage (--help) for more information.\n");
+}
+
+# Add multiple log files given from command line
+foreach my $f (@ARGV) {
+	push(@logfile, $f) if (-f $f && !-z $f);
+}
+
+# Set default configuration file
+$configfile ||= $DEFAULT_CONFFILE;
+
+if ($help) {
+	&usage;
+	exit;
+}
+
+# Check if an other process is already running
+if (-e "$pid_dir/$pidfile") {
+	die "FATAL: pid file ($pid_dir/$pidfile) exists, an other squid-analalyzer process may still running.\n";
+}
+
+# Write the pid file
+open(OUT, ">$pid_dir/$pidfile") or die "FATAL: can not write to pid file $pid_dir/$pidfile, $!\n";
+print OUT "$$";
+close(OUT);
+
+# Clear multiprocess temporary file if any
+unlink("$pid_dir/last_parsed.tmp");
+
+# Instanciate SquidAnalyzer.pm perl module
+my $sa = new SquidAnalyzer($configfile, join(',', @logfile), $debug, $rebuild, $pid_dir, $pidfile, $timezone, $skip_history, $refresh_time);
+$sa->{no_year_stat} = $no_year_stat;
+$sa->{with_month_stat} = $with_month_stat;
+$sa->{no_week_stat} = $no_week_stat;
+$sa->{queue_size} = $queue_size;
+$sa->{TimeStart} = $start_time;
+$sa->{TimeStop} = $stop_time;
+$sa->{OverrideHistory} = $override_history;
+
+# Set start and end time (for custom date range reports)
+if ($start_date && $start_date =~ /^(\d{4})(\d\d)(\d\d)(\d\d)(\d\d)(\d\d)/) {
+	my $t = timelocal($6, $5, $4, $3, $2-1, $1);
+	$sa->{report_starttime} = POSIX::strftime("%a %b %e %H:%M:%S %Y", localtime($t));
+	--$t; # 1 second less
+	$sa->{history_time} = $sa->{sg_history_time} = $sa->{ug_history_time} = "$t.999";
+	print STDERR "DEBUG: report start time set to $sa->{report_starttime}\n" if ($debug);
+}
+if ($stop_date && $stop_date =~ /^(\d{4})(\d\d)(\d\d)(\d\d)(\d\d)(\d\d)/) {
+	my $t = timelocal($6, $5, $4, $3, $2-1, $1);
+	$sa->{report_endtime} = POSIX::strftime("%a %b %e %H:%M:%S %Y", localtime($t));
+	$sa->{history_endtime} = "$t.999";
+	print STDERR "DEBUG: report end time set to $sa->{report_endtime}\n" if ($debug);
+}
+
+# Set output directory
+if ($outputdir) {
+	die "ERROR: Invalid output directory name specified\n" if ($outputdir !~ /^[-\w\/]+$/);
+	$outputdir = "$sa->{Output}/$outputdir" if ($outputdir !~ /^\//);
+	if (! -e $outputdir) {
+		mkdir ($outputdir) || die "ERROR: can't create directory $outputdir, $!\n";
+	}
+	$sa->{Output} = $outputdir;
+	print STDERR "DEBUG: Output directory set to $outputdir\n" if ($debug);
+}
+
+
+# Die cleanly on signal
+sub terminate
+{
+        # block signal
+        local $SIG{TERM} = 'IGNORE';
+        local $SIG{INT}  = 'IGNORE';
+
+        print("LOG: Received terminating signal.\n");
+
+	$sa->{terminate} = 1;
+
+	# Save last parse line
+	$sa->save_current_line();
+
+        # Wait for all child processes to die except for the logger
+	my $kid = 0;
+	do {
+                sleep(1);
+		$kid = waitpid(-1, WNOHANG);
+	} while ($kid > 0);
+
+	# Removed pid iand temp file
+        if (-e "$pid_dir/$pidfile") {
+                unlink("$pid_dir/$pidfile") or print("ERROR: Unable to remove pid file $pid_dir/$pidfile, $!\n");
+	}
+	foreach my $tmp_file ('last_parsed.tmp', 'sg_last_parsed.tmp', 'ug_last_parsed.tmp')
+	{
+		if (-e "$pid_dir/$tmp_file")
+		{
+			unlink("$pid_dir/$tmp_file") or print("ERROR: Unable to remove temp file $pid_dir/$tmp_file, $!\n");
+		}
+	}
+
+        exit 0;
+}
+
+# Handle signals to die cleanly
+$SIG{'INT'} = \&terminate;
+$SIG{'TERM'} = \&terminate;
+$SIG{'CHLD'} = 'DEFAULT';
+$SIG{'HUP'} = 'IGNORE'; # don't die on HUP
+
+my $t1;
+# Run parsing only if we have a log file or that we are not in rebuild mode
+if (!$rebuild || ($#{$sa->{LogFile}} >= 0)) {
+	$sa->parseFile();
+	if ($debug) {
+		$t1 = Benchmark->new;
+		my $td = timediff($t1, $t0);
+		print STDERR "DEBUG: the log statistics gathering took:", timestr($td), "\n";
+	}
+}
+
+# Remove old statistics
+if ($preserve) {
+	$sa->{preserve} = $preserve;
+}
+
+# In rebuild mode history time is not use and we must store the
+# specific rebuild date if any is provided at command line.
+if ($rebuild) {
+	$sa->{history_time} = $sa->{sg_history_time} = $sa->{ug_history_time} = '';
+	$sa->{build_date} = $build_date;
+}
+
+# Generate graphics and html
+$sa->buildHTML();
+if ($debug) {
+	my $t2 = Benchmark->new;
+	if (defined $t1) {
+		my $td = timediff($t2, $t1);
+		print STDERR "DEBUG: generating HTML output took:", timestr($td), "\n";
+	}
+
+	my $td = timediff($t2, $t0);
+	print STDERR "DEBUG: total execution time:", timestr($td), "\n";
+}
+
+# Remove PID file
+unlink("$pid_dir/$pidfile");
+
+exit(0);
+
+
+sub usage
+{
+	print qq{
+Usage: squid-analyzer [ -c squidanalyzer.conf ] [logfile(s)]
+
+    -c | --configfile filename : path to the SquidAnalyzer configuration file.
+				 By default: $DEFAULT_CONFFILE
+    -b | --build_date date     : set the date to be rebuilt, format: yyyy-mm-dd
+				 or yyyy-mm or yyyy. Used with -r or --rebuild.
+    -d | --debug               : show debug information.
+    -h | --help                : show this message and exit.
+    -j | --jobs number         : number of jobs to run at same time. Default
+                                 is 1, run as single process.
+    -o | --outputdir name      : set output directory. If it does not start
+				 with / then prefixes Output from configfile
+    -p | --preserve number     : used to set the statistic obsolescence in
+				 number of month. Older stats will be removed.
+    -P | --pid_dir directory   : set directory where pid file will be stored.
+				 Default /tmp/
+    -r | --rebuild             : use this option to rebuild all html and graphs
+				 output from all data files.
+    -R | --refresh minutes     : add a html refresh tag into index.html file
+                                 with a refresh intervalle in minutes. 
+    -s | --start HH:MM         : log lines before this time will not be parsed.
+    -S | --stop  HH:MM         : log lines after this time will not be parsed.
+    -t | --timezone +/-HH      : set number of hours from GMT of the timezone.
+                                 Use this to adjust date/time of SquidAnalyzer
+                                 output when it is run on a different timezone
+                                 than the squid server.
+    -v | version               : show version and exit.
+    --no-year-stat             : disable years statistics, reports will start
+                                 from month level only.
+    --no-week-stat             : disable weekly statistics.
+    --with-month-stat          : enable month stats when --no-year-stat is used.
+    --startdate YYYYMMDDHHMMSS : lines before this datetime will not be parsed.
+    --stopdate  YYYYMMDDHHMMSS : lines after this datetime will not be parsed.
+    --skip-history             : used to not take care of the history file. Log
+                                 parsing offset will start at 0 but old history
+                                 file will be preserved at end. Useful if you
+                                 want to parse and old log file.
+    --override-history         : when skip-history is used the current history
+                                 file will be overriden by the offset of the
+                                 last log file parsed.
+
+Log files to parse can be given as command line arguments or as a comma separated
+list of file for the LogFile configuration directive. By default SquidAnalyer will
+use file: /var/log/squid/access.log
+
+};
+
+	exit 0;
+}
+

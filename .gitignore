@@ -1,0 +1,50 @@
+# Логи Squid
+logs/*.log
+logs/access.log*
+logs/cache.log*
+
+# Кеш директория Squid
+cache/*
+!cache/.gitkeep
+
+# Docker volumes данные
+data/
+
+# Временные файлы
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE файлы
+.vscode/
+.idea/
+*.sublime-*
+
+# Environment файлы с секретами
+.env.local
+.env.production
+.env.development
+secrets.env
+
+# SSL сертификаты (если есть)
+ssl/*.key
+ssl/*.pem
+ssl/*.crt
+config/ssl/*.key
+config/ssl/*.pem
+config/ssl/*.crt
+
+# Backup файлы
+*.bak
+*.backup

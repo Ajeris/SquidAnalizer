@@ -1,0 +1,2 @@
+# SquidAnalizer
+Squid log analyzer

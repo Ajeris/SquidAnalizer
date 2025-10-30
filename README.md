@@ -1,406 +1,211 @@
-# Squid Log Analyzer Container
+# Squid Log Analytics Container
 
-Optimized Docker container for Squid log analytics using **SquidAnalyzer
-v6.6** and **SqStat** on **Debian 12-slim** with a preconfigured Apache2
-web server.
+An optimized Docker image providing Squid log analytics (SquidAnalyzer) and real???time monitoring (SqStat) on Debian 12-slim with Apache2.
 
-[![Docker
-Build](https://img.shields.io/badge/docker-build-blue.svg)](https://docker.com)
-[![Debian
-12](https://img.shields.io/badge/base-Debian%2012--slim-lightgrey)](https://www.debian.org/)
-[![SquidAnalyzer](https://img.shields.io/badge/SquidAnalyzer-6.6-success)](https://github.com/darold/squidanalyzer)
-[![SqStat](https://img.shields.io/badge/SqStat-latest-brightgreen)](https://github.com/CrashX/SqStat/)
+Badges: Debian 12-slim ??? SquidAnalyzer 6.x ??? SqStat ??? Apache2 ??? Self???contained
 
-------------------------------------------------------------------------
+---
 
 ## Overview
 
-This container extends Squid deployments with high-performance log
-analytics and real-time traffic visualization.\
-It is designed to work as a **companion** to the main
+This container is designed to be a companion to an existing Squid deployment. It:
+- Parses Squid access logs and generates daily/weekly/monthly HTML reports (SquidAnalyzer)
+- Shows real-time connections, users, bandwidth, and targets (SqStat)
+- Auto-initializes default configs and web assets on first run
 
-------------------------------------------------------------------------
+---
 
-## Quick Deployment
+## Features
 
-### ???? Simple Setup (Recommended)
+- SquidAnalyzer reports (tables, charts, localization)
+- SqStat real-time dashboard
+- Apache2 web UI, zero-config on first start
+- Volume-friendly: configs and web data persist on host
+- Works with bridge/macvlan or alongside a Squid container
 
-For most users, use the simplified deployment:
+---
 
-```bash
-# Download and run 
-curl -o docker-compose.yml https://raw.githubusercontent.com/ajeris/squid-monitoring/main/docker-compose.simple.yml
-mkdir -p logs
-# Copy your Squid logs to ./logs/ or edit docker-compose.yml
-docker-compose up -d
-```
+## Quick Start
 
-**Access**: http://localhost:8080/
+1) Ensure you have Squid access logs available on the host (bind-mount to `./logs`).
 
-See [QUICKSTART.md](QUICKSTART.md) for detailed instructions.
-
-### ??????? Development Setup
-
-For development or customization:
-
-```bash
-git clone https://github.com/ajeris/squid-monitoring.git
-cd squid-monitoring
-./init-directories.sh  # Setup local directories
-docker-compose up -d    # Use full development compose
-```
-
-
-------------------------------------------------------------------------
-
-## Configuration Management
-
-### Automatic Initialization
-
-The container automatically handles both SquidAnalyzer and SqStat configuration:
-
-- **First run**: Default configuration files are automatically deployed
-- **Subsequent runs**: Uses existing configuration files 
-- **Reset configuration**: Delete the respective directory, and defaults will be restored
-
-### Quick Setup
-
-Run the initialization script to set up directories and copy default configurations:
-
-```bash
-./init-directories.sh
-```
-
-### Directory Structure
-
-After initialization, you'll have:
-
-```
-./squidanalyzer/          # SquidAnalyzer configuration (bind mounted)
-????????? squidanalyzer.conf    # Main configuration file
-????????? excluded              # URL exclusion patterns
-????????? included              # URL inclusion patterns  
-????????? network-aliases       # Network name mappings
-????????? url-aliases          # URL alias definitions
-????????? user-aliases         # User alias definitions
-
-./apache-webdata/         # Web server content (bind mounted)
-????????? index.html           # Main landing page
-????????? sqstat/              # SqStat real-time dashboard
-???   ????????? sqstat.php       # Main dashboard script
-???   ????????? config.inc.php   # SqStat configuration
-???   ????????? ...              # Other SqStat files
-????????? squidanalyzer/       # SquidAnalyzer generated reports
-    ????????? ...              # Generated HTML reports
-```
-
-### Configuration Editing
-
-All configuration files are now directly accessible on the host system:
-
-**SquidAnalyzer Configuration:**
-- Edit: `./squidanalyzer/squidanalyzer.conf`
-- Restart container to apply changes
-
-**SqStat Configuration:**
-- Edit: `./apache-webdata/sqstat/config.inc.php`
-- Changes are applied immediately (PHP)
-
-### Resetting Configuration
-
-**Reset SquidAnalyzer configuration:**
-```bash
-docker-compose down
-rm -rf ./squidanalyzer
-docker-compose up -d
-```
-
-**Reset SqStat files:**
-```bash
-docker-compose down
-rm -rf ./apache-webdata
-docker-compose up -d
-```
-
-**Reset everything:**
-```bash
-docker-compose down
-rm -rf ./squidanalyzer ./apache-webdata
-docker-compose up -d
-```
-
-
-------------------------------------------------------------------------
-
-## SquidAnalyzer Configuration & Automation
-
-### Configuration Files
-
-After first container run, SquidAnalyzer configuration files are available in `./squidanalyzer/`:
-
-- **squidanalyzer.conf** - Main configuration file
-- **excluded** - URL patterns to exclude from analysis  
-- **included** - URL patterns to include in analysis
-- **network-aliases** - Network name mappings
-- **url-aliases** - URL alias definitions
-- **user-aliases** - User alias mappings
-
-### Basic Configuration
-
-Edit the main configuration file:
-
-```bash
-nano ./squidanalyzer/squidanalyzer.conf
-```
-
-Key settings to review:
-
-```bash
-# Output directory (mounted from container)
-Output /var/www/html/squidanalyzer
-
-# Web URL path
-WebUrl /squidanalyzer
-
-# Log file path (mounted from host)
-LogFile /var/log/squid/access.log
-
-# Analysis options
-TopNumber 100
-TopUrlUser 10
-UserReport 1
-UrlReport 1
-
-# Time zone
-TimeZone auto
-```
-
-### Host System Setup for Automated Reports
-
-To generate regular reports, configure cron on the **host system**:
-
-#### 1. Install SquidAnalyzer on Host
-
-```bash
-# Download and install SquidAnalyzer on host
-wget https://github.com/darold/squidanalyzer/archive/master.zip
-unzip master.zip
-cd squidanalyzer-master/
-perl Makefile.PL INSTALLDIRS=site
-make && sudo make install
-```
-
-#### 2. Configure Host SquidAnalyzer
-
-```bash
-# Edit host configuration to match container paths
-sudo nano /etc/squidanalyzer/squidanalyzer.conf
-```
-
-Update paths to match your setup:
-
-```bash
-# Point to container's web directory (if using bind mount)
-Output /path/to/your/project/apache-webdata/squidanalyzer
-
-# Point to your Squid logs
-LogFile /path/to/your/squid/logs/access.log
-
-# Web URL (container accessible)
-WebUrl /squidanalyzer
-```
-
-#### 3. Create Update Script
-
-```bash
-sudo nano /etc/squidanalyzer/statistic-update.sh
-```
-
-```bash
-#!/bin/bash
-# SquidAnalyzer update script
-
-------------------------------------------------------------------------
-
-## SquidAnalyzer Configuration
-
-### Configuration Files
-
-After first container run, edit configuration files in `./squidanalyzer/`:
-
-- **squidanalyzer.conf** - Main configuration file
-- **network-aliases** - Network name mappings (IP ranges to names)
-- **excluded** - URL patterns to exclude from analysis
-- **included** - URL patterns to include in analysis
-
-### Basic Configuration
-
-Edit the main configuration:
-
-```bash
-nano ./squidanalyzer/squidanalyzer.conf
-```
-
-Key settings to review:
-
-```bash
-# Output directory (container path)
-Output /var/www/html/squidanalyzer
-
-# Log file path (container path)
-LogFile /var/log/squid/access.log
-
-# Analysis options
-TopNumber 100
-UserReport 1
-UrlReport 1
-
-# Time zone
-TimeZone auto
-```
-
-### Network Aliases Configuration
-
-Edit network mappings for better reporting:
-
-```bash
-nano ./squidanalyzer/network-aliases
-```
-
-Example network aliases:
-
-```bash
-# Format: network_address/mask network_name
-192.168.1.0/24 Office Network
-10.0.0.0/8 Internal Network
-172.16.0.0/12 DMZ Network
-203.0.113.0/24 External Servers
-```
-
-### Automated Report Generation
-
-Setup cron on the host system to generate reports daily:
-
-```bash
-crontab -e
-```
-
-Add line for daily report generation at 2 AM:
-
-```bash
-# Generate SquidAnalyzer reports daily at 2:00 AM
-00 02 * * * docker exec -t squid-analytics squid-analyzer > /dev/null 2>&1
-```
-
-### Manual Report Generation
-
-To generate reports manually:
-
-```bash
-# Generate reports now
-docker exec -t squid-analytics squid-analyzer
-
-# Generate with debug output
-docker exec -t squid-analytics squid-analyzer --debug
-```
-
-### Verification
-
-### Resource Files
-
-SquidAnalyzer requires CSS, JavaScript, and image files for proper display. These are automatically copied to the web directory on container startup.
-
-If reports display without styling, the resources may be missing. Manually copy them:
-
-```bash
-docker exec squid-analytics cp -r /opt/squidanalyzer-resources/* /var/www/html/squidanalyzer/
-```
-
-
-Check if reports are generated:
-
-1. **Web Interface**: Visit http://localhost:8080/squidanalyzer/
-2. **Files**: Check `./apache-webdata/squidanalyzer/` for HTML files
-3. **Logs**: `docker-compose logs` to see container activity
-
-
-------------------------------------------------------------------------
-
-## SqStat Configuration
-
-### Network Configuration
-
-SqStat requires network access to Squid servers' cachemgr interface. The container is configured with macvlan network (IP: 192.168.10.22) to communicate with local Squid servers.
-
-### SqStat Configuration File
-
-Edit the SqStat configuration after first container run:
-
-```bash
-nano ./apache-webdata/sqstat/config.inc.php
-```
-
-Configure your Squid servers:
-
-```php
-<?php
-/* Squid proxy server settings */
-
-/* First Squid server */
-$squidhost[0]="192.168.10.11";    // Squid server IP
-$squidport[0]=8080;               // Squid port  
-$cachemgr_passwd[0]="secret";     // cachemgr password (from squid.conf)
-$resolveip[0]=false;              // Resolve IP to hostnames
-$group_by[0]="username";          // Group by username or host
-
-/* Additional servers */
-$squidhost[1]="192.168.10.3"; 
-$squidport[1]=8080;
-$cachemgr_passwd[1]="secret";
-$resolveip[1]=true;
-$group_by[1]="host";
-?>
-```
-
-### Squid Server Requirements
-
-Each Squid server must allow cachemgr access. Add to `/etc/squid/squid.conf`:
-
-```bash
-# Allow cachemgr access from monitoring container
-http_access allow localhost manager
-acl monitoring_host src 192.168.10.22
-http_access allow monitoring_host manager
-http_access deny manager
-
-# Set cachemgr password (use in SqStat config)
-cachemgr_passwd secret_password all
-```
-
-### Network Configuration
-
-Update docker-compose.yml network settings for your environment:
+2) docker-compose.yml (macvlan example with a static IP for the container):
 
 ```yaml
+services:
+  squid-analytics:
+    image: squid-analytics:2.5
+    container_name: squid-analytics
+    restart: unless-stopped
+    # ports:               # not required on macvlan
+    #   - "8078:80"
+    volumes:
+      - ./logs:/var/log/squid:ro         # your Squid access logs
+      - ./squidanalyzer:/etc/squidanalyzer
+      - ./apache-webdata:/var/www/html
+    environment:
+      - TZ=Asia/Qyzylorda
+    networks:
+      squid-net:
+        ipv4_address: 192.168.10.22
+
 networks:
   squid-net:
     driver: macvlan
     driver_opts:
-      parent: eth0  # Change to your network interface
+      parent: eth0   # replace with your host NIC
     ipam:
       config:
-        - subnet: 192.168.10.0/24     # Your subnet
-          gateway: 192.168.10.1       # Your gateway
-          ip_range: 192.168.10.22/32  # Container IP
+        - subnet: 192.168.10.0/24
+          gateway: 192.168.10.1
+          ip_range: 192.168.10.22/32
 ```
 
-### Verification
+3) Bring it up:
+```bash
+docker-compose up -d
+```
 
-1. **Test connectivity**: `docker exec squid-analytics ping 192.168.10.11`
-2. **Test cachemgr**: `curl http://192.168.10.11:8080/squid-internal-mgr/`
-3. **View SqStat**: http://localhost:8078/sqstat/
+4) Access:
+- Main: http://\<container-ip\>/
+- Reports (SquidAnalyzer): http://\<container-ip\>/squidanalyzer/
+- Real-time (SqStat): http://\<container-ip\>/sqstat/
 
-### Future Integration
+> Note: With macvlan, access the container from your LAN (host-to-container access may be restricted by design).
 
-This container is designed to work with dedicated Squid containers. For container-to-container communication, SqStat will connect to Squid services in the same Docker network.
+---
+
+## What Happens on First Run
+
+The container automatically initializes defaults when mounted directories are empty:
+- Copies SquidAnalyzer default configs to `/etc/squidanalyzer` (host: `./squidanalyzer`)
+- Copies SquidAnalyzer web resources (CSS/JS/images) to `/var/www/html/squidanalyzer`
+- Deploys SqStat app into `/var/www/html/sqstat`
+- Creates a landing page at `/var/www/html/index.html`
+
+---
+
+## Directory Structure (after first run)
+
+```
+./                      # project root on host
+????????? docker-compose.yml
+????????? logs/               # bind-mounted Squid logs (read-only)
+???   ????????? access.log
+???   ????????? cache.log
+????????? squidanalyzer/      # SquidAnalyzer configs (persisted)
+???   ????????? squidanalyzer.conf      # main config (LogFile path, Output, options)
+???   ????????? network-aliases         # CIDR -> name mappings
+???   ????????? url-aliases             # URL grouping
+???   ????????? user-aliases            # user/group aliases
+???   ????????? excluded                # exclude filters
+???   ????????? included                # include filters
+???   ????????? lang/                   # localization files (12 languages)
+???       ????????? en_US.txt
+???       ????????? ru_RU.txt
+???       ????????? ...
+????????? apache-webdata/     # web root (persisted)
+    ????????? index.html
+    ????????? squidanalyzer/          # SquidAnalyzer web assets + generated HTML reports
+    ???   ????????? squidanalyzer.css
+    ???   ????????? flotr2.js
+    ???   ????????? sorttable.js
+    ???   ????????? images/
+    ???   ????????? 20YY/               # reports by year/month/day (created after parsing)
+    ???   ????????? index.html          # created after parsing
+    ????????? sqstat/                 # SqStat real-time dashboard
+        ????????? sqstat.php
+        ????????? sqstat.class.php
+        ????????? config.inc.php
+        ????????? sqstat.css
+        ????????? ...
+```
+
+---
+
+## Configuration
+
+### SquidAnalyzer (./squidanalyzer/squidanalyzer.conf)
+Recommended key settings:
+```conf
+# Log path (container path; with provided compose, maps to ./logs on host)
+LogFile /var/log/squid/access.log
+
+# Output directory (container path)
+Output /var/www/html/squidanalyzer
+
+# Web URL prefix
+WebUrl /squidanalyzer
+
+# Optional tuning
+TopNumber 100
+UserReport 1
+UrlReport 1
+TimeZone auto
+```
+Localization is available via `./squidanalyzer/lang/` (automatically copied on first run).
+
+### SqStat (./apache-webdata/sqstat/config.inc.php)
+Set your Squid cachemgr endpoints:
+```php
+$squidhost[0] = "192.168.10.11";  $squidport[0] = 8080;  $cachemgr_passwd[0] = "secret";
+// $group_by[0] = "username"; // or "host"
+```
+On each Squid server, allow cachemgr from the analytics container IP:
+```conf
+# squid.conf
+acl monitoring_host src 192.168.10.22
+http_access allow monitoring_host manager
+http_access deny manager
+cachemgr_passwd secret all
+```
+
+---
+
+## Generating Reports (Parsing)
+
+Manual parse:
+```bash
+docker exec -t squid-analytics squid-analyzer
+```
+
+Cron (host) ??? daily at 02:00:
+```bash
+crontab -e
+00 02 * * * docker exec -t squid-analytics squid-analyzer > /dev/null 2>&1
+```
+
+If reports don???t appear, verify:
+- Log path in `squidanalyzer.conf` (use `/var/log/squid/access.log`)
+- File permissions (container must read the mounted log)
+- That your `./logs` actually contains access logs
+
+---
+
+## Networking Notes
+
+- macvlan: gives the container its own IP in your LAN. Port publishing is typically unnecessary.
+- bridge/host: also supported; adjust `ports` and network mode as needed.
+
+---
+
+## Troubleshooting
+
+- SqStat shows only connection info (no tables): ensure cachemgr is allowed from the container IP and credentials match `config.inc.php`.
+- SquidAnalyzer page without styles/charts: resources are auto-copied; if missing, run:
+  ```bash
+  docker exec squid-analytics cp -r /opt/squidanalyzer-resources/* /var/www/html/squidanalyzer/
+  ```
+- No reports generated: run with debug
+  ```bash
+  docker exec -t squid-analytics squid-analyzer --debug
+  ```
+
+---
+
+## License
+
+This project bundles and configures open-source tools under their respective licenses:
+- SquidAnalyzer ??? GPLv3 (https://github.com/darold/squidanalyzer)
+- SqStat ??? GPLv2 (https://github.com/CrashX/SqStat/)
 

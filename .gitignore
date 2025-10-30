@@ -1,16 +1,20 @@
-# Логи Squid
+# Squid logs
 logs/*.log
 logs/access.log*
 logs/cache.log*
 
-# Кеш директория Squid
+# Squid cache directory
 cache/*
 !cache/.gitkeep
 
-# Docker volumes данные
+# Auto-generated configuration directories (created by container)
+apache-webdata/
+squidanalyzer/
+
+# Docker volumes data
 data/
 
-# Временные файлы
+# Temporary files
 *.tmp
 *.temp
 *.swp
@@ -26,18 +30,18 @@ data/
 ehthumbs.db
 Thumbs.db
 
-# IDE файлы
+# IDE files
 .vscode/
 .idea/
 *.sublime-*
 
-# Environment файлы с секретами
+# Environment files with secrets
 .env.local
 .env.production
 .env.development
 secrets.env
 
-# SSL сертификаты (если есть)
+# SSL certificates (if any)
 ssl/*.key
 ssl/*.pem
 ssl/*.crt
@@ -45,6 +49,12 @@ config/ssl/*.key
 config/ssl/*.pem
 config/ssl/*.crt
 
-# Backup файлы
+# Backup files
 *.bak
 *.backup
+
+# Docker build cache
+.dockerignore.bak
+Dockerfile.bak
+docker-compose*.backup
+docker-compose*.bak

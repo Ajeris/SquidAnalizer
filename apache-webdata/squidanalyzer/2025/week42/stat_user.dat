@@ -1,7 +1,0 @@
-192.168.10.11 hits_day=15:3090,;bytes_day=15:2547647,;duration_day=15:46,;largest_file_size=19292;largest_file_url=cache_object://localhost/active_requests
-192.168.10.41 hits_day=13:112,14:0,15:0,;bytes_day=13:6350489,14:0,15:0,;duration_day=13:6436193,14:0,15:0,;largest_file_size=984911;largest_file_url=st3-23.vk.com:443
-192.168.11.38 hits_day=13:148,14:0,15:0,;bytes_day=13:23071739,14:0,15:0,;duration_day=13:3478190,14:0,15:0,;largest_file_size=6072476;largest_file_url=rusradio.hostingradio.ru:443
-192.168.11.5 hits_day=14:0,15:0,;bytes_day=14:0,15:0,;duration_day=14:0,15:0,;largest_file_size=;largest_file_url=
-sgolota@tp.oil hits_day=13:649,14:1760,15:1115,;bytes_day=13:105187177,14:585674733,15:9835935,;duration_day=13:15540198,14:16597001,15:119787,;largest_file_size=42740383;largest_file_url=speedtest.kyzylorda.telecom.kz.prod.hosts.ooklaserver.net:8080
-vpupkin@tp.oil hits_day=13:477,14:132,15:0,;bytes_day=13:29850510,14:4418383,15:0,;duration_day=13:7286820,14:4356327,15:0,;largest_file_size=4228456;largest_file_url=msedgeextensions.sf.tlu.dl.delivery.mp.microsoft.com:443
-vrogov@tp.oil hits_day=13:682,14:371,15:163,;bytes_day=13:79227747,14:74905974,15:4660743,;duration_day=13:9708077,14:13502846,15:484539,;largest_file_size=16021380;largest_file_url=cloclo58.datacloudmail.ru:443

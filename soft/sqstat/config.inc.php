@@ -6,21 +6,18 @@ $use_js=true; // use javascript for the HTML toolkits
 // Maximum URL length to display in URI table column
 DEFINE("SQSTAT_SHOWLEN",120);
 
-
 // Timezone for date display (optional, auto-detected if not set)
 // Example: "Europe/Moscow", "America/New_York", "Asia/Tokyo"
-DEFINE("SQSTAT_TIMEZONE", "Asia/Qyzylorda");
+DEFINE("SQSTAT_TIMEZONE", "auto");
 
 /* proxy settings */
 
 /* Squid proxy server ip address or host name */
-// Docker service name for internal communication
-$squidhost[0]="squid-proxy-service";
+$squidhost[0]="127.0.0.1";
 /* Squid proxy server port */
-// Internal port within Docker network
 $squidport[0]=3128;
 /* cachemgr_passwd in squid.conf. Leave blank to disable authorisation */
-$cachemgr_passwd[0]="squid_stats";
+$cachemgr_passwd[0]="";
 /* Resolve user IP addresses or print them as numbers only [true|false] */
 $resolveip[0]=false; 
 /* uncomment next line if you want to use hosts-like file. 
@@ -28,20 +25,15 @@ $resolveip[0]=false;
 // $hosts_file[0]="hosts.txt"
 /* Group users by hostname - "host" or by User - "username". Username work only 
    with squid 2.6+ */ 
-//$group_by[0]="host";
-$group_by[0]="username";
+$group_by[0]="host";
 
-/* Alternative configuration for external access (commented out):
-   If SqStat cannot connect via Docker service name, uncomment these lines:
-// $squidhost[0]="host.docker.internal";  // or "localhost"
-// $squidport[0]=8078;  // external mapped port
-*/
-
-/* you can specify more than one proxy in the configuration file, e.g.: */
-// $squidhost[1]="192.168.0.2";
-// $squidport[1]=3129;
-// $cachemgr_passwd[1]="secret";
-// $resolveip[1]=true; 
+/* you can specify more than one proxy in the configuration file, e.g.:
+$squidhost[1]="192.168.1.2";
+$squidport[1]=3128;
+$cachemgr_passwd[1]="password";
+$resolveip[1]=true;
+$group_by[1]="username"; 
 // $hosts_file[1]="otherhosts.txt"
+*/
 
 ?>

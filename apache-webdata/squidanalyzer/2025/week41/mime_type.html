@@ -1,0 +1,423 @@
+
+<html>
+<head>
+<meta NAME="robots" CONTENT="noindex,nofollow" />
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache" />
+<meta HTTP-EQUIV="Cache-Control" content="no-cache" />
+<meta HTTP-EQUIV="Expires" CONTENT="Thu Oct 30 14:52:59 2025" />
+<meta HTTP-EQUIV="Generator" CONTENT="SquidAnalyzer 6.6" />
+<meta HTTP-EQUIV="Date" CONTENT="Thu Oct 30 14:52:59 2025" />
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
+<meta HTTP-EQUIV="refresh" CONTENT="300">
+<title>SquidAnalyzer 6.6 Report</title>
+<link rel="stylesheet" type="text/css" href="/squidanalyzer/squidanalyzer.css" media="screen" />
+<!-- javascript to sort table -->
+<script type="text/javascript" src="/squidanalyzer/sorttable.js"></script>
+<!-- javascript to draw graphics -->
+<script type="text/javascript" src="/squidanalyzer/flotr2.js"></script>
+<script  type="text/javascript" >sortpos = 2;</script>
+</head>
+<body onload="var myTH = document.getElementById('contenu').getElementsByTagName('th')[2]; sorttable.innerSortFunction.apply(myTH, []);">
+<div id="conteneur">
+<a name="atop"></a>
+	<div id="header">
+		<div id="alignLeft">
+		<h1>
+		<a href="/squidanalyzer/"><img src="/squidanalyzer/images/logo-squidanalyzer.png" title="SquidAnalyzer 6.6" border="0"></a> SquidAnalyzer
+		</h1>
+		<p class="sous-titre">
+		Дата создания отчета Thu Oct 30 14:52:59 2025.
+		</p>
+		</div>
+		
+	</div>
+	
+<div id="menu">
+<ul>
+<li><a href="../index.html"><span class="iconArrow">Назад</span></a></li>
+
+<li><a href="domain.html"><span class="iconDomain">Рейтинг доменов</span></a></li>
+<li><a href="url.html"><span class="iconUrl">Рейтинг URL</span></a></li>
+<li><a href="denied.html"><span class="iconUrl">Рейтинг отказов в доступе</span></a></li>
+
+<li><a href="user.html"><span class="iconUser">Пользователи</span></a></li>
+
+<li><a href="network.html"><span class="iconNetwork">Подсети</span></a></li>
+<li><a href="mime_type.html"><span class="iconMime">Типы MIME</span></a></li>
+</ul>
+</div>
+
+	<div id="contenu">
+
+<h4>Статистика по типам MIME 2025 Неделя 41</h4>
+<div class="line-separator"></div>
+
+<style>
+  #container {
+    display: table;
+  }
+  #row  {
+    display: table-row;
+  }
+  #mime_hits, #mime_bytes {
+    display: table-cell;
+  }
+  #mime_hits { z-index: 999; }
+</style>
+<table class="graphs"><tr><td>
+<div id="container">
+<div id="mime_hits"></div>
+<script type="text/javascript">
+(function basic_pie(container) {
+
+
+//document.writeln('<input type="button" class="dldButton" value="To Image" id="toimage1" onclick="return false;">'+
+//	'<input type="button" class="dldButton" value="Download" id="download1" onclick="return false;">' +
+//	'<input type="button" class="dldButton" value="Reset" id="reset1" onclick="return false;">'
+//	);
+
+    var d1 = [ [0,1450] ];
+ var d2 = [ [0,1282] ];
+ var d3 = [ [0,672] ];
+ var d4 = [ [0,581] ];
+ var d5 = [ [0,489] ];
+ var d6 = [ [0,468] ];
+ var d7 = [ [0,439] ];
+ var d8 = [ [0,431] ];
+ var d9 = [ [0,227] ];
+ var d10 = [ [0,185] ];
+
+    var graph = Flotr.draw(container, [
+    { data: d1, label: "none" },
+ { data: d2, label: "text/plain" },
+ { data: d3, label: "image/png" },
+ { data: d4, label: "application/json" },
+ { data: d5, label: "others" },
+ { data: d6, label: "text/javascript" },
+ { data: d7, label: "image/webp" },
+ { data: d8, label: "image/gif" },
+ { data: d9, label: "text/html" },
+ { data: d10, label: "application/javascript" },
+
+    ], {
+        title: "Типы MIME (запросы) за 2025",
+        HtmlText: false,
+        grid: {
+            verticalLines: false,
+            horizontalLines: false,
+	    outline: '',
+        },
+        xaxis: {
+            showLabels: false,
+	    title: ""
+        },
+        yaxis: {
+            showLabels: false,
+	    title: ""
+        },
+        pie: {
+            show: true,
+	    explode: 6
+        },
+        mouse: {
+            track: true,
+	    trackFormatter: function(obj){ return pieTracker(obj) },
+	    relative: true
+        },
+        legend: {
+            position: "sw",
+            backgroundColor: "#D2E8FF",
+	    backgroundOpacity: 0.4
+        }
+    });
+/*
+    document.getElementById('reset1').onclick = function() {
+      graph.download.restoreCanvas();
+    };
+    document.getElementById('download1').onclick = function(){
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png');
+    };
+    document.getElementById('toimage1').onclick = function() {
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png', null, null, true);
+    };
+i*/
+
+})(document.getElementById("mime_hits"));
+</script>
+
+</div>
+</td><td>
+
+<div id="container">
+<div id="mime_bytes"></div>
+<script type="text/javascript">
+(function basic_pie(container) {
+
+
+//document.writeln('<input type="button" class="dldButton" value="To Image" id="toimage1" onclick="return false;">'+
+//	'<input type="button" class="dldButton" value="Download" id="download1" onclick="return false;">' +
+//	'<input type="button" class="dldButton" value="Reset" id="reset1" onclick="return false;">'
+//	);
+
+    var d1 = [ [0,141] ];
+ var d2 = [ [0,73] ];
+ var d3 = [ [0,27] ];
+ var d4 = [ [0,27] ];
+ var d5 = [ [0,9] ];
+ var d6 = [ [0,7] ];
+ var d7 = [ [0,7] ];
+
+    var graph = Flotr.draw(container, [
+    { data: d1, label: "none" },
+ { data: d2, label: "application/octet-stream" },
+ { data: d3, label: "text/javascript" },
+ { data: d4, label: "others" },
+ { data: d5, label: "application/javascript" },
+ { data: d6, label: "image/webp" },
+ { data: d7, label: "text/html" },
+
+    ], {
+        title: "Типы MIME (трафик) за 2025",
+        HtmlText: false,
+        grid: {
+            verticalLines: false,
+            horizontalLines: false,
+	    outline: '',
+        },
+        xaxis: {
+            showLabels: false,
+	    title: ""
+        },
+        yaxis: {
+            showLabels: false,
+	    title: ""
+        },
+        pie: {
+            show: true,
+	    explode: 6
+        },
+        mouse: {
+            track: true,
+	    trackFormatter: function(obj){ return pieTracker(obj) },
+	    relative: true
+        },
+        legend: {
+            position: "sw",
+            backgroundColor: "#D2E8FF",
+	    backgroundOpacity: 0.4
+        }
+    });
+/*
+    document.getElementById('reset1').onclick = function() {
+      graph.download.restoreCanvas();
+    };
+    document.getElementById('download1').onclick = function(){
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png');
+    };
+    document.getElementById('toimage1').onclick = function() {
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png', null, null, true);
+    };
+i*/
+
+})(document.getElementById("mime_bytes"));
+</script>
+
+</div>
+</td></tr></table>
+<h3>Количество типов MIME: 24</h3>
+
+<table class="sortable stata">
+<thead>
+<tr>
+<th>Типы MIME</th>
+<th>Запросы (%)</th>
+<th>Мегабайт (%)</th>
+
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>none</td>
+<td>1450 <span class="italicPercent">(23.30)</span></td>
+<td>135.15 <span class="italicPercent">(48.19)</span></td>
+
+</tr>
+<tr>
+<td>application/octet-stream</td>
+<td>61 <span class="italicPercent">(0.98)</span></td>
+<td>70.34 <span class="italicPercent">(25.08)</span></td>
+
+</tr>
+<tr>
+<td>text/javascript</td>
+<td>468 <span class="italicPercent">(7.52)</span></td>
+<td>26.00 <span class="italicPercent">(9.27)</span></td>
+
+</tr>
+<tr>
+<td>application/javascript</td>
+<td>185 <span class="italicPercent">(2.97)</span></td>
+<td>8.69 <span class="italicPercent">(3.10)</span></td>
+
+</tr>
+<tr>
+<td>text/html</td>
+<td>227 <span class="italicPercent">(3.65)</span></td>
+<td>7.48 <span class="italicPercent">(2.67)</span></td>
+
+</tr>
+<tr>
+<td>image/webp</td>
+<td>439 <span class="italicPercent">(7.05)</span></td>
+<td>6.74 <span class="italicPercent">(2.40)</span></td>
+
+</tr>
+<tr>
+<td>video/mp4</td>
+<td>8 <span class="italicPercent">(0.13)</span></td>
+<td>4.76 <span class="italicPercent">(1.70)</span></td>
+
+</tr>
+<tr>
+<td>application/json</td>
+<td>581 <span class="italicPercent">(9.33)</span></td>
+<td>4.37 <span class="italicPercent">(1.56)</span></td>
+
+</tr>
+<tr>
+<td>application/x-chrome-extension</td>
+<td>1 <span class="italicPercent">(0.02)</span></td>
+<td>4.01 <span class="italicPercent">(1.43)</span></td>
+
+</tr>
+<tr>
+<td>text/plain</td>
+<td>1282 <span class="italicPercent">(20.60)</span></td>
+<td>3.44 <span class="italicPercent">(1.23)</span></td>
+
+</tr>
+<tr>
+<td>image/png</td>
+<td>672 <span class="italicPercent">(10.80)</span></td>
+<td>3.22 <span class="italicPercent">(1.15)</span></td>
+
+</tr>
+<tr>
+<td>text/css</td>
+<td>115 <span class="italicPercent">(1.85)</span></td>
+<td>2.26 <span class="italicPercent">(0.80)</span></td>
+
+</tr>
+<tr>
+<td>font/woff2</td>
+<td>37 <span class="italicPercent">(0.59)</span></td>
+<td>1.45 <span class="italicPercent">(0.52)</span></td>
+
+</tr>
+<tr>
+<td>image/svg+xml</td>
+<td>118 <span class="italicPercent">(1.90)</span></td>
+<td>0.91 <span class="italicPercent">(0.32)</span></td>
+
+</tr>
+<tr>
+<td>image/jpeg</td>
+<td>61 <span class="italicPercent">(0.98)</span></td>
+<td>0.62 <span class="italicPercent">(0.22)</span></td>
+
+</tr>
+<tr>
+<td>image/gif</td>
+<td>431 <span class="italicPercent">(6.92)</span></td>
+<td>0.50 <span class="italicPercent">(0.18)</span></td>
+
+</tr>
+<tr>
+<td>application/json+protobuf</td>
+<td>66 <span class="italicPercent">(1.06)</span></td>
+<td>0.29 <span class="italicPercent">(0.10)</span></td>
+
+</tr>
+<tr>
+<td>image/x-icon</td>
+<td>8 <span class="italicPercent">(0.13)</span></td>
+<td>0.16 <span class="italicPercent">(0.06)</span></td>
+
+</tr>
+<tr>
+<td>image/vnd.microsoft.icon</td>
+<td>2 <span class="italicPercent">(0.03)</span></td>
+<td>0.03 <span class="italicPercent">(0.01)</span></td>
+
+</tr>
+<tr>
+<td>application/binary</td>
+<td>4 <span class="italicPercent">(0.06)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+
+</tr>
+<tr>
+<td>application/manifest+json</td>
+<td>3 <span class="italicPercent">(0.05)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+
+</tr>
+<tr>
+<td>application/x-javascript</td>
+<td>2 <span class="italicPercent">(0.03)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+
+</tr>
+<tr>
+<td>text/xml</td>
+<td>2 <span class="italicPercent">(0.03)</span></td>
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+
+</tr>
+<tr>
+<td>application/opensearchdescription+xml</td>
+<td>1 <span class="italicPercent">(0.02)</span></td>
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+
+</tr>
+</tbody>
+</table>
+
+<div class="uplink">
+    <a href="#atop"><span class="iconUpArrow">Вверх</span></a>
+</div>
+
+	</div>
+	<div id="footer">
+		<h4>
+		Отчет сгенерирован программой <a href="http://squidanalyzer.darold.net/">SquidAnalyzer v6.6</a>
+		</h4>
+	</div>
+</div>
+</body>
+</html>

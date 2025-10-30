@@ -1,0 +1,22 @@
+Зоздание образа docker на базе debian-slim и программ для обработки логов squid.
+располоденных в каталоге:
+├─ soft/
+│  ├─ squidanalyzer-master/
+│  └─ sqstat/
+ squidanalyzer-master требует устновки зависимостей (perl make libgd-graph-perl libgd-text-perl libhtml-template-perl liburi-perl libcompress-zlib-perl libdbd-pg-perl libdbi-perl apache2) и сборки, sqstat надо устоновить зависимости (apache2 libapache2-mod-php) и скопировать в /var/www/html 
+в каталоге:
+├─ config/
+│  └─ apache/
+│     ├─ sqstat.conf
+│     └─ squidanalyzer.conf
+это файлы конфигурации apache2 по пути /etc/apache2/conf-available
+из контейнера вывести каталоги:
+volumes:
+            - 'apache-webdata:/var/www/html'
+            - 'squid-logs:/var/log/squid' (настроен на другом контейнере)
+            - 'squidanalyzer-conf:/etc/squidanalyzer' (каталог конфигурации)
+удалить пакеты используемые для сборки которые не потребуюся для работы (для уменьщения размера образа)
+вести записи в файл WARP.md для раязнеснеия сути проекта при использования WARP
+Вести README.md формате md для последующей загрузки на github
+все коментарии и записи делать на англиском (при обнаружениее русского текста испровлять) 
+           

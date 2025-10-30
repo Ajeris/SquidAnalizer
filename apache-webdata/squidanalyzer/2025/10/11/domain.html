@@ -1,0 +1,745 @@
+
+<html>
+<head>
+<meta NAME="robots" CONTENT="noindex,nofollow" />
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache" />
+<meta HTTP-EQUIV="Cache-Control" content="no-cache" />
+<meta HTTP-EQUIV="Expires" CONTENT="Thu Oct 30 14:52:59 2025" />
+<meta HTTP-EQUIV="Generator" CONTENT="SquidAnalyzer 6.6" />
+<meta HTTP-EQUIV="Date" CONTENT="Thu Oct 30 14:52:59 2025" />
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
+<meta HTTP-EQUIV="refresh" CONTENT="300">
+<title>SquidAnalyzer 6.6 Report</title>
+<link rel="stylesheet" type="text/css" href="/squidanalyzer/squidanalyzer.css" media="screen" />
+<!-- javascript to sort table -->
+<script type="text/javascript" src="/squidanalyzer/sorttable.js"></script>
+<!-- javascript to draw graphics -->
+<script type="text/javascript" src="/squidanalyzer/flotr2.js"></script>
+<script  type="text/javascript" >sortpos = 1;</script>
+</head>
+<body onload="var myTH = document.getElementById('contenu').getElementsByTagName('th')[1]; sorttable.innerSortFunction.apply(myTH, []);">
+<div id="conteneur">
+<a name="atop"></a>
+	<div id="header">
+		<div id="alignLeft">
+		<h1>
+		<a href="/squidanalyzer/"><img src="/squidanalyzer/images/logo-squidanalyzer.png" title="SquidAnalyzer 6.6" border="0"></a> SquidAnalyzer
+		</h1>
+		<p class="sous-titre">
+		Дата создания отчета Thu Oct 30 14:52:59 2025.
+		</p>
+		</div>
+		<div id="calendar">
+<table><tr><th colspan="8">2025-10</th></tr>
+<tr><td>&nbsp;</td><td align="center">Пн</td><td align="center">Вт</td><td align="center">Ср</td><td align="center">Чт</td><td align="center">Пт</td><td align="center">Сб</td><td align="center">Вс</td></tr>
+<tr><th>40</th><td>&nbsp;</td><td>&nbsp;</td><td>01</td><td>02</td><td>03</td><td>04</td><td>05</td></tr>
+<tr><th><a href="/squidanalyzer/2025/week41">41</a></th><td>06</td><td><a href="../07/index.html">07</a></td><td><a href="../08/index.html">08</a></td><td><a href="../09/index.html">09</a></td><td><a href="../10/index.html">10</a></td><td><a href="../11/index.html">11</a></td><td><a href="../12/index.html">12</a></td></tr>
+<tr><th><a href="/squidanalyzer/2025/week42">42</a></th><td><a href="../13/index.html">13</a></td><td><a href="../14/index.html">14</a></td><td><a href="../15/index.html">15</a></td><td>16</td><td>17</td><td>18</td><td>19</td></tr>
+<tr><th>43</th><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
+<tr><th>44</th><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</table>
+</div>
+
+	</div>
+	
+<div id="menu">
+<ul>
+<li><a href="../index.html"><span class="iconArrow">Назад</span></a></li>
+
+<li><a href="domain.html"><span class="iconDomain">Рейтинг доменов</span></a></li>
+<li><a href="url.html"><span class="iconUrl">Рейтинг URL</span></a></li>
+<li><a href="denied.html"><span class="iconUrl">Рейтинг отказов в доступе</span></a></li>
+
+<li><a href="user.html"><span class="iconUser">Пользователи</span></a></li>
+
+<li><a href="network.html"><span class="iconNetwork">Подсети</span></a></li>
+<li><a href="mime_type.html"><span class="iconMime">Типы MIME</span></a></li>
+</ul>
+</div>
+
+	<div id="contenu">
+<h3>Кол-во доменов: 7</h3>
+
+<h4>100 самых посещаемых доменов за 2025-10-11</h4>
+<div class="line-separator"></div>
+
+<style>
+  #container {
+    display: table;
+  }
+  #row  {
+    display: table-row;
+  }
+  #domain_hits, #second_domain_hits {
+    display: table-cell;
+  }
+  #domain_hits { z-index: 999; }
+</style>
+<table class="graphs"><tr><td>
+<div id="container">
+<div id="domain_hits"></div>
+<script type="text/javascript">
+(function basic_pie(container) {
+
+
+//document.writeln('<input type="button" class="dldButton" value="To Image" id="toimage1" onclick="return false;">'+
+//	'<input type="button" class="dldButton" value="Download" id="download1" onclick="return false;">' +
+//	'<input type="button" class="dldButton" value="Reset" id="reset1" onclick="return false;">'
+//	);
+
+    var d1 = [ [0,34] ];
+ var d2 = [ [0,7] ];
+ var d3 = [ [0,5] ];
+
+    var graph = Flotr.draw(container, [
+    { data: d1, label: ".com" },
+ { data: d2, label: "others" },
+ { data: d3, label: ".net" },
+
+    ], {
+        title: "Статистика запросов по доменам за 2025-10-11",
+        HtmlText: false,
+        grid: {
+            verticalLines: false,
+            horizontalLines: false,
+	    outline: '',
+        },
+        xaxis: {
+            showLabels: false,
+	    title: "Домены"
+        },
+        yaxis: {
+            showLabels: false,
+	    title: ""
+        },
+        pie: {
+            show: true,
+	    explode: 6
+        },
+        mouse: {
+            track: true,
+	    trackFormatter: function(obj){ return pieTracker(obj) },
+	    relative: true
+        },
+        legend: {
+            position: "sw",
+            backgroundColor: "#D2E8FF",
+	    backgroundOpacity: 0.4
+        }
+    });
+/*
+    document.getElementById('reset1').onclick = function() {
+      graph.download.restoreCanvas();
+    };
+    document.getElementById('download1').onclick = function(){
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png');
+    };
+    document.getElementById('toimage1').onclick = function() {
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png', null, null, true);
+    };
+i*/
+
+})(document.getElementById("domain_hits"));
+</script>
+
+</div>
+</td><td>
+<div id="container">
+<div id="second_domain_hits"></div>
+<script type="text/javascript">
+(function basic_pie(container) {
+
+
+//document.writeln('<input type="button" class="dldButton" value="To Image" id="toimage1" onclick="return false;">'+
+//	'<input type="button" class="dldButton" value="Download" id="download1" onclick="return false;">' +
+//	'<input type="button" class="dldButton" value="Reset" id="reset1" onclick="return false;">'
+//	);
+
+    var d1 = [ [0,33] ];
+ var d2 = [ [0,7] ];
+ var d3 = [ [0,3] ];
+ var d4 = [ [0,2] ];
+ var d5 = [ [0,1] ];
+ var d6 = [ [0,0] ];
+
+    var graph = Flotr.draw(container, [
+    { data: d1, label: "microsoft.com" },
+ { data: d2, label: "unknown" },
+ { data: d3, label: "jsdelivr.net" },
+ { data: d4, label: "azureedge.net" },
+ { data: d5, label: "githubusercontent.com" },
+ { data: d6, label: "others" },
+
+    ], {
+        title: "Статистика запросов по доменам второго уровня за 2025-10-11",
+        HtmlText: false,
+        grid: {
+            verticalLines: false,
+            horizontalLines: false,
+	    outline: '',
+        },
+        xaxis: {
+            showLabels: false,
+	    title: "Домены"
+        },
+        yaxis: {
+            showLabels: false,
+	    title: ""
+        },
+        pie: {
+            show: true,
+	    explode: 6
+        },
+        mouse: {
+            track: true,
+	    trackFormatter: function(obj){ return pieTracker(obj) },
+	    relative: true
+        },
+        legend: {
+            position: "sw",
+            backgroundColor: "#D2E8FF",
+	    backgroundOpacity: 0.4
+        }
+    });
+/*
+    document.getElementById('reset1').onclick = function() {
+      graph.download.restoreCanvas();
+    };
+    document.getElementById('download1').onclick = function(){
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png');
+    };
+    document.getElementById('toimage1').onclick = function() {
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png', null, null, true);
+    };
+i*/
+
+})(document.getElementById("second_domain_hits"));
+</script>
+
+</div>
+</td></tr>
+<tr><td>
+<style>
+  #container {
+    display: table;
+  }
+  #row  {
+    display: table-row;
+  }
+  #domain_bytes, #second_domain_bytes {
+    display: table-cell;
+  }
+  #domain_bytes { z-index: 999; }
+</style>
+<div id="container">
+<div id="domain_bytes"></div>
+<script type="text/javascript">
+(function basic_pie(container) {
+
+
+//document.writeln('<input type="button" class="dldButton" value="To Image" id="toimage1" onclick="return false;">'+
+//	'<input type="button" class="dldButton" value="Download" id="download1" onclick="return false;">' +
+//	'<input type="button" class="dldButton" value="Reset" id="reset1" onclick="return false;">'
+//	);
+
+    var d1 = [ [0,247779] ];
+ var d2 = [ [0,185713] ];
+ var d3 = [ [0,121924] ];
+
+    var graph = Flotr.draw(container, [
+    { data: d1, label: "others" },
+ { data: d2, label: ".com" },
+ { data: d3, label: ".net" },
+
+    ], {
+        title: "Статистика трафика по доменам за 2025-10-11",
+        HtmlText: false,
+        grid: {
+            verticalLines: false,
+            horizontalLines: false,
+	    outline: '',
+        },
+        xaxis: {
+            showLabels: false,
+	    title: "Домены"
+        },
+        yaxis: {
+            showLabels: false,
+	    title: ""
+        },
+        pie: {
+            show: true,
+	    explode: 6
+        },
+        mouse: {
+            track: true,
+	    trackFormatter: function(obj){ return pieTracker(obj) },
+	    relative: true
+        },
+        legend: {
+            position: "sw",
+            backgroundColor: "#D2E8FF",
+	    backgroundOpacity: 0.4
+        }
+    });
+/*
+    document.getElementById('reset1').onclick = function() {
+      graph.download.restoreCanvas();
+    };
+    document.getElementById('download1').onclick = function(){
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png');
+    };
+    document.getElementById('toimage1').onclick = function() {
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png', null, null, true);
+    };
+i*/
+
+})(document.getElementById("domain_bytes"));
+</script>
+
+</div>
+</td><td>
+<div id="container">
+<div id="second_domain_bytes"></div>
+<script type="text/javascript">
+(function basic_pie(container) {
+
+
+//document.writeln('<input type="button" class="dldButton" value="To Image" id="toimage1" onclick="return false;">'+
+//	'<input type="button" class="dldButton" value="Download" id="download1" onclick="return false;">' +
+//	'<input type="button" class="dldButton" value="Reset" id="reset1" onclick="return false;">'
+//	);
+
+    var d1 = [ [0,247779] ];
+ var d2 = [ [0,183141] ];
+ var d3 = [ [0,94578] ];
+ var d4 = [ [0,27346] ];
+ var d5 = [ [0,2572] ];
+
+    var graph = Flotr.draw(container, [
+    { data: d1, label: "unknown" },
+ { data: d2, label: "microsoft.com" },
+ { data: d3, label: "azureedge.net" },
+ { data: d4, label: "jsdelivr.net" },
+ { data: d5, label: "others" },
+
+    ], {
+        title: "Статистика трафика по доменам второго уровня за 2025-10-11",
+        HtmlText: false,
+        grid: {
+            verticalLines: false,
+            horizontalLines: false,
+	    outline: '',
+        },
+        xaxis: {
+            showLabels: false,
+	    title: "Домены"
+        },
+        yaxis: {
+            showLabels: false,
+	    title: ""
+        },
+        pie: {
+            show: true,
+	    explode: 6
+        },
+        mouse: {
+            track: true,
+	    trackFormatter: function(obj){ return pieTracker(obj) },
+	    relative: true
+        },
+        legend: {
+            position: "sw",
+            backgroundColor: "#D2E8FF",
+	    backgroundOpacity: 0.4
+        }
+    });
+/*
+    document.getElementById('reset1').onclick = function() {
+      graph.download.restoreCanvas();
+    };
+    document.getElementById('download1').onclick = function(){
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png');
+    };
+    document.getElementById('toimage1').onclick = function() {
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png', null, null, true);
+    };
+i*/
+
+})(document.getElementById("second_domain_bytes"));
+</script>
+
+</div>
+</td></tr></table>
+<table class="sortable stata">
+<thead>
+<tr>
+<th>URL</th>
+
+<th>Запросы (%)</th>
+<th>Мегабайт (%)</th>
+<th>Продолжительность (%)</th>
+
+<th>Пропускная способность (MB/s)</th>
+<th>Последнее посещение</th>
+
+<th>Первое посещение</th>
+
+</tr>
+</thead>
+<tbody>
+<tr><td>
+<div class="tooltipLink"><span class="information">microsoft.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>33</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>33 <span class="italicPercent">(71.74)</span></td>
+<td>0.17 <span class="italicPercent">(32.97)</span></td>
+<td>01:01:05 <span class="italicPercent">(44.30)</span></td>
+
+<td>0.00</td>
+<td>23:17:36</td>
+
+<td>00:17:33</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">unknown</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>7</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>7 <span class="italicPercent">(15.22)</span></td>
+<td>0.24 <span class="italicPercent">(44.61)</span></td>
+<td>00:40:06 <span class="italicPercent">(29.08)</span></td>
+
+<td>0.00</td>
+<td>23:19:44</td>
+
+<td>00:23:59</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">jsdelivr.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>3</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>3 <span class="italicPercent">(6.52)</span></td>
+<td>0.03 <span class="italicPercent">(4.92)</span></td>
+<td>00:23:30 <span class="italicPercent">(17.05)</span></td>
+
+<td>0.00</td>
+<td>13:25:14</td>
+
+<td>03:27:35</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">azureedge.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>2</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>2 <span class="italicPercent">(4.35)</span></td>
+<td>0.09 <span class="italicPercent">(17.03)</span></td>
+<td>00:03:01 <span class="italicPercent">(2.19)</span></td>
+
+<td>0.00</td>
+<td>16:27:02</td>
+
+<td>16:17:03</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">githubusercontent.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1 <span class="italicPercent">(2.17)</span></td>
+<td>0.00 <span class="italicPercent">(0.46)</span></td>
+<td>00:10:10 <span class="italicPercent">(7.38)</span></td>
+
+<td>0.00</td>
+<td>18:29:16</td>
+
+<td>18:29:16</td>
+
+</tr></tbody></table><h4>100 доменов с наибольшим трафиком за 2025-10-11</h4><div class="line-separator"></div>
+
+<table class="sortable stata">
+<thead>
+<tr>
+<th>URL</th>
+
+<th>Мегабайт (%)</th>
+<th>Запросы (%)</th>
+<th>Продолжительность (%)</th>
+
+<th>Пропускная способность (MB/s)</th>
+<th>Последнее посещение</th>
+
+<th>Первое посещение</th>
+
+</tr>
+</thead>
+<tbody>
+<tr><td>
+<div class="tooltipLink"><span class="information">unknown</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>0.24</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.24 <span class="italicPercent">(44.61)</span></td>
+<td>7 <span class="italicPercent">(15.22)</span></td>
+<td>00:40:06 <span class="italicPercent">(29.08)</span></td>
+
+<td>0.00</td>
+<td>23:19:44</td>
+
+<td>00:23:59</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">microsoft.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>0.17</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.17 <span class="italicPercent">(32.97)</span></td>
+<td>33 <span class="italicPercent">(71.74)</span></td>
+<td>01:01:05 <span class="italicPercent">(44.30)</span></td>
+
+<td>0.00</td>
+<td>23:17:36</td>
+
+<td>00:17:33</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">azureedge.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>0.09</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.09 <span class="italicPercent">(17.03)</span></td>
+<td>2 <span class="italicPercent">(4.35)</span></td>
+<td>00:03:01 <span class="italicPercent">(2.19)</span></td>
+
+<td>0.00</td>
+<td>16:27:02</td>
+
+<td>16:17:03</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">jsdelivr.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>0.03</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.03 <span class="italicPercent">(4.92)</span></td>
+<td>3 <span class="italicPercent">(6.52)</span></td>
+<td>00:23:30 <span class="italicPercent">(17.05)</span></td>
+
+<td>0.00</td>
+<td>13:25:14</td>
+
+<td>03:27:35</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">githubusercontent.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>0.00</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.00 <span class="italicPercent">(0.46)</span></td>
+<td>1 <span class="italicPercent">(2.17)</span></td>
+<td>00:10:10 <span class="italicPercent">(7.38)</span></td>
+
+<td>0.00</td>
+<td>18:29:16</td>
+
+<td>18:29:16</td>
+
+</tr></tbody></table><h4>100 доменов с наибольшей продолжительностью за 2025-10-11</h4><div class="line-separator"></div>
+
+<table class="sortable stata">
+<thead>
+<tr>
+<th>URL</th>
+
+<th>Продолжительность (%)</th>
+<th>Запросы (%)</th>
+<th>Мегабайт (%)</th>
+
+<th>Пропускная способность (MB/s)</th>
+<th>Последнее посещение</th>
+
+<th>Первое посещение</th>
+
+</tr>
+</thead>
+<tbody>
+<tr><td>
+<div class="tooltipLink"><span class="information">microsoft.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vrogov@tp.oil</td><td>01:01:05</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>01:01:05 <span class="italicPercent">(44.30)</span></td>
+<td>33 <span class="italicPercent">(71.74)</span></td>
+<td>0.17 <span class="italicPercent">(32.97)</span></td>
+
+<td>0.00</td>
+<td>23:17:36</td>
+
+<td>00:17:33</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">unknown</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vrogov@tp.oil</td><td>00:40:06</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:40:06 <span class="italicPercent">(29.08)</span></td>
+<td>7 <span class="italicPercent">(15.22)</span></td>
+<td>0.24 <span class="italicPercent">(44.61)</span></td>
+
+<td>0.00</td>
+<td>23:19:44</td>
+
+<td>00:23:59</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">jsdelivr.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vrogov@tp.oil</td><td>00:23:30</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:23:30 <span class="italicPercent">(17.05)</span></td>
+<td>3 <span class="italicPercent">(6.52)</span></td>
+<td>0.03 <span class="italicPercent">(4.92)</span></td>
+
+<td>0.00</td>
+<td>13:25:14</td>
+
+<td>03:27:35</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">githubusercontent.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vrogov@tp.oil</td><td>00:10:10</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:10:10 <span class="italicPercent">(7.38)</span></td>
+<td>1 <span class="italicPercent">(2.17)</span></td>
+<td>0.00 <span class="italicPercent">(0.46)</span></td>
+
+<td>0.00</td>
+<td>18:29:16</td>
+
+<td>18:29:16</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">azureedge.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vrogov@tp.oil</td><td>00:03:01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:03:01 <span class="italicPercent">(2.19)</span></td>
+<td>2 <span class="italicPercent">(4.35)</span></td>
+<td>0.09 <span class="italicPercent">(17.03)</span></td>
+
+<td>0.00</td>
+<td>16:27:02</td>
+
+<td>16:17:03</td>
+
+</tr></tbody></table>
+<div class="uplink">
+<a href="#atop"><span class="iconUpArrow">Вверх</span></a>
+</div>
+
+	</div>
+	<div id="footer">
+		<h4>
+		Отчет сгенерирован программой <a href="http://squidanalyzer.darold.net/">SquidAnalyzer v6.6</a>
+		</h4>
+	</div>
+</div>
+</body>
+</html>

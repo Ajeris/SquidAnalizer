@@ -1,0 +1,427 @@
+
+<html>
+<head>
+<meta NAME="robots" CONTENT="noindex,nofollow" />
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache" />
+<meta HTTP-EQUIV="Cache-Control" content="no-cache" />
+<meta HTTP-EQUIV="Expires" CONTENT="Thu Oct 30 14:52:59 2025" />
+<meta HTTP-EQUIV="Generator" CONTENT="SquidAnalyzer 6.6" />
+<meta HTTP-EQUIV="Date" CONTENT="Thu Oct 30 14:52:59 2025" />
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
+<meta HTTP-EQUIV="refresh" CONTENT="300">
+<title>SquidAnalyzer 6.6 Report</title>
+<link rel="stylesheet" type="text/css" href="/squidanalyzer/squidanalyzer.css" media="screen" />
+<!-- javascript to sort table -->
+<script type="text/javascript" src="/squidanalyzer/sorttable.js"></script>
+<!-- javascript to draw graphics -->
+<script type="text/javascript" src="/squidanalyzer/flotr2.js"></script>
+<script  type="text/javascript" >sortpos = 2;</script>
+</head>
+<body onload="var myTH = document.getElementById('contenu').getElementsByTagName('th')[2]; sorttable.innerSortFunction.apply(myTH, []);">
+<div id="conteneur">
+<a name="atop"></a>
+	<div id="header">
+		<div id="alignLeft">
+		<h1>
+		<a href="/squidanalyzer/"><img src="/squidanalyzer/images/logo-squidanalyzer.png" title="SquidAnalyzer 6.6" border="0"></a> SquidAnalyzer
+		</h1>
+		<p class="sous-titre">
+		Дата создания отчета Thu Oct 30 14:52:59 2025.
+		</p>
+		</div>
+		
+	</div>
+	
+<div id="menu">
+<ul>
+<li><a href="../index.html"><span class="iconArrow">Назад</span></a></li>
+
+<li><a href="domain.html"><span class="iconDomain">Рейтинг доменов</span></a></li>
+<li><a href="url.html"><span class="iconUrl">Рейтинг URL</span></a></li>
+<li><a href="denied.html"><span class="iconUrl">Рейтинг отказов в доступе</span></a></li>
+
+<li><a href="user.html"><span class="iconUser">Пользователи</span></a></li>
+
+<li><a href="network.html"><span class="iconNetwork">Подсети</span></a></li>
+<li><a href="mime_type.html"><span class="iconMime">Типы MIME</span></a></li>
+</ul>
+</div>
+
+	<div id="contenu">
+
+<h4>Статистика прокси 2025 Неделя 41</h4>
+<div class="line-separator"></div>
+
+<table class="stata">
+<tr>
+<th colspan="3" class="headerBlack">Запросы</th>
+<th colspan="3" class="headerBlack">Мегабайт</th>
+<th colspan="6" class="headerBlack">Всего</th>
+</tr>
+<tr>
+<th>Получено из кэша</th>
+<th>Получено не из кэша</th>
+<th>Запрещено</th>
+<th>Получено из кэша</th>
+<th>Получено не из кэша</th>
+<th>Запрещено</th>
+<th>Запросы</th>
+<th>Мегабайт</th>
+<th>Пропускная способность</th>
+<th>Пользователи</th>
+<th>Сайты</th>
+<th>Домены</th>
+
+</tr>
+<tr>
+<td title="0.00 %"></td>
+<td title="88.64 %">6224</td>
+<td title="11.36 %">798</td>
+<td title="0.00 %">0.00</td>
+<td title="99.55 %">280.46</td>
+<td title="0.45 %">1.26</td>
+<td>6224</td>
+<td>280.46</td>
+<td>0.01 MB/s</td>
+<td>4</td>
+<td>184</td>
+<td>72</td>
+
+</tr>
+</table>
+
+<style>
+  #container {
+    display: table;
+  }
+  #row  {
+    display: table-row;
+  }
+  #code_requests, #code_bytes {
+    display: table-cell;
+  }
+  #code_requests { z-index: 999; }
+</style>
+
+<table class="graphs">
+<tr><td>
+<div id="container">
+<div id="code_requests"></div>
+<script type="text/javascript">
+
+(function mouse_zoom(container) {
+
+//document.writeln('<table class="tbbutton"><tr><td><input type="button" class="dldButton" value="To Image" id="toimage1" onclick="return false;">'+
+//	'<input type="button" class="dldButton" value="Download" id="download1" onclick="return false;">' +
+//	'<input type="button" class="dldButton" value="Reset" id="reset1" onclick="return false;"></td></tr><tr><td>&nbsp;</td></tr></table>'
+//	);
+    var d1 = [[ 1759690800000, 0 ],[ 1759777200000, 93 ],[ 1759863600000, 1119 ],[ 1759950000000, 3452 ],[ 1760036400000, 1473 ],[ 1760122800000, 46 ],[ 1760209200000, 41 ]];
+ var d2 = [[ 1759690800000, 0 ],[ 1759777200000, 0 ],[ 1759863600000, 0 ],[ 1759950000000, 0 ],[ 1760036400000, 0 ],[ 1760122800000, 0 ],[ 1760209200000, 0 ]];
+ var d3 = [[ 1759690800000, 0 ],[ 1759777200000, 93 ],[ 1759863600000, 1119 ],[ 1759950000000, 3452 ],[ 1760036400000, 1473 ],[ 1760122800000, 46 ],[ 1760209200000, 41 ]];
+ var d4 = [[ 1759690800000, 0 ],[ 1759777200000, 0 ],[ 1759863600000, 69 ],[ 1759950000000, 314 ],[ 1760036400000, 415 ],[ 1760122800000, 0 ],[ 1760209200000, 0 ]];
+
+    var options = {
+        mouse: {
+            track: true,
+            relative: true,
+	    trackFormatter: function(obj){ return dateTracker(obj,'[06,07,08,09,10,11,12]',['Всего (Из кэша+Не из кэша)','Из кэша','Не из кэша','Запрещено'],[d1,d2,d3,d4]) },
+        },
+        yaxis: {
+            min: 0,
+            mode: "normal",
+            autoscaleMargin: 1,
+            title: "Запросы",
+        },
+        xaxis: {
+            mode: "time",
+            noTicks: 7,
+	    
+            title: "Число",
+        },
+        title: "Weekly Статистика  по запросам за 2025",
+        legend: {
+            position: "nw",
+            backgroundColor: "#D2E8FF",
+	    backgroundOpacity: 0.4
+        },
+        HtmlText: false,
+    };
+
+    function drawGraph(opts) {
+        var o = Flotr._.extend(Flotr._.clone(options), opts );
+        return Flotr.draw(
+        	container,
+        	[
+{ data: d1, label: "Всего (Из кэша+Не из кэша)", color: "#6e9dc9", mouse:{track:true} },
+ { data: d2, label: "Из кэша", color: "#f4ab3a", mouse:{track:true} },
+ { data: d3, label: "Не из кэша", color: "#ac7fa8", mouse:{track:true} },
+ { data: d4, label: "Запрещено", color: "#8dbd0f", mouse:{track:true} },
+
+    		],
+    		o
+    	);
+    }
+
+    var graph = drawGraph();
+    Flotr.EventAdapter.observe(container, "flotr:select", function(area) {
+        f = drawGraph({
+            xaxis: {
+                min: area.x1,
+                max: area.x2
+            },
+            yaxis: {
+                min: area.y1,
+                max: area.y2
+            }
+        });
+    });
+    Flotr.EventAdapter.observe(container, "flotr:click", function() {
+        drawGraph();
+    });
+
+/*
+    document.getElementById('reset1').onclick = function() {
+      graph.download.restoreCanvas();
+    };
+    document.getElementById('download1').onclick = function(){
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png');
+    };
+    document.getElementById('toimage1').onclick = function() {
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png', null, null, true);
+    };
+*/
+})(document.getElementById("code_requests"));
+</script>
+
+</div>
+</td><td>
+<div id="container">
+<div id="code_bytes"></div>
+<script type="text/javascript">
+
+(function mouse_zoom(container) {
+
+//document.writeln('<table class="tbbutton"><tr><td><input type="button" class="dldButton" value="To Image" id="toimage2" onclick="return false;">'+
+//	'<input type="button" class="dldButton" value="Download" id="download2" onclick="return false;">' +
+//	'<input type="button" class="dldButton" value="Reset" id="reset2" onclick="return false;"></td></tr><tr><td>&nbsp;</td></tr></table>'
+//	);
+    var d1 = [[ 1759690800000, 0 ],[ 1759777200000, 1 ],[ 1759863600000, 16 ],[ 1759950000000, 125 ],[ 1760036400000, 149 ],[ 1760122800000, 0 ],[ 1760209200000, 0 ]];
+ var d2 = [[ 1759690800000, 0 ],[ 1759777200000, 0 ],[ 1759863600000, 0 ],[ 1759950000000, 0 ],[ 1760036400000, 0 ],[ 1760122800000, 0 ],[ 1760209200000, 0 ]];
+ var d3 = [[ 1759690800000, 0 ],[ 1759777200000, 1 ],[ 1759863600000, 16 ],[ 1759950000000, 125 ],[ 1760036400000, 149 ],[ 1760122800000, 0 ],[ 1760209200000, 0 ]];
+ var d4 = [[ 1759690800000, 0 ],[ 1759777200000, 0 ],[ 1759863600000, 0 ],[ 1759950000000, 0 ],[ 1760036400000, 0 ],[ 1760122800000, 0 ],[ 1760209200000, 0 ]];
+
+    var options = {
+        mouse: {
+            track: true,
+            relative: true,
+	    trackFormatter: function(obj){ return dateTracker(obj,'[06,07,08,09,10,11,12]',['Всего (Из кэша+Не из кэша)','Из кэша','Не из кэша','Запрещено'],[d1,d2,d3,d4]) },
+        },
+        yaxis: {
+            min: 0,
+            mode: "normal",
+            autoscaleMargin: 1,
+            title: "Трафик",
+        },
+        xaxis: {
+            mode: "time",
+            noTicks: 7,
+	    
+            title: "Число",
+        },
+        title: "Weekly Статистика по трафику за 2025",
+        legend: {
+            position: "nw",
+            backgroundColor: "#D2E8FF",
+	    backgroundOpacity: 0.4
+        },
+        HtmlText: false,
+    };
+
+    function drawGraph(opts) {
+        var o = Flotr._.extend(Flotr._.clone(options), opts );
+        return Flotr.draw(
+        	container,
+        	[
+{ data: d1, label: "Всего (Из кэша+Не из кэша)", color: "#6e9dc9", mouse:{track:true} },
+ { data: d2, label: "Из кэша", color: "#f4ab3a", mouse:{track:true} },
+ { data: d3, label: "Не из кэша", color: "#ac7fa8", mouse:{track:true} },
+ { data: d4, label: "Запрещено", color: "#8dbd0f", mouse:{track:true} },
+
+    		],
+    		o
+    	);
+    }
+
+    var graph = drawGraph();
+    Flotr.EventAdapter.observe(container, "flotr:select", function(area) {
+        f = drawGraph({
+            xaxis: {
+                min: area.x1,
+                max: area.x2
+            },
+            yaxis: {
+                min: area.y1,
+                max: area.y2
+            }
+        });
+    });
+    Flotr.EventAdapter.observe(container, "flotr:click", function() {
+        drawGraph();
+    });
+
+/*
+    document.getElementById('reset2').onclick = function() {
+      graph.download.restoreCanvas();
+    };
+    document.getElementById('download2').onclick = function(){
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png');
+    };
+    document.getElementById('toimage2').onclick = function() {
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png', null, null, true);
+    };
+*/
+})(document.getElementById("code_bytes"));
+</script>
+
+</div>
+</td></tr>
+<tr><td colspan="2" align="center"><div id="throughput_bytes"></div>
+<script type="text/javascript">
+
+(function mouse_zoom(container) {
+
+//document.writeln('<table class="tbbutton"><tr><td><input type="button" class="dldButton" value="To Image" id="toimage3" onclick="return false;">'+
+//	'<input type="button" class="dldButton" value="Download" id="download3" onclick="return false;">' +
+//	'<input type="button" class="dldButton" value="Reset" id="reset3" onclick="return false;"></td></tr><tr><td>&nbsp;</td></tr></table>'
+//	);
+    var d1 = [[ 1759690800000, 0 ],[ 1759777200000, 132889 ],[ 1759863600000, 110989 ],[ 1759950000000, 202939 ],[ 1760036400000, 8847 ],[ 1760122800000, 67 ],[ 1760209200000, 45 ]];
+
+    var options = {
+        mouse: {
+            track: true,
+            relative: true,
+	    trackFormatter: function(obj){ return dateTracker(obj,'[06,07,08,09,10,11,12]',['Байт/сек'],[d1]) },
+        },
+        yaxis: {
+            min: 0,
+            mode: "normal",
+            autoscaleMargin: 1,
+            title: "Байты",
+        },
+        xaxis: {
+            mode: "time",
+            noTicks: 7,
+	    
+            title: "Число",
+        },
+        title: "Weekly пропускная способность на 2025",
+        legend: {
+            position: "nw",
+            backgroundColor: "#D2E8FF",
+	    backgroundOpacity: 0.4
+        },
+        HtmlText: false,
+    };
+
+    function drawGraph(opts) {
+        var o = Flotr._.extend(Flotr._.clone(options), opts );
+        return Flotr.draw(
+        	container,
+        	[
+{ data: d1, label: "Байт/сек", color: "#6e9dc9", mouse:{track:true} },
+
+    		],
+    		o
+    	);
+    }
+
+    var graph = drawGraph();
+    Flotr.EventAdapter.observe(container, "flotr:select", function(area) {
+        f = drawGraph({
+            xaxis: {
+                min: area.x1,
+                max: area.x2
+            },
+            yaxis: {
+                min: area.y1,
+                max: area.y2
+            }
+        });
+    });
+    Flotr.EventAdapter.observe(container, "flotr:click", function() {
+        drawGraph();
+    });
+
+/*
+    document.getElementById('reset3').onclick = function() {
+      graph.download.restoreCanvas();
+    };
+    document.getElementById('download3').onclick = function(){
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png');
+    };
+    document.getElementById('toimage3').onclick = function() {
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png', null, null, true);
+    };
+*/
+})(document.getElementById("throughput_bytes"));
+</script>
+</td></tr>
+</table>
+
+	<h4>Подсказка</h4>
+	<div class="line-separator"></div>
+	<div class="displayLegend">
+	<span class="legendeTitle">Получено из кэша:</span> <span class="descLegend">Объекты, найденные в кэше</span><br/>
+	<span class="legendeTitle">Получено не из кэша:</span> <span class="descLegend">Объекты, не найденные в кэше</span><br/>
+	<span class="legendeTitle">Запрещено:</span> <span class="descLegend">Объекты, доступ к которым был запрещен</span><br/>
+	<span class="legendeTitle">Пользователи:</span> <span class="descLegend">Статистика по пользователям за выбранный период</span><br/>
+	<span class="legendeTitle">Сайты:</span> <span class="descLegend">Статистика по сайтам за выбранный период</span><br/>
+	<span class="legendeTitle">Домены:</span> <span class="descLegend">Статистика по доменам за выбранный период</span><br/>
+
+</div>
+
+	</div>
+	<div id="footer">
+		<h4>
+		Отчет сгенерирован программой <a href="http://squidanalyzer.darold.net/">SquidAnalyzer v6.6</a>
+		</h4>
+	</div>
+</div>
+</body>
+</html>

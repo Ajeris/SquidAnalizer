@@ -1,0 +1,1949 @@
+
+<html>
+<head>
+<meta NAME="robots" CONTENT="noindex,nofollow" />
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache" />
+<meta HTTP-EQUIV="Cache-Control" content="no-cache" />
+<meta HTTP-EQUIV="Expires" CONTENT="Thu Oct 30 14:52:59 2025" />
+<meta HTTP-EQUIV="Generator" CONTENT="SquidAnalyzer 6.6" />
+<meta HTTP-EQUIV="Date" CONTENT="Thu Oct 30 14:52:59 2025" />
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
+<meta HTTP-EQUIV="refresh" CONTENT="300">
+<title>SquidAnalyzer 6.6 Report</title>
+<link rel="stylesheet" type="text/css" href="/squidanalyzer/squidanalyzer.css" media="screen" />
+<!-- javascript to sort table -->
+<script type="text/javascript" src="/squidanalyzer/sorttable.js"></script>
+<!-- javascript to draw graphics -->
+<script type="text/javascript" src="/squidanalyzer/flotr2.js"></script>
+<script  type="text/javascript" >sortpos = 2;</script>
+</head>
+<body onload="var myTH = document.getElementById('contenu').getElementsByTagName('th')[2]; sorttable.innerSortFunction.apply(myTH, []);">
+<div id="conteneur">
+<a name="atop"></a>
+	<div id="header">
+		<div id="alignLeft">
+		<h1>
+		<a href="/squidanalyzer/"><img src="/squidanalyzer/images/logo-squidanalyzer.png" title="SquidAnalyzer 6.6" border="0"></a> SquidAnalyzer
+		</h1>
+		<p class="sous-titre">
+		Дата создания отчета Thu Oct 30 14:52:59 2025.
+		</p>
+		</div>
+		
+	</div>
+	
+<div id="menu">
+<ul>
+<li><a href="../../index.html"><span class="iconArrow">Назад</span></a></li>
+
+<li><a href="../../domain.html"><span class="iconDomain">Рейтинг доменов</span></a></li>
+<li><a href="../../url.html"><span class="iconUrl">Рейтинг URL</span></a></li>A
+<li><a href="../../denied.html"><span class="iconUrl">Рейтинг отказов в доступе</span></a></li>A
+
+<li><a href="../../user.html"><span class="iconUser">Пользователи</span></a></li>
+
+<li><a href="../../network.html"><span class="iconNetwork">Подсети</span></a></li>
+<li><a href="../../mime_type.html"><span class="iconMime">Типы MIME</span></a></li>
+</ul>
+</div>
+
+	<div id="contenu">
+
+<h4>Статистика по пользователям за 192.168.10.41 - 2025</h4>
+<div class="line-separator"></div>
+
+<style>
+  #container {
+    display: table;
+  }
+  #row  {
+    display: table-row;
+  }
+  #user_hits, #user_bytes {
+    display: table-cell;
+  }
+  #user_hits { z-index: 999; }
+</style>
+<table class="graphs"><tr><td>
+<div id="container">
+<div id="user_hits"></div>
+<script type="text/javascript">
+var months = [ 'Янв', 'Фев', 'Мрт', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек' ];
+
+(function mouse_zoom(container) {
+
+//document.writeln('<table class="tbbutton"><tr><td><input type="button" class="dldButton" value="To Image" id="toimage1" onclick="return false;">'+
+//	'<input type="button" class="dldButton" value="Download" id="download1" onclick="return false;">' +
+//	'<input type="button" class="dldButton" value="Reset" id="reset1" onclick="return false;"></td></tr><tr><td>&nbsp;</td></tr></table>'
+//	);
+    var d1 = [[ 01, 0 ],[ 02, 0 ],[ 03, 0 ],[ 04, 0 ],[ 05, 0 ],[ 06, 0 ],[ 07, 0 ],[ 08, 0 ],[ 09, 0 ],[ 10, 693 ],[ 11, 0 ],[ 12, 0 ]];
+
+    var options = {
+        mouse: {
+            track: true,
+            relative: true,
+	    trackFormatter: function(obj){ return dateTracker(obj,'month',['Из кэша'],[d1]) },
+        },
+        yaxis: {
+            min: 0,
+            mode: "normal",
+            autoscaleMargin: 1,
+            title: "Запросы",
+        },
+        xaxis: {
+            mode: "normal",
+            noTicks: 12,
+	    
+            tickFormatter: function(x) {
+                var pos = parseInt(x);
+		return months[(pos -1) % 12];
+            },
+
+            title: "месяцев",
+        },
+        title: "Помесячная 192.168.10.41 Статистика  по запросам за 2025",
+        legend: {
+            position: "nw",
+            backgroundColor: "#D2E8FF",
+	    backgroundOpacity: 0.4
+        },
+        HtmlText: false,
+    };
+
+    function drawGraph(opts) {
+        var o = Flotr._.extend(Flotr._.clone(options), opts );
+        return Flotr.draw(
+        	container,
+        	[
+{ data: d1, label: "Из кэша", color: "#6e9dc9", mouse:{track:true} },
+
+    		],
+    		o
+    	);
+    }
+
+    var graph = drawGraph();
+    Flotr.EventAdapter.observe(container, "flotr:select", function(area) {
+        f = drawGraph({
+            xaxis: {
+                min: area.x1,
+                max: area.x2
+            },
+            yaxis: {
+                min: area.y1,
+                max: area.y2
+            }
+        });
+    });
+    Flotr.EventAdapter.observe(container, "flotr:click", function() {
+        drawGraph();
+    });
+
+/*
+    document.getElementById('reset1').onclick = function() {
+      graph.download.restoreCanvas();
+    };
+    document.getElementById('download1').onclick = function(){
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png');
+    };
+    document.getElementById('toimage1').onclick = function() {
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png', null, null, true);
+    };
+*/
+})(document.getElementById("user_hits"));
+</script>
+
+</div>
+</td><td>
+
+<div id="container">
+<div id="user_bytes"></div>
+<script type="text/javascript">
+var months = [ 'Янв', 'Фев', 'Мрт', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек' ];
+
+(function mouse_zoom(container) {
+
+//document.writeln('<table class="tbbutton"><tr><td><input type="button" class="dldButton" value="To Image" id="toimage1" onclick="return false;">'+
+//	'<input type="button" class="dldButton" value="Download" id="download1" onclick="return false;">' +
+//	'<input type="button" class="dldButton" value="Reset" id="reset1" onclick="return false;"></td></tr><tr><td>&nbsp;</td></tr></table>'
+//	);
+    var d1 = [[ 01, 0 ],[ 02, 0 ],[ 03, 0 ],[ 04, 0 ],[ 05, 0 ],[ 06, 0 ],[ 07, 0 ],[ 08, 0 ],[ 09, 0 ],[ 10, 16 ],[ 11, 0 ],[ 12, 0 ]];
+
+    var options = {
+        mouse: {
+            track: true,
+            relative: true,
+	    trackFormatter: function(obj){ return dateTracker(obj,'month',['Байты'],[d1]) },
+        },
+        yaxis: {
+            min: 0,
+            mode: "normal",
+            autoscaleMargin: 1,
+            title: "Трафик",
+        },
+        xaxis: {
+            mode: "normal",
+            noTicks: 12,
+	    
+            tickFormatter: function(x) {
+                var pos = parseInt(x);
+		return months[(pos -1) % 12];
+            },
+
+            title: "месяцев",
+        },
+        title: "Помесячная 192.168.10.41 Статистика по трафику за 2025",
+        legend: {
+            position: "nw",
+            backgroundColor: "#D2E8FF",
+	    backgroundOpacity: 0.4
+        },
+        HtmlText: false,
+    };
+
+    function drawGraph(opts) {
+        var o = Flotr._.extend(Flotr._.clone(options), opts );
+        return Flotr.draw(
+        	container,
+        	[
+{ data: d1, label: "Байты", color: "#6e9dc9", mouse:{track:true} },
+
+    		],
+    		o
+    	);
+    }
+
+    var graph = drawGraph();
+    Flotr.EventAdapter.observe(container, "flotr:select", function(area) {
+        f = drawGraph({
+            xaxis: {
+                min: area.x1,
+                max: area.x2
+            },
+            yaxis: {
+                min: area.y1,
+                max: area.y2
+            }
+        });
+    });
+    Flotr.EventAdapter.observe(container, "flotr:click", function() {
+        drawGraph();
+    });
+
+/*
+    document.getElementById('reset1').onclick = function() {
+      graph.download.restoreCanvas();
+    };
+    document.getElementById('download1').onclick = function(){
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png');
+    };
+    document.getElementById('toimage1').onclick = function() {
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png', null, null, true);
+    };
+*/
+})(document.getElementById("user_bytes"));
+</script>
+
+</div>
+</td></tr></table>
+
+<h3>Рейтинг отказов в доступе</h3>
+<table class="sortable stata">
+<thead>
+<tr>
+<th>URL</th>
+<th>Blocklist ACLs</th>
+<th>Запросы (%)</th>
+<th>Последнее посещение</th>
+
+</tr>
+</thead>
+<tbody>
+
+<tr><td>
+<a href="http://edge.microsoft.com/" target="_blank" class="domainLink">edge.microsoft.com</a>
+</td>
+<td>-</td>
+<td>322 <span class="italicPercent">(17.61)</span></td>
+<td>Oct 15 12:10:47</td>
+
+<tr><td>
+<a href="http://web.whatsapp.com/" target="_blank" class="domainLink">web.whatsapp.com</a>
+</td>
+<td>-</td>
+<td>183 <span class="italicPercent">(10.01)</span></td>
+<td>-</td>
+
+<tr><td>
+<a href="http://yandex.kz/" target="_blank" class="domainLink">yandex.kz</a>
+</td>
+<td>-</td>
+<td>104 <span class="italicPercent">(5.69)</span></td>
+<td>Oct 15 11:19:25</td>
+
+<tr><td>
+<a href="http://portal.mail.ru/" target="_blank" class="domainLink">portal.mail.ru</a>
+</td>
+<td>-</td>
+<td>98 <span class="italicPercent">(5.36)</span></td>
+<td>Oct 14 17:25:52</td>
+
+<tr><td>
+<a href="http://yastatic.net/" target="_blank" class="domainLink">yastatic.net</a>
+</td>
+<td>-</td>
+<td>46 <span class="italicPercent">(2.52)</span></td>
+<td>Oct 15 10:21:27</td>
+
+<tr><td>
+<a href="http://embeds.rambler.ru/" target="_blank" class="domainLink">embeds.rambler.ru</a>
+</td>
+<td>-</td>
+<td>44 <span class="italicPercent">(2.41)</span></td>
+<td>Oct 15 11:19:27</td>
+
+<tr><td>
+<a href="http://app.warp.dev/" target="_blank" class="domainLink">app.warp.dev</a>
+</td>
+<td>-</td>
+<td>39 <span class="italicPercent">(2.13)</span></td>
+<td>Oct 09 09:49:53</td>
+
+<tr><td>
+<a href="http://cloud.imgsmail.ru/" target="_blank" class="domainLink">cloud.imgsmail.ru</a>
+</td>
+<td>-</td>
+<td>37 <span class="italicPercent">(2.02)</span></td>
+<td>Oct 14 17:23:50</td>
+
+<tr><td>
+<a href="http://rcm.rambler.ru/" target="_blank" class="domainLink">rcm.rambler.ru</a>
+</td>
+<td>-</td>
+<td>33 <span class="italicPercent">(1.81)</span></td>
+<td>Oct 15 09:57:33</td>
+
+<tr><td>
+<a href="http://ingest.prod.verisoul.ai/" target="_blank" class="domainLink">ingest.prod.verisoul.ai</a>
+</td>
+<td>-</td>
+<td>32 <span class="italicPercent">(1.75)</span></td>
+<td>Oct 09 09:50:02</td>
+
+<tr><td>
+<a href="http://cloud.mail.ru/" target="_blank" class="domainLink">cloud.mail.ru</a>
+</td>
+<td>-</td>
+<td>32 <span class="italicPercent">(1.75)</span></td>
+<td>Oct 14 17:23:50</td>
+
+<tr><td>
+<a href="http://www.google.com/" target="_blank" class="domainLink">www.google.com</a>
+</td>
+<td>-</td>
+<td>31 <span class="italicPercent">(1.70)</span></td>
+<td>Oct 15 10:21:32</td>
+
+<tr><td>
+<a href="http://jzk-st10g.2day.kz.prod.hosts.ooklaserver.net/" target="_blank" class="domainLink">jzk-st10g.2day.kz.prod.hosts.ooklaserver.net</a>
+</td>
+<td>-</td>
+<td>28 <span class="italicPercent">(1.53)</span></td>
+<td>Oct 14 15:00:30</td>
+
+<tr><td>
+<a href="http://speedtest.shimkent.telecom.kz.prod.hosts.ooklaserver.net/" target="_blank" class="domainLink">speedtest.shimkent.telecom.kz.prod.hosts.ooklaserver.net</a>
+</td>
+<td>-</td>
+<td>28 <span class="italicPercent">(1.53)</span></td>
+<td>Oct 14 15:00:33</td>
+
+<tr><td>
+<a href="http://speedtest.connect-s.kz.prod.hosts.ooklaserver.net/" target="_blank" class="domainLink">speedtest.connect-s.kz.prod.hosts.ooklaserver.net</a>
+</td>
+<td>-</td>
+<td>28 <span class="italicPercent">(1.53)</span></td>
+<td>Oct 14 15:00:31</td>
+
+<tr><td>
+<a href="http://nur-st.astel.kz.prod.hosts.ooklaserver.net/" target="_blank" class="domainLink">nur-st.astel.kz.prod.hosts.ooklaserver.net</a>
+</td>
+<td>-</td>
+<td>28 <span class="italicPercent">(1.53)</span></td>
+<td>Oct 14 15:00:30</td>
+
+<tr><td>
+<a href="http://shymkent-01.speedtest.telco.ftel.kz.prod.hosts.ooklaserver.net/" target="_blank" class="domainLink">shymkent-01.speedtest.telco.ftel.kz.prod.hosts.ooklaserver.net</a>
+</td>
+<td>-</td>
+<td>28 <span class="italicPercent">(1.53)</span></td>
+<td>Oct 14 15:00:34</td>
+
+<tr><td>
+<a href="http://speedtest2.fish-net.kz.prod.hosts.ooklaserver.net/" target="_blank" class="domainLink">speedtest2.fish-net.kz.prod.hosts.ooklaserver.net</a>
+</td>
+<td>-</td>
+<td>28 <span class="italicPercent">(1.53)</span></td>
+<td>Oct 14 15:00:35</td>
+
+<tr><td>
+<a href="http://shm-st10g.2day.kz.prod.hosts.ooklaserver.net/" target="_blank" class="domainLink">shm-st10g.2day.kz.prod.hosts.ooklaserver.net</a>
+</td>
+<td>-</td>
+<td>28 <span class="italicPercent">(1.53)</span></td>
+<td>Oct 14 15:00:31</td>
+
+<tr><td>
+<a href="http://speedtest.kyzylorda.telecom.kz.prod.hosts.ooklaserver.net/" target="_blank" class="domainLink">speedtest.kyzylorda.telecom.kz.prod.hosts.ooklaserver.net</a>
+</td>
+<td>-</td>
+<td>28 <span class="italicPercent">(1.53)</span></td>
+<td>Oct 14 15:00:30</td>
+
+<tr><td>
+<a href="http://speedtest.sat-lines.kz.prod.hosts.ooklaserver.net/" target="_blank" class="domainLink">speedtest.sat-lines.kz.prod.hosts.ooklaserver.net</a>
+</td>
+<td>-</td>
+<td>28 <span class="italicPercent">(1.53)</span></td>
+<td>Oct 14 15:00:31</td>
+
+<tr><td>
+<a href="http://shm-st-01.kcell.kz.prod.hosts.ooklaserver.net/" target="_blank" class="domainLink">shm-st-01.kcell.kz.prod.hosts.ooklaserver.net</a>
+</td>
+<td>-</td>
+<td>28 <span class="italicPercent">(1.53)</span></td>
+<td>Oct 14 15:00:34</td>
+
+<tr><td>
+<a href="http://www.rambler.ru/" target="_blank" class="domainLink">www.rambler.ru</a>
+</td>
+<td>-</td>
+<td>25 <span class="italicPercent">(1.37)</span></td>
+<td>Oct 15 09:57:33</td>
+
+<tr><td>
+<a href="http://favicon.yandex.net/" target="_blank" class="domainLink">favicon.yandex.net</a>
+</td>
+<td>-</td>
+<td>24 <span class="italicPercent">(1.31)</span></td>
+<td>Oct 15 10:21:27</td>
+
+<tr><td>
+<a href="http://www.youtube.com/" target="_blank" class="domainLink">www.youtube.com</a>
+</td>
+<td>-</td>
+<td>24 <span class="italicPercent">(1.31)</span></td>
+<td>Oct 14 15:31:19</td>
+
+<tr><td>
+<a href="http://news.store.rambler.ru/" target="_blank" class="domainLink">news.store.rambler.ru</a>
+</td>
+<td>-</td>
+<td>24 <span class="italicPercent">(1.31)</span></td>
+<td>Oct 15 09:57:33</td>
+
+<tr><td>
+<a href="http://net.prod.verisoul.ai/" target="_blank" class="domainLink">net.prod.verisoul.ai</a>
+</td>
+<td>-</td>
+<td>24 <span class="italicPercent">(1.31)</span></td>
+<td>-</td>
+
+<tr><td>
+<a href="http://permanently-removed.invalid/" target="_blank" class="domainLink">permanently-removed.invalid</a>
+</td>
+<td>-</td>
+<td>22 <span class="italicPercent">(1.20)</span></td>
+<td>Oct 15 09:28:19</td>
+
+<tr><td>
+<a href="http://ssl.gstatic.com/" target="_blank" class="domainLink">ssl.gstatic.com</a>
+</td>
+<td>-</td>
+<td>20 <span class="italicPercent">(1.09)</span></td>
+<td>Oct 09 09:50:50</td>
+
+<tr><td>
+<a href="http://mail.google.com/" target="_blank" class="domainLink">mail.google.com</a>
+</td>
+<td>-</td>
+<td>16 <span class="italicPercent">(0.88)</span></td>
+<td>Oct 09 09:49:52</td>
+
+<tr><td>
+<a href="http://id.rambler.ru/" target="_blank" class="domainLink">id.rambler.ru</a>
+</td>
+<td>-</td>
+<td>16 <span class="italicPercent">(0.88)</span></td>
+<td>Oct 15 09:57:32</td>
+
+<tr><td>
+<a href="http://st.top100.ru/" target="_blank" class="domainLink">st.top100.ru</a>
+</td>
+<td>-</td>
+<td>15 <span class="italicPercent">(0.82)</span></td>
+<td>Oct 14 14:33:35</td>
+
+<tr><td>
+<a href="http://avatars.mds.yandex.net/" target="_blank" class="domainLink">avatars.mds.yandex.net</a>
+</td>
+<td>-</td>
+<td>15 <span class="italicPercent">(0.82)</span></td>
+<td>Oct 15 10:21:27</td>
+
+<tr><td>
+<a href="http://ogads-pa.clients6.google.com/" target="_blank" class="domainLink">ogads-pa.clients6.google.com</a>
+</td>
+<td>-</td>
+<td>14 <span class="italicPercent">(0.77)</span></td>
+<td>Oct 15 10:21:32</td>
+
+<tr><td>
+<a href="http://static.rambler.ru/" target="_blank" class="domainLink">static.rambler.ru</a>
+</td>
+<td>-</td>
+<td>13 <span class="italicPercent">(0.71)</span></td>
+<td>Oct 14 14:33:35</td>
+
+<tr><td>
+<a href="http://featureassets.org/" target="_blank" class="domainLink">featureassets.org</a>
+</td>
+<td>-</td>
+<td>12 <span class="italicPercent">(0.66)</span></td>
+<td>Oct 13 10:42:02</td>
+
+<tr><td>
+<a href="http://yandex.ru/" target="_blank" class="domainLink">yandex.ru</a>
+</td>
+<td>-</td>
+<td>10 <span class="italicPercent">(0.55)</span></td>
+<td>Oct 15 10:21:26</td>
+
+<tr><td>
+<a href="http://ya.ru/" target="_blank" class="domainLink">ya.ru</a>
+</td>
+<td>-</td>
+<td>8 <span class="italicPercent">(0.44)</span></td>
+<td>Oct 15 09:57:43</td>
+
+<tr><td>
+<a href="http://rr1---sn-35153iuxa-53mz.googlevideo.com/" target="_blank" class="domainLink">rr1---sn-35153iuxa-53mz.googlevideo.com</a>
+</td>
+<td>-</td>
+<td>8 <span class="italicPercent">(0.44)</span></td>
+<td>Oct 14 15:29:44</td>
+
+<tr><td>
+<a href="http://cdn-store.rambler.ru/" target="_blank" class="domainLink">cdn-store.rambler.ru</a>
+</td>
+<td>-</td>
+<td>8 <span class="italicPercent">(0.44)</span></td>
+<td>Oct 15 09:52:39</td>
+
+<tr><td>
+<a href="http://js.hs-scripts.com/" target="_blank" class="domainLink">js.hs-scripts.com</a>
+</td>
+<td>-</td>
+<td>8 <span class="italicPercent">(0.44)</span></td>
+<td>Oct 09 09:49:52</td>
+
+<tr><td>
+<a href="http://v.warp.dev/" target="_blank" class="domainLink">v.warp.dev</a>
+</td>
+<td>-</td>
+<td>7 <span class="italicPercent">(0.38)</span></td>
+<td>Oct 09 09:49:52</td>
+
+<tr><td>
+<a href="http://static.whatsapp.net/" target="_blank" class="domainLink">static.whatsapp.net</a>
+</td>
+<td>-</td>
+<td>7 <span class="italicPercent">(0.38)</span></td>
+<td>Oct 14 14:34:10</td>
+
+<tr><td>
+<a href="http://crl.pki.gov.kz/" target="_blank" class="domainLink">crl.pki.gov.kz</a>
+</td>
+<td>-</td>
+<td>7 <span class="italicPercent">(0.38)</span></td>
+<td>-</td>
+
+<tr><td>
+<a href="http://api.rudderstack.com/" target="_blank" class="domainLink">api.rudderstack.com</a>
+</td>
+<td>-</td>
+<td>7 <span class="italicPercent">(0.38)</span></td>
+<td>Oct 09 09:49:52</td>
+
+<tr><td>
+<a href="http://www.yandex.kz/" target="_blank" class="domainLink">www.yandex.kz</a>
+</td>
+<td>-</td>
+<td>7 <span class="italicPercent">(0.38)</span></td>
+<td>Oct 14 14:29:16</td>
+
+<tr><td>
+<a href="http://www.bing.com/" target="_blank" class="domainLink">www.bing.com</a>
+</td>
+<td>-</td>
+<td>7 <span class="italicPercent">(0.38)</span></td>
+<td>Oct 15 09:33:18</td>
+
+<tr><td>
+<a href="http://cdn.jsdelivr.net/" target="_blank" class="domainLink">cdn.jsdelivr.net</a>
+</td>
+<td>-</td>
+<td>7 <span class="italicPercent">(0.38)</span></td>
+<td>Oct 14 14:33:39</td>
+
+<tr><td>
+<a href="http://video-preview.s3.yandex.net/" target="_blank" class="domainLink">video-preview.s3.yandex.net</a>
+</td>
+<td>-</td>
+<td>7 <span class="italicPercent">(0.38)</span></td>
+<td>Oct 15 09:55:36</td>
+
+<tr><td>
+<a href="http://atlas.rambler.ru/" target="_blank" class="domainLink">atlas.rambler.ru</a>
+</td>
+<td>-</td>
+<td>7 <span class="italicPercent">(0.38)</span></td>
+<td>Oct 15 09:58:03</td>
+
+<tr><td>
+<a href="http://encrypted-tbn2.gstatic.com/" target="_blank" class="domainLink">encrypted-tbn2.gstatic.com</a>
+</td>
+<td>-</td>
+<td>6 <span class="italicPercent">(0.33)</span></td>
+<td>Oct 09 08:26:01</td>
+
+<tr><td>
+<a href="http://offside.kz/" target="_blank" class="domainLink">offside.kz</a>
+</td>
+<td>-</td>
+<td>6 <span class="italicPercent">(0.33)</span></td>
+<td>Oct 15 09:57:02</td>
+
+<tr><td>
+<a href="http://www.warp.dev/" target="_blank" class="domainLink">www.warp.dev</a>
+</td>
+<td>-</td>
+<td>6 <span class="italicPercent">(0.33)</span></td>
+<td>Oct 09 09:42:58</td>
+
+<tr><td>
+<a href="http://identitytoolkit.googleapis.com/" target="_blank" class="domainLink">identitytoolkit.googleapis.com</a>
+</td>
+<td>-</td>
+<td>6 <span class="italicPercent">(0.33)</span></td>
+<td>Oct 09 09:49:52</td>
+
+<tr><td>
+<a href="http://turn.cloudflare.com/" target="_blank" class="domainLink">turn.cloudflare.com</a>
+</td>
+<td>-</td>
+<td>6 <span class="italicPercent">(0.33)</span></td>
+<td>Oct 09 09:43:01</td>
+
+<tr><td>
+<a href="http://geolocation.onetrust.com/" target="_blank" class="domainLink">geolocation.onetrust.com</a>
+</td>
+<td>-</td>
+<td>6 <span class="italicPercent">(0.33)</span></td>
+<td>-</td>
+
+<tr><td>
+<a href="http://imgs2.imgsmail.ru/" target="_blank" class="domainLink">imgs2.imgsmail.ru</a>
+</td>
+<td>-</td>
+<td>6 <span class="italicPercent">(0.33)</span></td>
+<td>Oct 14 17:23:50</td>
+
+<tr><td>
+<a href="http://store.rambler.ru/" target="_blank" class="domainLink">store.rambler.ru</a>
+</td>
+<td>-</td>
+<td>6 <span class="italicPercent">(0.33)</span></td>
+<td>Oct 15 09:28:25</td>
+
+<tr><td>
+<a href="http://ocsp.pki.gov.kz/" target="_blank" class="domainLink">ocsp.pki.gov.kz</a>
+</td>
+<td>-</td>
+<td>5 <span class="italicPercent">(0.27)</span></td>
+<td>Oct 14 13:54:56</td>
+
+<tr><td>
+<a href="http://weather.rambler.ru/" target="_blank" class="domainLink">weather.rambler.ru</a>
+</td>
+<td>-</td>
+<td>5 <span class="italicPercent">(0.27)</span></td>
+<td>Oct 15 09:57:33</td>
+
+<tr><td>
+<a href="http://fonts.gstatic.com/" target="_blank" class="domainLink">fonts.gstatic.com</a>
+</td>
+<td>-</td>
+<td>5 <span class="italicPercent">(0.27)</span></td>
+<td>Oct 14 15:28:12</td>
+
+<tr><td>
+<a href="http://appsgrowthpromo-pa.clients6.google.com/" target="_blank" class="domainLink">appsgrowthpromo-pa.clients6.google.com</a>
+</td>
+<td>-</td>
+<td>4 <span class="italicPercent">(0.22)</span></td>
+<td>Oct 09 09:47:27</td>
+
+<tr><td>
+<a href="http://player.vimeo.com/" target="_blank" class="domainLink">player.vimeo.com</a>
+</td>
+<td>-</td>
+<td>4 <span class="italicPercent">(0.22)</span></td>
+<td>Oct 13 10:42:00</td>
+
+<tr><td>
+<a href="http://peoplestack-pa.clients6.google.com/" target="_blank" class="domainLink">peoplestack-pa.clients6.google.com</a>
+</td>
+<td>-</td>
+<td>4 <span class="italicPercent">(0.22)</span></td>
+<td>Oct 09 09:47:31</td>
+
+<tr><td>
+<a href="http://o2.mail.ru/" target="_blank" class="domainLink">o2.mail.ru</a>
+</td>
+<td>-</td>
+<td>4 <span class="italicPercent">(0.22)</span></td>
+<td>Oct 14 14:55:07</td>
+
+<tr><td>
+<a href="http://i.ytimg.com/" target="_blank" class="domainLink">i.ytimg.com</a>
+</td>
+<td>-</td>
+<td>4 <span class="italicPercent">(0.22)</span></td>
+<td>Oct 14 15:28:36</td>
+
+<tr><td>
+<a href="http://notepad-plus-plus.org/" target="_blank" class="domainLink">notepad-plus-plus.org</a>
+</td>
+<td>-</td>
+<td>4 <span class="italicPercent">(0.22)</span></td>
+<td>-</td>
+
+<tr><td>
+<a href="http://github.com/" target="_blank" class="domainLink">github.com</a>
+</td>
+<td>-</td>
+<td>3 <span class="italicPercent">(0.16)</span></td>
+<td>Oct 14 14:55:55</td>
+
+<tr><td>
+<a href="http://cloclo63.datacloudmail.ru/" target="_blank" class="domainLink">cloclo63.datacloudmail.ru</a>
+</td>
+<td>-</td>
+<td>3 <span class="italicPercent">(0.16)</span></td>
+<td>Oct 14 14:53:53</td>
+
+<tr><td>
+<a href="http://play.google.com/" target="_blank" class="domainLink">play.google.com</a>
+</td>
+<td>-</td>
+<td>3 <span class="italicPercent">(0.16)</span></td>
+<td>Oct 09 09:47:12</td>
+
+<tr><td>
+<a href="http://r.mradx.net/" target="_blank" class="domainLink">r.mradx.net</a>
+</td>
+<td>-</td>
+<td>3 <span class="italicPercent">(0.16)</span></td>
+<td>Oct 14 14:52:58</td>
+
+<tr><td>
+<a href="http://apis.google.com/" target="_blank" class="domainLink">apis.google.com</a>
+</td>
+<td>-</td>
+<td>3 <span class="italicPercent">(0.16)</span></td>
+<td>Oct 09 09:47:41</td>
+
+<tr><td>
+<a href="http://encrypted-tbn3.gstatic.com/" target="_blank" class="domainLink">encrypted-tbn3.gstatic.com</a>
+</td>
+<td>-</td>
+<td>3 <span class="italicPercent">(0.16)</span></td>
+<td>Oct 09 08:21:35</td>
+
+<tr><td>
+<a href="http://www.gstatic.com/" target="_blank" class="domainLink">www.gstatic.com</a>
+</td>
+<td>-</td>
+<td>3 <span class="italicPercent">(0.16)</span></td>
+<td>Oct 14 14:55:35</td>
+
+<tr><td>
+<a href="http://cloclo59.cloud.mail.ru/" target="_blank" class="domainLink">cloclo59.cloud.mail.ru</a>
+</td>
+<td>-</td>
+<td>3 <span class="italicPercent">(0.16)</span></td>
+<td>Oct 14 16:19:19</td>
+
+<tr><td>
+<a href="http://www.google.kz/" target="_blank" class="domainLink">www.google.kz</a>
+</td>
+<td>-</td>
+<td>3 <span class="italicPercent">(0.16)</span></td>
+<td>Oct 15 09:57:32</td>
+
+<tr><td>
+<a href="http://speedtest21.altel.kz.prod.hosts.ooklaserver.net/" target="_blank" class="domainLink">speedtest21.altel.kz.prod.hosts.ooklaserver.net</a>
+</td>
+<td>-</td>
+<td>3 <span class="italicPercent">(0.16)</span></td>
+<td>Oct 09 08:53:26</td>
+
+<tr><td>
+<a href="http://cloclo63.cloud.mail.ru/" target="_blank" class="domainLink">cloclo63.cloud.mail.ru</a>
+</td>
+<td>-</td>
+<td>3 <span class="italicPercent">(0.16)</span></td>
+<td>Oct 14 14:53:52</td>
+
+<tr><td>
+<a href="http://addons-pa.clients6.google.com/" target="_blank" class="domainLink">addons-pa.clients6.google.com</a>
+</td>
+<td>-</td>
+<td>2 <span class="italicPercent">(0.11)</span></td>
+<td>Oct 09 09:47:29</td>
+
+<tr><td>
+<a href="http://peoplestackwebexperiments-pa.clients6.google.com/" target="_blank" class="domainLink">peoplestackwebexperiments-pa.clients6.google.com</a>
+</td>
+<td>-</td>
+<td>2 <span class="italicPercent">(0.11)</span></td>
+<td>Oct 09 09:47:32</td>
+
+<tr><td>
+<a href="http://xpaywalletcdn-prod.azureedge.net/" target="_blank" class="domainLink">xpaywalletcdn-prod.azureedge.net</a>
+</td>
+<td>-</td>
+<td>2 <span class="italicPercent">(0.11)</span></td>
+<td>Oct 15 09:33:19</td>
+
+<tr><td>
+<a href="http://b.cdnst.net/" target="_blank" class="domainLink">b.cdnst.net</a>
+</td>
+<td>-</td>
+<td>2 <span class="italicPercent">(0.11)</span></td>
+<td>Oct 14 15:25:23</td>
+
+<tr><td>
+<a href="http://encrypted-tbn1.gstatic.com/" target="_blank" class="domainLink">encrypted-tbn1.gstatic.com</a>
+</td>
+<td>-</td>
+<td>2 <span class="italicPercent">(0.11)</span></td>
+<td>Oct 14 14:55:35</td>
+
+<tr><td>
+<a href="http://ublockorigin.pages.dev/" target="_blank" class="domainLink">ublockorigin.pages.dev</a>
+</td>
+<td>-</td>
+<td>2 <span class="italicPercent">(0.11)</span></td>
+<td>Oct 15 07:58:22</td>
+
+<tr><td>
+<a href="http://home.imgsmail.ru/" target="_blank" class="domainLink">home.imgsmail.ru</a>
+</td>
+<td>-</td>
+<td>2 <span class="italicPercent">(0.11)</span></td>
+<td>Oct 14 14:55:04</td>
+
+<tr><td>
+<a href="http://thumb.cloud.mail.ru/" target="_blank" class="domainLink">thumb.cloud.mail.ru</a>
+</td>
+<td>-</td>
+<td>2 <span class="italicPercent">(0.11)</span></td>
+<td>Oct 14 14:55:07</td>
+
+<tr><td>
+<a href="http://signaler-pa.clients6.google.com/" target="_blank" class="domainLink">signaler-pa.clients6.google.com</a>
+</td>
+<td>-</td>
+<td>2 <span class="italicPercent">(0.11)</span></td>
+<td>Oct 09 09:47:38</td>
+
+<tr><td>
+<a href="http://astral-field-294621.firebaseapp.com/" target="_blank" class="domainLink">astral-field-294621.firebaseapp.com</a>
+</td>
+<td>-</td>
+<td>2 <span class="italicPercent">(0.11)</span></td>
+<td>Oct 09 09:47:31</td>
+
+<tr><td>
+<a href="http://ru.wikipedia.org/" target="_blank" class="domainLink">ru.wikipedia.org</a>
+</td>
+<td>-</td>
+<td>2 <span class="italicPercent">(0.11)</span></td>
+<td>Oct 09 15:11:13</td>
+
+<tr><td>
+<a href="http://cdn.statically.io/" target="_blank" class="domainLink">cdn.statically.io</a>
+</td>
+<td>-</td>
+<td>2 <span class="italicPercent">(0.11)</span></td>
+<td>Oct 15 12:11:25</td>
+
+<tr><td>
+<a href="http://kenes2.1414.kz/" target="_blank" class="domainLink">kenes2.1414.kz</a>
+</td>
+<td>-</td>
+<td>2 <span class="italicPercent">(0.11)</span></td>
+<td>Oct 14 14:52:35</td>
+
+<tr><td>
+<a href="http://mc.yandex.kz/" target="_blank" class="domainLink">mc.yandex.kz</a>
+</td>
+<td>-</td>
+<td>2 <span class="italicPercent">(0.11)</span></td>
+<td>Oct 13 12:21:57</td>
+
+<tr><td>
+<a href="http://accounts.google.com/" target="_blank" class="domainLink">accounts.google.com</a>
+</td>
+<td>-</td>
+<td>2 <span class="italicPercent">(0.11)</span></td>
+<td>Oct 14 15:05:24</td>
+
+<tr><td>
+<a href="http://egress.yandex.net/" target="_blank" class="domainLink">egress.yandex.net</a>
+</td>
+<td>-</td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>Oct 15 09:54:35</td>
+
+<tr><td>
+<a href="http://jnn-pa.googleapis.com/" target="_blank" class="domainLink">jnn-pa.googleapis.com</a>
+</td>
+<td>-</td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>-</td>
+
+<tr><td>
+<a href="http://blog.whatsapp.com/" target="_blank" class="domainLink">blog.whatsapp.com</a>
+</td>
+<td>-</td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>Oct 14 14:33:58</td>
+
+<tr><td>
+<a href="http://www.googleapis.com/" target="_blank" class="domainLink">www.googleapis.com</a>
+</td>
+<td>-</td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>-</td>
+
+<tr><td>
+<a href="http://account.mail.ru/" target="_blank" class="domainLink">account.mail.ru</a>
+</td>
+<td>-</td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>Oct 14 14:52:53</td>
+
+<tr><td>
+<a href="http://sozait.ru/" target="_blank" class="domainLink">sozait.ru</a>
+</td>
+<td>-</td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>Oct 09 08:26:01</td>
+
+<tr><td>
+<a href="http://cdn.cookielaw.org/" target="_blank" class="domainLink">cdn.cookielaw.org</a>
+</td>
+<td>-</td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>Oct 14 15:05:25</td>
+
+<tr><td>
+<a href="http://status.warp.dev/" target="_blank" class="domainLink">status.warp.dev</a>
+</td>
+<td>-</td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>Oct 09 09:42:55</td>
+
+</tbody>
+</table>
+
+<h3>Рейтинг 100/50 URL</h3>
+<table class="sortable stata">
+<thead>
+<tr>
+<th>URL</th>
+<th>Запросы (%)</th>
+<th>Мегабайт (%)</th>
+<th>Продолжительность (%)</th>
+<th>Пропускная способность (MB/s)</th>
+<th>Последнее посещение</th>
+
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td><a href="http://yastatic.net/" target="_blank" class="domainLink">yastatic.net</a></td>
+<td>164 <span class="italicPercent">(23.67)</span></td>
+<td>3.61 <span class="italicPercent">(22.68)</span></td>
+<td>00:00:35 <span class="italicPercent">(0.55)</span></td>
+<td>0.10</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 15:50:49</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 15:50:29</td></tr>
+<tr><td>Oct 08 10:34:57</td></tr>
+<tr><td>Oct 08 09:16:46</td></tr>
+<tr><td>Oct 07 15:57:27</td></tr>
+<tr><td>Oct 07 15:57:27</td></tr>
+<tr><td>Oct 07 15:57:26</td></tr>
+<tr><td>Oct 07 15:57:26</td></tr>
+<tr><td>Oct 07 15:57:26</td></tr>
+<tr><td>Oct 07 15:57:25</td></tr>
+<tr><td>Oct 07 15:57:25</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://yandex.kz/" target="_blank" class="domainLink">yandex.kz</a></td>
+<td>151 <span class="italicPercent">(21.79)</span></td>
+<td>2.78 <span class="italicPercent">(17.45)</span></td>
+<td>00:03:13 <span class="italicPercent">(2.97)</span></td>
+<td>0.01</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:07:12</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 15:51:34</td></tr>
+<tr><td>Oct 08 10:34:57</td></tr>
+<tr><td>Oct 08 09:16:48</td></tr>
+<tr><td>Oct 07 16:14:37</td></tr>
+<tr><td>Oct 07 16:08:37</td></tr>
+<tr><td>Oct 07 16:02:37</td></tr>
+<tr><td>Oct 07 15:57:26</td></tr>
+<tr><td>Oct 07 15:57:26</td></tr>
+<tr><td>Oct 07 15:57:26</td></tr>
+<tr><td>Oct 07 15:57:26</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://avatars.mds.yandex.net/" target="_blank" class="domainLink">avatars.mds.yandex.net</a></td>
+<td>110 <span class="italicPercent">(15.87)</span></td>
+<td>2.67 <span class="italicPercent">(16.77)</span></td>
+<td>00:01:22 <span class="italicPercent">(1.27)</span></td>
+<td>0.03</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:57:05</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:57:05</td></tr>
+<tr><td>Oct 13 15:50:29</td></tr>
+<tr><td>Oct 08 10:39:26</td></tr>
+<tr><td>Oct 08 09:16:48</td></tr>
+<tr><td>Oct 07 15:57:27</td></tr>
+<tr><td>Oct 07 15:57:27</td></tr>
+<tr><td>Oct 07 15:57:26</td></tr>
+<tr><td>Oct 07 15:57:26</td></tr>
+<tr><td>Oct 07 15:57:26</td></tr>
+<tr><td>Oct 07 15:57:26</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://www.google.com/" target="_blank" class="domainLink">www.google.com</a></td>
+<td>30 <span class="italicPercent">(4.33)</span></td>
+<td>1.36 <span class="italicPercent">(8.55)</span></td>
+<td>00:00:23 <span class="italicPercent">(0.36)</span></td>
+<td>0.06</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:02:41</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:02:41</td></tr>
+<tr><td>Oct 08 10:35:00</td></tr>
+<tr><td>Oct 08 09:16:47</td></tr>
+<tr><td>Oct 07 15:57:28</td></tr>
+<tr><td>Oct 07 15:57:28</td></tr>
+<tr><td>Oct 07 15:57:28</td></tr>
+<tr><td>Oct 07 15:57:28</td></tr>
+<tr><td>Oct 07 15:57:27</td></tr>
+<tr><td>Oct 07 15:57:27</td></tr>
+<tr><td>Oct 07 15:57:27</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://st3-23.vk.com/" target="_blank" class="domainLink">st3-23.vk.com</a></td>
+<td>5 <span class="italicPercent">(0.72)</span></td>
+<td>0.95 <span class="italicPercent">(5.97)</span></td>
+<td>00:00:06 <span class="italicPercent">(0.10)</span></td>
+<td>0.15</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 15:52:44</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 15:52:44</td></tr>
+<tr><td>Oct 13 15:52:39</td></tr>
+<tr><td>Oct 13 15:52:39</td></tr>
+<tr><td>Oct 13 15:52:39</td></tr>
+<tr><td>Oct 13 15:52:39</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://s00.yaplakal.com/" target="_blank" class="domainLink">s00.yaplakal.com</a></td>
+<td>2 <span class="italicPercent">(0.29)</span></td>
+<td>0.84 <span class="italicPercent">(5.27)</span></td>
+<td>00:06:48 <span class="italicPercent">(6.27)</span></td>
+<td>0.00</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 17:02:36</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 17:02:36</td></tr>
+<tr><td>Oct 13 15:52:44</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://vk.com/" target="_blank" class="domainLink">vk.com</a></td>
+<td>25 <span class="italicPercent">(3.61)</span></td>
+<td>0.59 <span class="italicPercent">(3.71)</span></td>
+<td>01:20:52 <span class="italicPercent">(74.55)</span></td>
+<td>0.00</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:55:57</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:55:57</td></tr>
+<tr><td>Oct 13 16:24:48</td></tr>
+<tr><td>Oct 13 16:10:52</td></tr>
+<tr><td>Oct 13 16:03:41</td></tr>
+<tr><td>Oct 13 16:02:41</td></tr>
+<tr><td>Oct 13 15:56:50</td></tr>
+<tr><td>Oct 13 15:55:45</td></tr>
+<tr><td>Oct 13 15:54:45</td></tr>
+<tr><td>Oct 13 15:53:45</td></tr>
+<tr><td>Oct 13 15:52:44</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://news.store.rambler.ru/" target="_blank" class="domainLink">news.store.rambler.ru</a></td>
+<td>5 <span class="italicPercent">(0.72)</span></td>
+<td>0.41 <span class="italicPercent">(2.58)</span></td>
+<td>00:00:09 <span class="italicPercent">(0.14)</span></td>
+<td>0.04</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:02:31</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:02:31</td></tr>
+<tr><td>Oct 08 09:21:35</td></tr>
+<tr><td>Oct 08 09:21:35</td></tr>
+<tr><td>Oct 08 09:21:35</td></tr>
+<tr><td>Oct 08 09:21:35</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://www.rambler.ru/" target="_blank" class="domainLink">www.rambler.ru</a></td>
+<td>12 <span class="italicPercent">(1.73)</span></td>
+<td>0.39 <span class="italicPercent">(2.45)</span></td>
+<td>00:00:20 <span class="italicPercent">(0.31)</span></td>
+<td>0.02</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:02:31</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:02:31</td></tr>
+<tr><td>Oct 08 09:21:36</td></tr>
+<tr><td>Oct 08 09:21:36</td></tr>
+<tr><td>Oct 08 09:21:34</td></tr>
+<tr><td>Oct 08 09:21:34</td></tr>
+<tr><td>Oct 08 09:21:33</td></tr>
+<tr><td>Oct 08 09:16:49</td></tr>
+<tr><td>Oct 08 09:16:49</td></tr>
+<tr><td>Oct 08 09:16:47</td></tr>
+<tr><td>Oct 08 09:16:47</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://www.speedtest.net/" target="_blank" class="domainLink">www.speedtest.net</a></td>
+<td>2 <span class="italicPercent">(0.29)</span></td>
+<td>0.37 <span class="italicPercent">(2.32)</span></td>
+<td>00:00:14 <span class="italicPercent">(0.22)</span></td>
+<td>0.03</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 10:30:34</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 10:30:34</td></tr>
+<tr><td>Oct 13 10:30:24</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://ru.wikipedia.org/" target="_blank" class="domainLink">ru.wikipedia.org</a></td>
+<td>17 <span class="italicPercent">(2.45)</span></td>
+<td>0.23 <span class="italicPercent">(1.47)</span></td>
+<td>00:00:10 <span class="italicPercent">(0.17)</span></td>
+<td>0.02</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:02:31</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:02:31</td></tr>
+<tr><td>Oct 08 10:35:01</td></tr>
+<tr><td>Oct 08 09:21:37</td></tr>
+<tr><td>Oct 08 09:21:37</td></tr>
+<tr><td>Oct 08 09:21:37</td></tr>
+<tr><td>Oct 08 09:21:37</td></tr>
+<tr><td>Oct 08 09:21:36</td></tr>
+<tr><td>Oct 08 09:21:36</td></tr>
+<tr><td>Oct 08 09:21:36</td></tr>
+<tr><td>Oct 08 09:21:36</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://cdn-store.rambler.ru/" target="_blank" class="domainLink">cdn-store.rambler.ru</a></td>
+<td>2 <span class="italicPercent">(0.29)</span></td>
+<td>0.13 <span class="italicPercent">(0.83)</span></td>
+<td>00:00:06 <span class="italicPercent">(0.10)</span></td>
+<td>0.02</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:02:31</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:02:31</td></tr>
+<tr><td>Oct 08 09:16:49</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://www.yaplakal.com/" target="_blank" class="domainLink">www.yaplakal.com</a></td>
+<td>4 <span class="italicPercent">(0.58)</span></td>
+<td>0.13 <span class="italicPercent">(0.82)</span></td>
+<td>00:00:23 <span class="italicPercent">(0.36)</span></td>
+<td>0.01</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:55:57</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:55:57</td></tr>
+<tr><td>Oct 13 16:13:12</td></tr>
+<tr><td>Oct 13 16:02:41</td></tr>
+<tr><td>Oct 13 15:52:44</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://embeds.rambler.ru/" target="_blank" class="domainLink">embeds.rambler.ru</a></td>
+<td>30 <span class="italicPercent">(4.33)</span></td>
+<td>0.12 <span class="italicPercent">(0.75)</span></td>
+<td>00:01:11 <span class="italicPercent">(1.10)</span></td>
+<td>0.00</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:57:04</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:57:04</td></tr>
+<tr><td>Oct 13 16:02:31</td></tr>
+<tr><td>Oct 08 09:16:49</td></tr>
+<tr><td>Oct 08 09:16:49</td></tr>
+<tr><td>Oct 08 09:16:49</td></tr>
+<tr><td>Oct 08 09:16:49</td></tr>
+<tr><td>Oct 08 09:16:48</td></tr>
+<tr><td>Oct 08 09:16:48</td></tr>
+<tr><td>Oct 08 09:16:48</td></tr>
+<tr><td>Oct 08 09:16:48</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://s02.yapfiles.ru/" target="_blank" class="domainLink">s02.yapfiles.ru</a></td>
+<td>2 <span class="italicPercent">(0.29)</span></td>
+<td>0.11 <span class="italicPercent">(0.67)</span></td>
+<td>00:02:05 <span class="italicPercent">(1.94)</span></td>
+<td>0.00</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:57:58</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:57:58</td></tr>
+<tr><td>Oct 13 15:52:44</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://rcm.rambler.ru/" target="_blank" class="domainLink">rcm.rambler.ru</a></td>
+<td>14 <span class="italicPercent">(2.02)</span></td>
+<td>0.10 <span class="italicPercent">(0.64)</span></td>
+<td>00:00:19 <span class="italicPercent">(0.30)</span></td>
+<td>0.01</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:02:31</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:02:31</td></tr>
+<tr><td>Oct 08 09:21:35</td></tr>
+<tr><td>Oct 08 09:21:35</td></tr>
+<tr><td>Oct 08 09:21:34</td></tr>
+<tr><td>Oct 08 09:21:34</td></tr>
+<tr><td>Oct 08 09:16:48</td></tr>
+<tr><td>Oct 08 09:16:48</td></tr>
+<tr><td>Oct 08 09:16:48</td></tr>
+<tr><td>Oct 08 09:16:48</td></tr>
+<tr><td>Oct 08 09:16:48</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://edgec.strm.yandex.net/" target="_blank" class="domainLink">edgec.strm.yandex.net</a></td>
+<td>1 <span class="italicPercent">(0.14)</span></td>
+<td>0.10 <span class="italicPercent">(0.62)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.01)</span></td>
+<td>0.29</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 08 10:40:37</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 08 10:40:37</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://ext-strm-ruekt05ttk-01.strm.yandex.net/" target="_blank" class="domainLink">ext-strm-ruekt05ttk-01.strm.yandex.net</a></td>
+<td>1 <span class="italicPercent">(0.14)</span></td>
+<td>0.10 <span class="italicPercent">(0.62)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+<td>0.50</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 08 10:40:37</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 08 10:40:37</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://ext-strm-rustw01rtk-01.strm.yandex.net/" target="_blank" class="domainLink">ext-strm-rustw01rtk-01.strm.yandex.net</a></td>
+<td>1 <span class="italicPercent">(0.14)</span></td>
+<td>0.10 <span class="italicPercent">(0.62)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+<td>0.46</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 08 10:40:37</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 08 10:40:37</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://ext-strm-chlbttk-01.strm.yandex.net/" target="_blank" class="domainLink">ext-strm-chlbttk-01.strm.yandex.net</a></td>
+<td>1 <span class="italicPercent">(0.14)</span></td>
+<td>0.10 <span class="italicPercent">(0.62)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+<td>0.43</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 08 10:40:37</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 08 10:40:37</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://yccdn-test.cdn.yandex.net/" target="_blank" class="domainLink">yccdn-test.cdn.yandex.net</a></td>
+<td>1 <span class="italicPercent">(0.14)</span></td>
+<td>0.10 <span class="italicPercent">(0.62)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+<td>0.33</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 08 10:40:37</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 08 10:40:37</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://malware-filter.gitlab.io/" target="_blank" class="domainLink">malware-filter.gitlab.io</a></td>
+<td>1 <span class="italicPercent">(0.14)</span></td>
+<td>0.08 <span class="italicPercent">(0.50)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.01)</span></td>
+<td>0.11</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 07 16:19:20</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 07 16:19:20</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://hd.kinopoisk.ru/" target="_blank" class="domainLink">hd.kinopoisk.ru</a></td>
+<td>3 <span class="italicPercent">(0.43)</span></td>
+<td>0.07 <span class="italicPercent">(0.43)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.01)</span></td>
+<td>0.13</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 08 10:39:30</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 08 10:39:30</td></tr>
+<tr><td>Oct 08 10:39:29</td></tr>
+<tr><td>Oct 08 10:39:29</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://payment-widget.plus.kinopoisk.ru/" target="_blank" class="domainLink">payment-widget.plus.kinopoisk.ru</a></td>
+<td>1 <span class="italicPercent">(0.14)</span></td>
+<td>0.06 <span class="italicPercent">(0.37)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+<td>0.22</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 08 10:39:33</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 08 10:39:33</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://graphql.kinopoisk.ru/" target="_blank" class="domainLink">graphql.kinopoisk.ru</a></td>
+<td>14 <span class="italicPercent">(2.02)</span></td>
+<td>0.05 <span class="italicPercent">(0.32)</span></td>
+<td>00:00:02 <span class="italicPercent">(0.04)</span></td>
+<td>0.02</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 08 10:39:35</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 08 10:39:34</td></tr>
+<tr><td>Oct 08 10:39:34</td></tr>
+<tr><td>Oct 08 10:39:34</td></tr>
+<tr><td>Oct 08 10:39:34</td></tr>
+<tr><td>Oct 08 10:39:33</td></tr>
+<tr><td>Oct 08 10:39:33</td></tr>
+<tr><td>Oct 08 10:39:33</td></tr>
+<tr><td>Oct 08 10:39:33</td></tr>
+<tr><td>Oct 08 10:39:33</td></tr>
+<tr><td>Oct 08 10:39:33</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://s01.yapfiles.ru/" target="_blank" class="domainLink">s01.yapfiles.ru</a></td>
+<td>1 <span class="italicPercent">(0.14)</span></td>
+<td>0.05 <span class="italicPercent">(0.29)</span></td>
+<td>00:00:04 <span class="italicPercent">(0.07)</span></td>
+<td>0.01</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 15:52:44</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 15:52:44</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://ogads-pa.clients6.google.com/" target="_blank" class="domainLink">ogads-pa.clients6.google.com</a></td>
+<td>9 <span class="italicPercent">(1.30)</span></td>
+<td>0.03 <span class="italicPercent">(0.21)</span></td>
+<td>00:00:20 <span class="italicPercent">(0.31)</span></td>
+<td>0.00</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:02:41</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:02:41</td></tr>
+<tr><td>Oct 13 16:02:31</td></tr>
+<tr><td>Oct 13 16:02:31</td></tr>
+<tr><td>Oct 08 10:35:01</td></tr>
+<tr><td>Oct 08 10:35:00</td></tr>
+<tr><td>Oct 08 09:21:36</td></tr>
+<tr><td>Oct 08 09:16:47</td></tr>
+<tr><td>Oct 07 15:57:28</td></tr>
+<tr><td>Oct 07 15:57:28</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://edge.microsoft.com/" target="_blank" class="domainLink">edge.microsoft.com</a></td>
+<td>10 <span class="italicPercent">(1.44)</span></td>
+<td>0.03 <span class="italicPercent">(0.20)</span></td>
+<td>00:06:19 <span class="italicPercent">(5.83)</span></td>
+<td>0.00</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 17:03:04</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 17:03:04</td></tr>
+<tr><td>Oct 13 16:02:21</td></tr>
+<tr><td>Oct 13 15:50:29</td></tr>
+<tr><td>Oct 13 15:13:58</td></tr>
+<tr><td>Oct 13 14:20:29</td></tr>
+<tr><td>Oct 08 10:39:33</td></tr>
+<tr><td>Oct 07 16:22:33</td></tr>
+<tr><td>Oct 07 16:21:09</td></tr>
+<tr><td>Oct 07 16:18:39</td></tr>
+<tr><td>Oct 07 16:18:09</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://api.yapfiles.ru/" target="_blank" class="domainLink">api.yapfiles.ru</a></td>
+<td>4 <span class="italicPercent">(0.58)</span></td>
+<td>0.03 <span class="italicPercent">(0.18)</span></td>
+<td>00:00:13 <span class="italicPercent">(0.21)</span></td>
+<td>0.00</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:55:57</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:55:57</td></tr>
+<tr><td>Oct 13 16:13:12</td></tr>
+<tr><td>Oct 13 16:02:41</td></tr>
+<tr><td>Oct 13 15:52:44</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://store.rambler.ru/" target="_blank" class="domainLink">store.rambler.ru</a></td>
+<td>1 <span class="italicPercent">(0.14)</span></td>
+<td>0.03 <span class="italicPercent">(0.18)</span></td>
+<td>00:00:07 <span class="italicPercent">(0.12)</span></td>
+<td>0.00</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:02:31</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:02:31</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://encrypted-tbn0.gstatic.com/" target="_blank" class="domainLink">encrypted-tbn0.gstatic.com</a></td>
+<td>1 <span class="italicPercent">(0.14)</span></td>
+<td>0.03 <span class="italicPercent">(0.18)</span></td>
+<td>00:00:08 <span class="italicPercent">(0.13)</span></td>
+<td>0.00</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:02:41</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:02:41</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://yandex.ru/" target="_blank" class="domainLink">yandex.ru</a></td>
+<td>7 <span class="italicPercent">(1.01)</span></td>
+<td>0.02 <span class="italicPercent">(0.15)</span></td>
+<td>00:00:45 <span class="italicPercent">(0.70)</span></td>
+<td>0.00</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:02:41</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:02:41</td></tr>
+<tr><td>Oct 13 15:52:44</td></tr>
+<tr><td>Oct 13 15:51:14</td></tr>
+<tr><td>Oct 08 10:39:28</td></tr>
+<tr><td>Oct 08 09:21:47</td></tr>
+<tr><td>Oct 08 09:17:01</td></tr>
+<tr><td>Oct 07 15:57:34</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://id.rambler.ru/" target="_blank" class="domainLink">id.rambler.ru</a></td>
+<td>9 <span class="italicPercent">(1.30)</span></td>
+<td>0.02 <span class="italicPercent">(0.15)</span></td>
+<td>00:00:19 <span class="italicPercent">(0.30)</span></td>
+<td>0.00</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:02:31</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:02:31</td></tr>
+<tr><td>Oct 13 16:02:31</td></tr>
+<tr><td>Oct 08 09:21:35</td></tr>
+<tr><td>Oct 08 09:21:34</td></tr>
+<tr><td>Oct 08 09:21:34</td></tr>
+<tr><td>Oct 08 09:21:34</td></tr>
+<tr><td>Oct 08 09:16:49</td></tr>
+<tr><td>Oct 08 09:16:47</td></tr>
+<tr><td>Oct 08 09:16:47</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://upload.wikimedia.org/" target="_blank" class="domainLink">upload.wikimedia.org</a></td>
+<td>4 <span class="italicPercent">(0.58)</span></td>
+<td>0.02 <span class="italicPercent">(0.11)</span></td>
+<td>00:00:08 <span class="italicPercent">(0.13)</span></td>
+<td>0.00</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:02:31</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:02:31</td></tr>
+<tr><td>Oct 08 10:35:02</td></tr>
+<tr><td>Oct 08 10:35:02</td></tr>
+<tr><td>Oct 08 09:21:37</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://ya.ru/" target="_blank" class="domainLink">ya.ru</a></td>
+<td>6 <span class="italicPercent">(0.87)</span></td>
+<td>0.02 <span class="italicPercent">(0.11)</span></td>
+<td>00:00:44 <span class="italicPercent">(0.68)</span></td>
+<td>0.00</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:02:41</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:02:41</td></tr>
+<tr><td>Oct 13 15:52:44</td></tr>
+<tr><td>Oct 13 15:51:14</td></tr>
+<tr><td>Oct 08 09:21:47</td></tr>
+<tr><td>Oct 08 09:17:01</td></tr>
+<tr><td>Oct 07 15:57:35</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://favicon.yandex.net/" target="_blank" class="domainLink">favicon.yandex.net</a></td>
+<td>10 <span class="italicPercent">(1.44)</span></td>
+<td>0.02 <span class="italicPercent">(0.10)</span></td>
+<td>00:00:08 <span class="italicPercent">(0.12)</span></td>
+<td>0.00</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 15:52:34</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 15:52:34</td></tr>
+<tr><td>Oct 08 10:39:28</td></tr>
+<tr><td>Oct 08 10:39:27</td></tr>
+<tr><td>Oct 08 10:39:26</td></tr>
+<tr><td>Oct 08 10:39:26</td></tr>
+<tr><td>Oct 08 10:39:26</td></tr>
+<tr><td>Oct 08 09:16:49</td></tr>
+<tr><td>Oct 07 15:57:27</td></tr>
+<tr><td>Oct 07 15:57:26</td></tr>
+<tr><td>Oct 07 15:57:26</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://www.yapfiles.ru/" target="_blank" class="domainLink">www.yapfiles.ru</a></td>
+<td>4 <span class="italicPercent">(0.58)</span></td>
+<td>0.02 <span class="italicPercent">(0.10)</span></td>
+<td>00:00:15 <span class="italicPercent">(0.24)</span></td>
+<td>0.00</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:55:57</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:55:57</td></tr>
+<tr><td>Oct 13 16:13:12</td></tr>
+<tr><td>Oct 13 16:02:41</td></tr>
+<tr><td>Oct 13 15:52:44</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://ublockorigin.pages.dev/" target="_blank" class="domainLink">ublockorigin.pages.dev</a></td>
+<td>1 <span class="italicPercent">(0.14)</span></td>
+<td>0.01 <span class="italicPercent">(0.08)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+<td>0.04</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 07 16:19:18</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 07 16:19:18</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://en.wikipedia.org/" target="_blank" class="domainLink">en.wikipedia.org</a></td>
+<td>5 <span class="italicPercent">(0.72)</span></td>
+<td>0.01 <span class="italicPercent">(0.06)</span></td>
+<td>00:00:07 <span class="italicPercent">(0.12)</span></td>
+<td>0.00</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:02:31</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:02:31</td></tr>
+<tr><td>Oct 08 10:35:02</td></tr>
+<tr><td>Oct 08 10:35:02</td></tr>
+<tr><td>Oct 08 09:21:38</td></tr>
+<tr><td>Oct 08 09:21:38</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://www.bing.com/" target="_blank" class="domainLink">www.bing.com</a></td>
+<td>3 <span class="italicPercent">(0.43)</span></td>
+<td>0.01 <span class="italicPercent">(0.05)</span></td>
+<td>00:00:01 <span class="italicPercent">(0.02)</span></td>
+<td>0.01</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:07:18</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:07:18</td></tr>
+<tr><td>Oct 08 09:17:03</td></tr>
+<tr><td>Oct 07 16:18:10</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://weather.rambler.ru/" target="_blank" class="domainLink">weather.rambler.ru</a></td>
+<td>3 <span class="italicPercent">(0.43)</span></td>
+<td>0.01 <span class="italicPercent">(0.05)</span></td>
+<td>00:00:09 <span class="italicPercent">(0.14)</span></td>
+<td>0.00</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:02:31</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:02:31</td></tr>
+<tr><td>Oct 08 09:21:35</td></tr>
+<tr><td>Oct 08 09:16:48</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://xpaywalletcdn-prod.azureedge.net/" target="_blank" class="domainLink">xpaywalletcdn-prod.azureedge.net</a></td>
+<td>2 <span class="italicPercent">(0.29)</span></td>
+<td>0.01 <span class="italicPercent">(0.04)</span></td>
+<td>00:00:04 <span class="italicPercent">(0.07)</span></td>
+<td>0.00</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 13 16:07:22</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 13 16:07:22</td></tr>
+<tr><td>Oct 08 09:17:03</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://api.acquisition-gwe.plus.kinopoisk.ru/" target="_blank" class="domainLink">api.acquisition-gwe.plus.kinopoisk.ru</a></td>
+<td>2 <span class="italicPercent">(0.29)</span></td>
+<td>0.01 <span class="italicPercent">(0.04)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+<td>0.02</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 08 10:39:34</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 08 10:39:34</td></tr>
+<tr><td>Oct 08 10:39:34</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://sso.kinopoisk.ru/" target="_blank" class="domainLink">sso.kinopoisk.ru</a></td>
+<td>1 <span class="italicPercent">(0.14)</span></td>
+<td>0.00 <span class="italicPercent">(0.03)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+<td>0.04</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 08 10:39:30</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 08 10:39:30</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://sso.passport.yandex.ru/" target="_blank" class="domainLink">sso.passport.yandex.ru</a></td>
+<td>1 <span class="italicPercent">(0.14)</span></td>
+<td>0.00 <span class="italicPercent">(0.02)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+<td>0.03</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 08 10:39:29</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 08 10:39:29</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://strm.yandex.ru/" target="_blank" class="domainLink">strm.yandex.ru</a></td>
+<td>2 <span class="italicPercent">(0.29)</span></td>
+<td>0.00 <span class="italicPercent">(0.02)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+<td>0.02</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 08 10:40:37</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 08 10:40:37</td></tr>
+<tr><td>Oct 08 10:40:36</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://tracking.ott.yandex.net/" target="_blank" class="domainLink">tracking.ott.yandex.net</a></td>
+<td>4 <span class="italicPercent">(0.58)</span></td>
+<td>0.00 <span class="italicPercent">(0.02)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.01)</span></td>
+<td>0.01</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 08 10:39:34</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 08 10:39:34</td></tr>
+<tr><td>Oct 08 10:39:34</td></tr>
+<tr><td>Oct 08 10:39:34</td></tr>
+<tr><td>Oct 08 10:39:34</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://raw.githubusercontent.com/" target="_blank" class="domainLink">raw.githubusercontent.com</a></td>
+<td>1 <span class="italicPercent">(0.14)</span></td>
+<td>0.00 <span class="italicPercent">(0.01)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+<td>0.01</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 07 16:18:47</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 07 16:18:47</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://atlas.rambler.ru/" target="_blank" class="domainLink">atlas.rambler.ru</a></td>
+<td>2 <span class="italicPercent">(0.29)</span></td>
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+<td>0.01</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 08 09:22:06</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 08 09:22:06</td></tr>
+<tr><td>Oct 08 09:22:06</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+<tr>
+<td><a href="http://myip.ru/" target="_blank" class="domainLink">myip.ru</a></td>
+<td>1 <span class="italicPercent">(0.14)</span></td>
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+<td>0.00</td>
+<td>
+<div class="tooltipLink"><span class="information">Oct 07 15:57:33</span><div class="tooltip">
+<table><tr><th>Последнее посещение</th></tr>
+<tr><td>Oct 07 15:57:33</td></tr>
+</table>
+</div></div>
+</td>
+
+</tr>
+</tbody>
+</table>
+
+	</div>
+	<div id="footer">
+		<h4>
+		Отчет сгенерирован программой <a href="http://squidanalyzer.darold.net/">SquidAnalyzer v6.6</a>
+		</h4>
+	</div>
+</div>
+</body>
+</html>

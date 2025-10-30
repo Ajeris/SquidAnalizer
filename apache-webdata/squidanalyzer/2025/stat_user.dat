@@ -1,0 +1,7 @@
+192.168.10.11 hits_month=10:3090,;bytes_month=10:2547647,;duration_month=10:46,;largest_file_size=19292;largest_file_url=cache_object://localhost/active_requests
+192.168.10.41 hits_month=10:693,;bytes_month=10:16711862,;duration_month=10:6509183,;largest_file_size=984911;largest_file_url=st3-23.vk.com:443
+192.168.11.38 hits_month=10:148,;bytes_month=10:23071739,;duration_month=10:3478190,;largest_file_size=6072476;largest_file_url=rusradio.hostingradio.ru:443
+192.168.11.5 hits_month=10:0,;bytes_month=10:0,;duration_month=10:0,;largest_file_size=;largest_file_url=
+sgolota@tp.oil hits_month=10:8210,;bytes_month=10:889441939,;duration_month=10:40313859,;largest_file_size=66705602;largest_file_url=https://releases.warp.dev/stable/v0.2025.10.01.08.12.stable_02/warpsetup.exe
+vpupkin@tp.oil hits_month=10:609,;bytes_month=10:34268893,;duration_month=10:11643147,;largest_file_size=4228456;largest_file_url=msedgeextensions.sf.tlu.dl.delivery.mp.microsoft.com:443
+vrogov@tp.oil hits_month=10:2173,;bytes_month=10:253770873,;duration_month=10:50489227,;largest_file_size=16021380;largest_file_url=cloclo58.datacloudmail.ru:443

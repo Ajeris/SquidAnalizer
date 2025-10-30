@@ -1,0 +1,4652 @@
+
+<html>
+<head>
+<meta NAME="robots" CONTENT="noindex,nofollow" />
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache" />
+<meta HTTP-EQUIV="Cache-Control" content="no-cache" />
+<meta HTTP-EQUIV="Expires" CONTENT="Thu Oct 30 14:52:59 2025" />
+<meta HTTP-EQUIV="Generator" CONTENT="SquidAnalyzer 6.6" />
+<meta HTTP-EQUIV="Date" CONTENT="Thu Oct 30 14:52:59 2025" />
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
+<meta HTTP-EQUIV="refresh" CONTENT="300">
+<title>SquidAnalyzer 6.6 Report</title>
+<link rel="stylesheet" type="text/css" href="/squidanalyzer/squidanalyzer.css" media="screen" />
+<!-- javascript to sort table -->
+<script type="text/javascript" src="/squidanalyzer/sorttable.js"></script>
+<!-- javascript to draw graphics -->
+<script type="text/javascript" src="/squidanalyzer/flotr2.js"></script>
+<script  type="text/javascript" >sortpos = 1;</script>
+</head>
+<body onload="var myTH = document.getElementById('contenu').getElementsByTagName('th')[1]; sorttable.innerSortFunction.apply(myTH, []);">
+<div id="conteneur">
+<a name="atop"></a>
+	<div id="header">
+		<div id="alignLeft">
+		<h1>
+		<a href="/squidanalyzer/"><img src="/squidanalyzer/images/logo-squidanalyzer.png" title="SquidAnalyzer 6.6" border="0"></a> SquidAnalyzer
+		</h1>
+		<p class="sous-titre">
+		Дата создания отчета Thu Oct 30 14:52:59 2025.
+		</p>
+		</div>
+		<div id="calendar">
+<table><tr><th colspan="8">2025-10</th></tr>
+<tr><td>&nbsp;</td><td align="center">Пн</td><td align="center">Вт</td><td align="center">Ср</td><td align="center">Чт</td><td align="center">Пт</td><td align="center">Сб</td><td align="center">Вс</td></tr>
+<tr><th>40</th><td>&nbsp;</td><td>&nbsp;</td><td>01</td><td>02</td><td>03</td><td>04</td><td>05</td></tr>
+<tr><th><a href="/squidanalyzer/2025/week41">41</a></th><td>06</td><td><a href="../07/index.html">07</a></td><td><a href="../08/index.html">08</a></td><td><a href="../09/index.html">09</a></td><td><a href="../10/index.html">10</a></td><td><a href="../11/index.html">11</a></td><td><a href="../12/index.html">12</a></td></tr>
+<tr><th><a href="/squidanalyzer/2025/week42">42</a></th><td><a href="../13/index.html">13</a></td><td><a href="../14/index.html">14</a></td><td><a href="../15/index.html">15</a></td><td>16</td><td>17</td><td>18</td><td>19</td></tr>
+<tr><th>43</th><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
+<tr><th>44</th><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</table>
+</div>
+
+	</div>
+	
+<div id="menu">
+<ul>
+<li><a href="../index.html"><span class="iconArrow">Назад</span></a></li>
+
+<li><a href="domain.html"><span class="iconDomain">Рейтинг доменов</span></a></li>
+<li><a href="url.html"><span class="iconUrl">Рейтинг URL</span></a></li>
+<li><a href="denied.html"><span class="iconUrl">Рейтинг отказов в доступе</span></a></li>
+
+<li><a href="user.html"><span class="iconUser">Пользователи</span></a></li>
+
+<li><a href="network.html"><span class="iconNetwork">Подсети</span></a></li>
+<li><a href="mime_type.html"><span class="iconMime">Типы MIME</span></a></li>
+</ul>
+</div>
+
+	<div id="contenu">
+<h3>Кол-во доменов: 81</h3>
+
+<h4>100 самых посещаемых доменов за 2025-10-13</h4>
+<div class="line-separator"></div>
+
+<style>
+  #container {
+    display: table;
+  }
+  #row  {
+    display: table-row;
+  }
+  #domain_hits, #second_domain_hits {
+    display: table-cell;
+  }
+  #domain_hits { z-index: 999; }
+</style>
+<table class="graphs"><tr><td>
+<div id="container">
+<div id="domain_hits"></div>
+<script type="text/javascript">
+(function basic_pie(container) {
+
+
+//document.writeln('<input type="button" class="dldButton" value="To Image" id="toimage1" onclick="return false;">'+
+//	'<input type="button" class="dldButton" value="Download" id="download1" onclick="return false;">' +
+//	'<input type="button" class="dldButton" value="Reset" id="reset1" onclick="return false;">'
+//	);
+
+    var d1 = [ [0,972] ];
+ var d2 = [ [0,627] ];
+ var d3 = [ [0,239] ];
+ var d4 = [ [0,162] ];
+ var d5 = [ [0,68] ];
+
+    var graph = Flotr.draw(container, [
+    { data: d1, label: ".ru" },
+ { data: d2, label: ".com" },
+ { data: d3, label: ".net" },
+ { data: d4, label: ".kz" },
+ { data: d5, label: "others" },
+
+    ], {
+        title: "Статистика запросов по доменам за 2025-10-13",
+        HtmlText: false,
+        grid: {
+            verticalLines: false,
+            horizontalLines: false,
+	    outline: '',
+        },
+        xaxis: {
+            showLabels: false,
+	    title: "Домены"
+        },
+        yaxis: {
+            showLabels: false,
+	    title: ""
+        },
+        pie: {
+            show: true,
+	    explode: 6
+        },
+        mouse: {
+            track: true,
+	    trackFormatter: function(obj){ return pieTracker(obj) },
+	    relative: true
+        },
+        legend: {
+            position: "sw",
+            backgroundColor: "#D2E8FF",
+	    backgroundOpacity: 0.4
+        }
+    });
+/*
+    document.getElementById('reset1').onclick = function() {
+      graph.download.restoreCanvas();
+    };
+    document.getElementById('download1').onclick = function(){
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png');
+    };
+    document.getElementById('toimage1').onclick = function() {
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png', null, null, true);
+    };
+i*/
+
+})(document.getElementById("domain_hits"));
+</script>
+
+</div>
+</td><td>
+<div id="container">
+<div id="second_domain_hits"></div>
+<script type="text/javascript">
+(function basic_pie(container) {
+
+
+//document.writeln('<input type="button" class="dldButton" value="To Image" id="toimage1" onclick="return false;">'+
+//	'<input type="button" class="dldButton" value="Download" id="download1" onclick="return false;">' +
+//	'<input type="button" class="dldButton" value="Reset" id="reset1" onclick="return false;">'
+//	);
+
+    var d1 = [ [0,492] ];
+ var d2 = [ [0,384] ];
+ var d3 = [ [0,187] ];
+ var d4 = [ [0,160] ];
+ var d5 = [ [0,145] ];
+ var d6 = [ [0,112] ];
+ var d7 = [ [0,92] ];
+ var d8 = [ [0,80] ];
+ var d9 = [ [0,79] ];
+ var d10 = [ [0,75] ];
+ var d11 = [ [0,73] ];
+ var d12 = [ [0,56] ];
+ var d13 = [ [0,46] ];
+ var d14 = [ [0,44] ];
+ var d15 = [ [0,43] ];
+
+    var graph = Flotr.draw(container, [
+    { data: d1, label: "rambler.ru" },
+ { data: d2, label: "others" },
+ { data: d3, label: "mail.ru" },
+ { data: d4, label: "yandex.kz" },
+ { data: d5, label: "vk.com" },
+ { data: d6, label: "yandex.net" },
+ { data: d7, label: "microsoft.com" },
+ { data: d8, label: "imgsmail.ru" },
+ { data: d9, label: "yapfiles.ru" },
+ { data: d10, label: "yastatic.net" },
+ { data: d11, label: "google.com" },
+ { data: d12, label: "yandex.ru" },
+ { data: d13, label: "userapi.com" },
+ { data: d14, label: "yaplakal.com" },
+ { data: d15, label: "gstatic.com" },
+
+    ], {
+        title: "Статистика запросов по доменам второго уровня за 2025-10-13",
+        HtmlText: false,
+        grid: {
+            verticalLines: false,
+            horizontalLines: false,
+	    outline: '',
+        },
+        xaxis: {
+            showLabels: false,
+	    title: "Домены"
+        },
+        yaxis: {
+            showLabels: false,
+	    title: ""
+        },
+        pie: {
+            show: true,
+	    explode: 6
+        },
+        mouse: {
+            track: true,
+	    trackFormatter: function(obj){ return pieTracker(obj) },
+	    relative: true
+        },
+        legend: {
+            position: "sw",
+            backgroundColor: "#D2E8FF",
+	    backgroundOpacity: 0.4
+        }
+    });
+/*
+    document.getElementById('reset1').onclick = function() {
+      graph.download.restoreCanvas();
+    };
+    document.getElementById('download1').onclick = function(){
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png');
+    };
+    document.getElementById('toimage1').onclick = function() {
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png', null, null, true);
+    };
+i*/
+
+})(document.getElementById("second_domain_hits"));
+</script>
+
+</div>
+</td></tr>
+<tr><td>
+<style>
+  #container {
+    display: table;
+  }
+  #row  {
+    display: table-row;
+  }
+  #domain_bytes, #second_domain_bytes {
+    display: table-cell;
+  }
+  #domain_bytes { z-index: 999; }
+</style>
+<div id="container">
+<div id="domain_bytes"></div>
+<script type="text/javascript">
+(function basic_pie(container) {
+
+
+//document.writeln('<input type="button" class="dldButton" value="To Image" id="toimage1" onclick="return false;">'+
+//	'<input type="button" class="dldButton" value="Download" id="download1" onclick="return false;">' +
+//	'<input type="button" class="dldButton" value="Reset" id="reset1" onclick="return false;">'
+//	);
+
+    var d1 = [ [0,148666153] ];
+ var d2 = [ [0,67170488] ];
+ var d3 = [ [0,17006003] ];
+ var d4 = [ [0,5609707] ];
+ var d5 = [ [0,5235311] ];
+
+    var graph = Flotr.draw(container, [
+    { data: d1, label: ".ru" },
+ { data: d2, label: ".com" },
+ { data: d3, label: ".net" },
+ { data: d4, label: "others" },
+ { data: d5, label: ".kz" },
+
+    ], {
+        title: "Статистика трафика по доменам за 2025-10-13",
+        HtmlText: false,
+        grid: {
+            verticalLines: false,
+            horizontalLines: false,
+	    outline: '',
+        },
+        xaxis: {
+            showLabels: false,
+	    title: "Домены"
+        },
+        yaxis: {
+            showLabels: false,
+	    title: ""
+        },
+        pie: {
+            show: true,
+	    explode: 6
+        },
+        mouse: {
+            track: true,
+	    trackFormatter: function(obj){ return pieTracker(obj) },
+	    relative: true
+        },
+        legend: {
+            position: "sw",
+            backgroundColor: "#D2E8FF",
+	    backgroundOpacity: 0.4
+        }
+    });
+/*
+    document.getElementById('reset1').onclick = function() {
+      graph.download.restoreCanvas();
+    };
+    document.getElementById('download1').onclick = function(){
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png');
+    };
+    document.getElementById('toimage1').onclick = function() {
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png', null, null, true);
+    };
+i*/
+
+})(document.getElementById("domain_bytes"));
+</script>
+
+</div>
+</td><td>
+<div id="container">
+<div id="second_domain_bytes"></div>
+<script type="text/javascript">
+(function basic_pie(container) {
+
+
+//document.writeln('<input type="button" class="dldButton" value="To Image" id="toimage1" onclick="return false;">'+
+//	'<input type="button" class="dldButton" value="Download" id="download1" onclick="return false;">' +
+//	'<input type="button" class="dldButton" value="Reset" id="reset1" onclick="return false;">'
+//	);
+
+    var d1 = [ [0,45239468] ];
+ var d2 = [ [0,44276439] ];
+ var d3 = [ [0,42386989] ];
+ var d4 = [ [0,32050200] ];
+ var d5 = [ [0,16175460] ];
+ var d6 = [ [0,13427839] ];
+ var d7 = [ [0,11991388] ];
+ var d8 = [ [0,9406264] ];
+ var d9 = [ [0,9187780] ];
+ var d10 = [ [0,7912524] ];
+ var d11 = [ [0,6408505] ];
+ var d12 = [ [0,5224806] ];
+
+    var graph = Flotr.draw(container, [
+    { data: d1, label: "others" },
+ { data: d2, label: "yapfiles.ru" },
+ { data: d3, label: "imgsmail.ru" },
+ { data: d4, label: "datacloudmail.ru" },
+ { data: d5, label: "rambler.ru" },
+ { data: d6, label: "vk.com" },
+ { data: d7, label: "google.com" },
+ { data: d8, label: "googlevideo.com" },
+ { data: d9, label: "hostingradio.ru" },
+ { data: d10, label: "yastatic.net" },
+ { data: d11, label: "yaplakal.com" },
+ { data: d12, label: "yandex.kz" },
+
+    ], {
+        title: "Статистика трафика по доменам второго уровня за 2025-10-13",
+        HtmlText: false,
+        grid: {
+            verticalLines: false,
+            horizontalLines: false,
+	    outline: '',
+        },
+        xaxis: {
+            showLabels: false,
+	    title: "Домены"
+        },
+        yaxis: {
+            showLabels: false,
+	    title: ""
+        },
+        pie: {
+            show: true,
+	    explode: 6
+        },
+        mouse: {
+            track: true,
+	    trackFormatter: function(obj){ return pieTracker(obj) },
+	    relative: true
+        },
+        legend: {
+            position: "sw",
+            backgroundColor: "#D2E8FF",
+	    backgroundOpacity: 0.4
+        }
+    });
+/*
+    document.getElementById('reset1').onclick = function() {
+      graph.download.restoreCanvas();
+    };
+    document.getElementById('download1').onclick = function(){
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png');
+    };
+    document.getElementById('toimage1').onclick = function() {
+	if (Flotr.isIE && Flotr.isIE < 9) {
+		alert(
+		"Your browser doesn't allow you to get a bitmap image from the plot, " +
+		"you can only get a VML image that you can use in Microsoft Office.<br />"
+		);
+	}
+      graph.download.saveImage('png', null, null, true);
+    };
+i*/
+
+})(document.getElementById("second_domain_bytes"));
+</script>
+
+</div>
+</td></tr></table>
+<table class="sortable stata">
+<thead>
+<tr>
+<th>URL</th>
+
+<th>Запросы (%)</th>
+<th>Мегабайт (%)</th>
+<th>Продолжительность (%)</th>
+
+<th>Пропускная способность (MB/s)</th>
+<th>Последнее посещение</th>
+
+<th>Первое посещение</th>
+
+</tr>
+</thead>
+<tbody>
+<tr><td>
+<div class="tooltipLink"><span class="information">rambler.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>210</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>139</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>102</td></td></tr>
+<tr><td>192.168.11.38</td><td>29</td></td></tr>
+<tr><td>192.168.10.41</td><td>12</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>492 <span class="italicPercent">(23.79)</span></td>
+<td>15.43 <span class="italicPercent">(6.64)</span></td>
+<td>01:25:08 <span class="italicPercent">(12.03)</span></td>
+
+<td>0.00</td>
+<td>18:27:53</td>
+
+<td>09:40:42</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">mail.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>sgolota@tp.oil</td><td>164</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>18</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>5</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>187 <span class="italicPercent">(9.04)</span></td>
+<td>2.38 <span class="italicPercent">(1.02)</span></td>
+<td>00:51:45 <span class="italicPercent">(7.32)</span></td>
+
+<td>0.00</td>
+<td>17:47:08</td>
+
+<td>09:43:23</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yandex.kz</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>79</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>32</td></td></tr>
+<tr><td>192.168.10.41</td><td>22</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>18</td></td></tr>
+<tr><td>192.168.11.38</td><td>9</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>160 <span class="italicPercent">(7.74)</span></td>
+<td>4.98 <span class="italicPercent">(2.14)</span></td>
+<td>00:30:58 <span class="italicPercent">(4.38)</span></td>
+
+<td>0.00</td>
+<td>17:47:26</td>
+
+<td>09:40:48</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">vk.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>44</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>31</td></td></tr>
+<tr><td>192.168.10.41</td><td>30</td></td></tr>
+<tr><td>192.168.11.38</td><td>29</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>11</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>145 <span class="italicPercent">(7.01)</span></td>
+<td>12.81 <span class="italicPercent">(5.51)</span></td>
+<td>02:16:51 <span class="italicPercent">(19.34)</span></td>
+
+<td>0.00</td>
+<td>17:46:14</td>
+
+<td>10:33:54</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yandex.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>37</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>36</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>30</td></td></tr>
+<tr><td>192.168.10.41</td><td>5</td></td></tr>
+<tr><td>192.168.11.38</td><td>4</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>112 <span class="italicPercent">(5.42)</span></td>
+<td>4.48 <span class="italicPercent">(1.93)</span></td>
+<td>00:26:56 <span class="italicPercent">(3.81)</span></td>
+
+<td>0.00</td>
+<td>17:47:08</td>
+
+<td>09:40:42</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">microsoft.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>29</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>29</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>17</td></td></tr>
+<tr><td>192.168.11.38</td><td>12</td></td></tr>
+<tr><td>192.168.10.41</td><td>5</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>92 <span class="italicPercent">(4.45)</span></td>
+<td>4.55 <span class="italicPercent">(1.96)</span></td>
+<td>01:24:44 <span class="italicPercent">(11.98)</span></td>
+
+<td>0.00</td>
+<td>23:49:04</td>
+
+<td>00:17:43</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">imgsmail.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>sgolota@tp.oil</td><td>67</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>13</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>80 <span class="italicPercent">(3.87)</span></td>
+<td>40.42 <span class="italicPercent">(17.39)</span></td>
+<td>00:18:19 <span class="italicPercent">(2.59)</span></td>
+
+<td>0.04</td>
+<td>12:14:34</td>
+
+<td>09:43:20</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yapfiles.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>32</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>17</td></td></tr>
+<tr><td>192.168.11.38</td><td>11</td></td></tr>
+<tr><td>192.168.10.41</td><td>11</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>8</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>79 <span class="italicPercent">(3.82)</span></td>
+<td>42.23 <span class="italicPercent">(18.17)</span></td>
+<td>00:06:47 <span class="italicPercent">(0.96)</span></td>
+
+<td>0.10</td>
+<td>17:45:14</td>
+
+<td>11:54:10</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yastatic.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>27</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>21</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>20</td></td></tr>
+<tr><td>192.168.11.38</td><td>4</td></td></tr>
+<tr><td>192.168.10.41</td><td>3</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>75 <span class="italicPercent">(3.63)</span></td>
+<td>7.55 <span class="italicPercent">(3.25)</span></td>
+<td>00:04:39 <span class="italicPercent">(0.66)</span></td>
+
+<td>0.03</td>
+<td>17:45:14</td>
+
+<td>09:40:40</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">google.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>29</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>23</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>9</td></td></tr>
+<tr><td>192.168.11.38</td><td>8</td></td></tr>
+<tr><td>192.168.10.41</td><td>4</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>73 <span class="italicPercent">(3.53)</span></td>
+<td>11.44 <span class="italicPercent">(4.92)</span></td>
+<td>00:14:51 <span class="italicPercent">(2.10)</span></td>
+
+<td>0.01</td>
+<td>17:45:03</td>
+
+<td>08:06:34</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yandex.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>37</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>9</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>6</td></td></tr>
+<tr><td>192.168.10.41</td><td>3</td></td></tr>
+<tr><td>192.168.11.38</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>56 <span class="italicPercent">(2.71)</span></td>
+<td>1.02 <span class="italicPercent">(0.44)</span></td>
+<td>00:11:05 <span class="italicPercent">(1.57)</span></td>
+
+<td>0.00</td>
+<td>17:47:16</td>
+
+<td>09:41:03</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">userapi.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>17</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>15</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>13</td></td></tr>
+<tr><td>192.168.11.38</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>46 <span class="italicPercent">(2.22)</span></td>
+<td>0.76 <span class="italicPercent">(0.33)</span></td>
+<td>00:03:09 <span class="italicPercent">(0.45)</span></td>
+
+<td>0.00</td>
+<td>17:45:14</td>
+
+<td>11:53:30</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yaplakal.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>20</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>9</td></td></tr>
+<tr><td>192.168.10.41</td><td>6</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>5</td></td></tr>
+<tr><td>192.168.11.38</td><td>4</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>44 <span class="italicPercent">(2.13)</span></td>
+<td>6.11 <span class="italicPercent">(2.63)</span></td>
+<td>00:09:26 <span class="italicPercent">(1.33)</span></td>
+
+<td>0.01</td>
+<td>17:45:14</td>
+
+<td>11:54:10</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">gstatic.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>21</td></td></tr>
+<tr><td>192.168.11.38</td><td>8</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>8</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>5</td></td></tr>
+<tr><td>192.168.10.41</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>43 <span class="italicPercent">(2.08)</span></td>
+<td>2.08 <span class="italicPercent">(0.89)</span></td>
+<td>00:02:02 <span class="italicPercent">(0.29)</span></td>
+
+<td>0.02</td>
+<td>17:45:03</td>
+
+<td>10:30:17</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">bing.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>15</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>7</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>7</td></td></tr>
+<tr><td>192.168.10.41</td><td>1</td></td></tr>
+<tr><td>192.168.11.38</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>31 <span class="italicPercent">(1.50)</span></td>
+<td>4.34 <span class="italicPercent">(1.87)</span></td>
+<td>00:15:57 <span class="italicPercent">(2.26)</span></td>
+
+<td>0.00</td>
+<td>17:48:57</td>
+
+<td>08:01:15</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">youtube.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>24</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>24 <span class="italicPercent">(1.16)</span></td>
+<td>3.15 <span class="italicPercent">(1.35)</span></td>
+<td>00:01:53 <span class="italicPercent">(0.27)</span></td>
+
+<td>0.03</td>
+<td>10:55:05</td>
+
+<td>10:34:04</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">ya.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>8</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>5</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>5</td></td></tr>
+<tr><td>192.168.10.41</td><td>3</td></td></tr>
+<tr><td>192.168.11.38</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>22 <span class="italicPercent">(1.06)</span></td>
+<td>0.10 <span class="italicPercent">(0.04)</span></td>
+<td>00:08:55 <span class="italicPercent">(1.26)</span></td>
+
+<td>0.00</td>
+<td>17:47:16</td>
+
+<td>09:41:03</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">azureedge.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>8</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>6</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>3</td></td></tr>
+<tr><td>192.168.11.38</td><td>2</td></td></tr>
+<tr><td>192.168.10.41</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>20 <span class="italicPercent">(0.97)</span></td>
+<td>0.56 <span class="italicPercent">(0.24)</span></td>
+<td>00:04:43 <span class="italicPercent">(0.67)</span></td>
+
+<td>0.00</td>
+<td>17:57:17</td>
+
+<td>08:07:14</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">ad-tech.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>17</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>17 <span class="italicPercent">(0.82)</span></td>
+<td>0.11 <span class="italicPercent">(0.05)</span></td>
+<td>00:00:13 <span class="italicPercent">(0.03)</span></td>
+
+<td>0.01</td>
+<td>17:47:16</td>
+
+<td>17:47:06</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">googleapis.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>5</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>5</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>5</td></td></tr>
+<tr><td>192.168.11.38</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>16 <span class="italicPercent">(0.77)</span></td>
+<td>0.25 <span class="italicPercent">(0.11)</span></td>
+<td>00:01:56 <span class="italicPercent">(0.28)</span></td>
+
+<td>0.00</td>
+<td>17:47:16</td>
+
+<td>08:02:09</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">s-microsoft.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>15</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>15 <span class="italicPercent">(0.73)</span></td>
+<td>1.57 <span class="italicPercent">(0.68)</span></td>
+<td>00:02:07 <span class="italicPercent">(0.30)</span></td>
+
+<td>0.01</td>
+<td>17:42:54</td>
+
+<td>17:42:34</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">ytimg.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>15</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>15 <span class="italicPercent">(0.73)</span></td>
+<td>1.26 <span class="italicPercent">(0.54)</span></td>
+<td>00:00:45 <span class="italicPercent">(0.11)</span></td>
+
+<td>0.03</td>
+<td>10:54:56</td>
+
+<td>10:34:04</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">wikipedia.org</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>sgolota@tp.oil</td><td>12</td></td></tr>
+<tr><td>192.168.10.41</td><td>2</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>14 <span class="italicPercent">(0.68)</span></td>
+<td>0.43 <span class="italicPercent">(0.18)</span></td>
+<td>00:04:55 <span class="italicPercent">(0.70)</span></td>
+
+<td>0.00</td>
+<td>16:02:31</td>
+
+<td>10:30:11</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">online-red.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>192.168.11.38</td><td>14</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>14 <span class="italicPercent">(0.68)</span></td>
+<td>0.98 <span class="italicPercent">(0.42)</span></td>
+<td>00:01:54 <span class="italicPercent">(0.27)</span></td>
+
+<td>0.01</td>
+<td>16:57:30</td>
+
+<td>16:13:32</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">figma.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>sgolota@tp.oil</td><td>12</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>12 <span class="italicPercent">(0.58)</span></td>
+<td>4.32 <span class="italicPercent">(1.86)</span></td>
+<td>00:04:04 <span class="italicPercent">(0.58)</span></td>
+
+<td>0.02</td>
+<td>10:44:35</td>
+
+<td>10:38:55</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">wikimedia.org</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>sgolota@tp.oil</td><td>10</td></td></tr>
+<tr><td>192.168.10.41</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>11 <span class="italicPercent">(0.53)</span></td>
+<td>0.34 <span class="italicPercent">(0.15)</span></td>
+<td>00:02:31 <span class="italicPercent">(0.36)</span></td>
+
+<td>0.00</td>
+<td>16:02:31</td>
+
+<td>10:30:10</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">unknown</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>sgolota@tp.oil</td><td>5</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>3</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>2</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>10 <span class="italicPercent">(0.48)</span></td>
+<td>1.14 <span class="italicPercent">(0.49)</span></td>
+<td>00:40:46 <span class="italicPercent">(5.76)</span></td>
+
+<td>0.00</td>
+<td>20:21:33</td>
+
+<td>00:27:42</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">github.io</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>6</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>2</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>1</td></td></tr>
+<tr><td>192.168.11.38</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>10 <span class="italicPercent">(0.48)</span></td>
+<td>0.39 <span class="italicPercent">(0.17)</span></td>
+<td>00:40:59 <span class="italicPercent">(5.79)</span></td>
+
+<td>0.00</td>
+<td>20:57:47</td>
+
+<td>10:55:46</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">googlevideo.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>10</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>10 <span class="italicPercent">(0.48)</span></td>
+<td>8.97 <span class="italicPercent">(3.86)</span></td>
+<td>00:00:35 <span class="italicPercent">(0.08)</span></td>
+
+<td>0.25</td>
+<td>10:54:56</td>
+
+<td>10:34:24</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">twitter.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>5</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>4</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>9 <span class="italicPercent">(0.44)</span></td>
+<td>0.33 <span class="italicPercent">(0.14)</span></td>
+<td>00:00:51 <span class="italicPercent">(0.12)</span></td>
+
+<td>0.01</td>
+<td>17:45:14</td>
+
+<td>11:54:10</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">msn.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>8</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>9 <span class="italicPercent">(0.44)</span></td>
+<td>0.09 <span class="italicPercent">(0.04)</span></td>
+<td>00:11:22 <span class="italicPercent">(1.61)</span></td>
+
+<td>0.00</td>
+<td>18:01:29</td>
+
+<td>08:02:19</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">dsp-rambler.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>8</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>8 <span class="italicPercent">(0.39)</span></td>
+<td>0.39 <span class="italicPercent">(0.17)</span></td>
+<td>00:00:27 <span class="italicPercent">(0.07)</span></td>
+
+<td>0.01</td>
+<td>17:47:16</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">jsdelivr.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>sgolota@tp.oil</td><td>7</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>8 <span class="italicPercent">(0.39)</span></td>
+<td>0.54 <span class="italicPercent">(0.23)</span></td>
+<td>00:10:28 <span class="italicPercent">(1.48)</span></td>
+
+<td>0.00</td>
+<td>08:06:34</td>
+
+<td>01:31:20</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">sanity.io</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>sgolota@tp.oil</td><td>8</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>8 <span class="italicPercent">(0.39)</span></td>
+<td>2.01 <span class="italicPercent">(0.87)</span></td>
+<td>00:00:16 <span class="italicPercent">(0.04)</span></td>
+
+<td>0.12</td>
+<td>10:39:05</td>
+
+<td>10:38:51</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">azurefd.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>7</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>7 <span class="italicPercent">(0.34)</span></td>
+<td>0.79 <span class="italicPercent">(0.34)</span></td>
+<td>00:00:11 <span class="italicPercent">(0.03)</span></td>
+
+<td>0.07</td>
+<td>17:42:44</td>
+
+<td>17:42:21</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">tns-counter.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>6</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>6 <span class="italicPercent">(0.29)</span></td>
+<td>0.03 <span class="italicPercent">(0.01)</span></td>
+<td>00:00:05 <span class="italicPercent">(0.01)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:03</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">msedge.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>5</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>5 <span class="italicPercent">(0.24)</span></td>
+<td>0.04 <span class="italicPercent">(0.02)</span></td>
+<td>00:10:22 <span class="italicPercent">(1.47)</span></td>
+
+<td>0.00</td>
+<td>17:41:58</td>
+
+<td>17:40:57</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">ggpht.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>5</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>5 <span class="italicPercent">(0.24)</span></td>
+<td>0.14 <span class="italicPercent">(0.06)</span></td>
+<td>00:00:33 <span class="italicPercent">(0.08)</span></td>
+
+<td>0.00</td>
+<td>10:54:56</td>
+
+<td>10:34:07</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">microsoftonline.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>5</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>5 <span class="italicPercent">(0.24)</span></td>
+<td>0.03 <span class="italicPercent">(0.01)</span></td>
+<td>00:00:09 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>17:46:59</td>
+
+<td>17:21:19</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">githubusercontent.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>2</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>1</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>4 <span class="italicPercent">(0.19)</span></td>
+<td>0.43 <span class="italicPercent">(0.18)</span></td>
+<td>00:11:09 <span class="italicPercent">(1.58)</span></td>
+
+<td>0.00</td>
+<td>17:47:16</td>
+
+<td>06:31:21</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">datacloudmail.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>sgolota@tp.oil</td><td>4</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>4 <span class="italicPercent">(0.19)</span></td>
+<td>30.57 <span class="italicPercent">(13.15)</span></td>
+<td>00:00:28 <span class="italicPercent">(0.07)</span></td>
+
+<td>1.09</td>
+<td>12:11:44</td>
+
+<td>09:43:43</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">statically.io</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>2</td></td></tr>
+<tr><td>192.168.11.38</td><td>1</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>4 <span class="italicPercent">(0.19)</span></td>
+<td>0.65 <span class="italicPercent">(0.28)</span></td>
+<td>00:07:51 <span class="italicPercent">(1.11)</span></td>
+
+<td>0.00</td>
+<td>17:47:36</td>
+
+<td>10:09:53</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">office.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>4</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>4 <span class="italicPercent">(0.19)</span></td>
+<td>0.03 <span class="italicPercent">(0.01)</span></td>
+<td>00:00:31 <span class="italicPercent">(0.07)</span></td>
+
+<td>0.00</td>
+<td>17:44:24</td>
+
+<td>17:42:44</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">top100.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>2</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>3 <span class="italicPercent">(0.15)</span></td>
+<td>0.10 <span class="italicPercent">(0.04)</span></td>
+<td>00:00:14 <span class="italicPercent">(0.03)</span></td>
+
+<td>0.01</td>
+<td>17:47:05</td>
+
+<td>10:54:16</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">adriver.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>3</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>3 <span class="italicPercent">(0.15)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:10 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>17:47:08</td>
+
+<td>17:45:34</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">cookielaw.org</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>sgolota@tp.oil</td><td>3</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>3 <span class="italicPercent">(0.15)</span></td>
+<td>0.08 <span class="italicPercent">(0.03)</span></td>
+<td>00:00:18 <span class="italicPercent">(0.04)</span></td>
+
+<td>0.00</td>
+<td>10:30:34</td>
+
+<td>10:30:24</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">hostingradio.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>192.168.11.38</td><td>3</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>3 <span class="italicPercent">(0.15)</span></td>
+<td>8.76 <span class="italicPercent">(3.77)</span></td>
+<td>00:28:47 <span class="italicPercent">(4.07)</span></td>
+
+<td>0.01</td>
+<td>17:02:50</td>
+
+<td>16:36:39</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">amgradio.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>192.168.11.38</td><td>3</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>3 <span class="italicPercent">(0.15)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:20 <span class="italicPercent">(0.05)</span></td>
+
+<td>0.00</td>
+<td>16:57:30</td>
+
+<td>16:13:42</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">cdnst.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>sgolota@tp.oil</td><td>3</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>3 <span class="italicPercent">(0.15)</span></td>
+<td>1.84 <span class="italicPercent">(0.79)</span></td>
+<td>00:00:23 <span class="italicPercent">(0.06)</span></td>
+
+<td>0.08</td>
+<td>10:30:34</td>
+
+<td>10:30:21</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">otclick-adv.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>2</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:09 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>17:46:14</td>
+
+<td>17:45:34</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">skype.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>2</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.02 <span class="italicPercent">(0.01)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.02</td>
+<td>17:43:45</td>
+
+<td>17:38:45</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yadro.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>2</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:12 <span class="italicPercent">(0.03)</span></td>
+
+<td>0.00</td>
+<td>17:47:03</td>
+
+<td>17:45:14</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">buzzoola.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>2</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:10 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>17:47:08</td>
+
+<td>17:46:14</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">google.kz</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>sgolota@tp.oil</td><td>1</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:11 <span class="italicPercent">(0.03)</span></td>
+
+<td>0.00</td>
+<td>12:02:01</td>
+
+<td>09:40:48</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">cdn-apple.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>sgolota@tp.oil</td><td>2</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.03 <span class="italicPercent">(0.01)</span></td>
+<td>00:00:10 <span class="italicPercent">(0.03)</span></td>
+
+<td>0.00</td>
+<td>10:30:34</td>
+
+<td>10:30:25</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yoyo.org</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>sgolota@tp.oil</td><td>1</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.18 <span class="italicPercent">(0.08)</span></td>
+<td>00:00:16 <span class="italicPercent">(0.04)</span></td>
+
+<td>0.01</td>
+<td>17:47:26</td>
+
+<td>08:02:29</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yandex.md</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>2</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:01 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:16</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">speedtest.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>192.168.10.41</td><td>2</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.37 <span class="italicPercent">(0.16)</span></td>
+<td>00:00:14 <span class="italicPercent">(0.03)</span></td>
+
+<td>0.03</td>
+<td>10:30:34</td>
+
+<td>10:30:24</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">adhigh.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>2</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:10 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>17:47:08</td>
+
+<td>17:46:14</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">wi-fi.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>2</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.20 <span class="italicPercent">(0.09)</span></td>
+<td>00:00:01 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.12</td>
+<td>17:47:08</td>
+
+<td>17:45:03</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">alfasense.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>2</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:19 <span class="italicPercent">(0.05)</span></td>
+
+<td>0.00</td>
+<td>17:46:14</td>
+
+<td>17:45:44</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">publicsuffix.org</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.09 <span class="italicPercent">(0.04)</span></td>
+<td>00:00:04 <span class="italicPercent">(0.01)</span></td>
+
+<td>0.02</td>
+<td>17:47:36</td>
+
+<td>17:47:36</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">hybrid.ai</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:09 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>17:46:14</td>
+
+<td>17:46:14</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">skcrtxr.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:09 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>17:46:14</td>
+
+<td>17:46:14</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">mos.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">bumlam.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">vk.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vrogov@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:09 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>11:53:30</td>
+
+<td>11:53:30</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">weborama.fr</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">googleadservices.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:06 <span class="italicPercent">(0.01)</span></td>
+
+<td>0.00</td>
+<td>17:45:03</td>
+
+<td>17:45:03</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">googleusercontent.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.17 <span class="italicPercent">(0.07)</span></td>
+<td>00:00:01 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.12</td>
+<td>17:20:42</td>
+
+<td>17:20:42</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">betweendigital.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">24smi.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:09 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>17:46:14</td>
+
+<td>17:46:14</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">digitaltarget.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">ziffstatic.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>sgolota@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.18 <span class="italicPercent">(0.08)</span></td>
+<td>00:00:14 <span class="italicPercent">(0.03)</span></td>
+
+<td>0.01</td>
+<td>10:30:34</td>
+
+<td>10:30:34</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">jquery.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>192.168.11.38</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.03 <span class="italicPercent">(0.01)</span></td>
+<td>00:00:07 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>16:13:42</td>
+
+<td>16:13:42</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">aidata.io</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Запросы</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>1</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:08</td>
+
+</tr></tbody></table><h4>100 доменов с наибольшим трафиком за 2025-10-13</h4><div class="line-separator"></div>
+
+<table class="sortable stata">
+<thead>
+<tr>
+<th>URL</th>
+
+<th>Мегабайт (%)</th>
+<th>Запросы (%)</th>
+<th>Продолжительность (%)</th>
+
+<th>Пропускная способность (MB/s)</th>
+<th>Последнее посещение</th>
+
+<th>Первое посещение</th>
+
+</tr>
+</thead>
+<tbody>
+<tr><td>
+<div class="tooltipLink"><span class="information">yapfiles.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>34.55</td></td></tr>
+<tr><td>192.168.11.38</td><td>6.53</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>0.51</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.44</td></td></tr>
+<tr><td>192.168.10.41</td><td>0.20</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>42.23 <span class="italicPercent">(18.17)</span></td>
+<td>79 <span class="italicPercent">(3.82)</span></td>
+<td>00:06:47 <span class="italicPercent">(0.96)</span></td>
+
+<td>0.10</td>
+<td>17:45:14</td>
+
+<td>11:54:10</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">imgsmail.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>sgolota@tp.oil</td><td>39.82</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>0.60</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>40.42 <span class="italicPercent">(17.39)</span></td>
+<td>80 <span class="italicPercent">(3.87)</span></td>
+<td>00:18:19 <span class="italicPercent">(2.59)</span></td>
+
+<td>0.04</td>
+<td>12:14:34</td>
+
+<td>09:43:20</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">datacloudmail.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>sgolota@tp.oil</td><td>30.57</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>30.57 <span class="italicPercent">(13.15)</span></td>
+<td>4 <span class="italicPercent">(0.19)</span></td>
+<td>00:00:28 <span class="italicPercent">(0.07)</span></td>
+
+<td>1.09</td>
+<td>12:11:44</td>
+
+<td>09:43:43</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">rambler.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>6.77</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>3.93</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>2.81</td></td></tr>
+<tr><td>192.168.11.38</td><td>1.15</td></td></tr>
+<tr><td>192.168.10.41</td><td>0.76</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>15.43 <span class="italicPercent">(6.64)</span></td>
+<td>492 <span class="italicPercent">(23.79)</span></td>
+<td>01:25:08 <span class="italicPercent">(12.03)</span></td>
+
+<td>0.00</td>
+<td>18:27:53</td>
+
+<td>09:40:42</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">vk.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>3.59</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>3.18</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>3.09</td></td></tr>
+<tr><td>192.168.10.41</td><td>1.54</td></td></tr>
+<tr><td>192.168.11.38</td><td>1.40</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>12.81 <span class="italicPercent">(5.51)</span></td>
+<td>145 <span class="italicPercent">(7.01)</span></td>
+<td>02:16:51 <span class="italicPercent">(19.34)</span></td>
+
+<td>0.00</td>
+<td>17:46:14</td>
+
+<td>10:33:54</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">google.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>5.05</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>3.12</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>1.66</td></td></tr>
+<tr><td>192.168.11.38</td><td>1.03</td></td></tr>
+<tr><td>192.168.10.41</td><td>0.57</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>11.44 <span class="italicPercent">(4.92)</span></td>
+<td>73 <span class="italicPercent">(3.53)</span></td>
+<td>00:14:51 <span class="italicPercent">(2.10)</span></td>
+
+<td>0.01</td>
+<td>17:45:03</td>
+
+<td>08:06:34</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">googlevideo.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>8.97</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>8.97 <span class="italicPercent">(3.86)</span></td>
+<td>10 <span class="italicPercent">(0.48)</span></td>
+<td>00:00:35 <span class="italicPercent">(0.08)</span></td>
+
+<td>0.25</td>
+<td>10:54:56</td>
+
+<td>10:34:24</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">hostingradio.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>192.168.11.38</td><td>8.76</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>8.76 <span class="italicPercent">(3.77)</span></td>
+<td>3 <span class="italicPercent">(0.15)</span></td>
+<td>00:28:47 <span class="italicPercent">(4.07)</span></td>
+
+<td>0.01</td>
+<td>17:02:50</td>
+
+<td>16:36:39</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yastatic.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>sgolota@tp.oil</td><td>2.59</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>2.46</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>1.91</td></td></tr>
+<tr><td>192.168.10.41</td><td>0.40</td></td></tr>
+<tr><td>192.168.11.38</td><td>0.20</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>7.55 <span class="italicPercent">(3.25)</span></td>
+<td>75 <span class="italicPercent">(3.63)</span></td>
+<td>00:04:39 <span class="italicPercent">(0.66)</span></td>
+
+<td>0.03</td>
+<td>17:45:14</td>
+
+<td>09:40:40</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yaplakal.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>2.43</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>1.18</td></td></tr>
+<tr><td>192.168.10.41</td><td>0.97</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.82</td></td></tr>
+<tr><td>192.168.11.38</td><td>0.71</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>6.11 <span class="italicPercent">(2.63)</span></td>
+<td>44 <span class="italicPercent">(2.13)</span></td>
+<td>00:09:26 <span class="italicPercent">(1.33)</span></td>
+
+<td>0.01</td>
+<td>17:45:14</td>
+
+<td>11:54:10</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yandex.kz</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>sgolota@tp.oil</td><td>2.31</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>1.55</td></td></tr>
+<tr><td>192.168.10.41</td><td>0.55</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.40</td></td></tr>
+<tr><td>192.168.11.38</td><td>0.18</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>4.98 <span class="italicPercent">(2.14)</span></td>
+<td>160 <span class="italicPercent">(7.74)</span></td>
+<td>00:30:58 <span class="italicPercent">(4.38)</span></td>
+
+<td>0.00</td>
+<td>17:47:26</td>
+
+<td>09:40:48</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">microsoft.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>4.12</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>0.18</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>0.16</td></td></tr>
+<tr><td>192.168.11.38</td><td>0.06</td></td></tr>
+<tr><td>192.168.10.41</td><td>0.03</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>4.55 <span class="italicPercent">(1.96)</span></td>
+<td>92 <span class="italicPercent">(4.45)</span></td>
+<td>01:24:44 <span class="italicPercent">(11.98)</span></td>
+
+<td>0.00</td>
+<td>23:49:04</td>
+
+<td>00:17:43</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yandex.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>sgolota@tp.oil</td><td>1.52</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>1.18</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>1.17</td></td></tr>
+<tr><td>192.168.10.41</td><td>0.56</td></td></tr>
+<tr><td>192.168.11.38</td><td>0.06</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>4.48 <span class="italicPercent">(1.93)</span></td>
+<td>112 <span class="italicPercent">(5.42)</span></td>
+<td>00:26:56 <span class="italicPercent">(3.81)</span></td>
+
+<td>0.00</td>
+<td>17:47:08</td>
+
+<td>09:40:42</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">bing.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>2.97</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>1.32</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>0.03</td></td></tr>
+<tr><td>192.168.11.38</td><td>0.01</td></td></tr>
+<tr><td>192.168.10.41</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>4.34 <span class="italicPercent">(1.87)</span></td>
+<td>31 <span class="italicPercent">(1.50)</span></td>
+<td>00:15:57 <span class="italicPercent">(2.26)</span></td>
+
+<td>0.00</td>
+<td>17:48:57</td>
+
+<td>08:01:15</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">figma.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>sgolota@tp.oil</td><td>4.32</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>4.32 <span class="italicPercent">(1.86)</span></td>
+<td>12 <span class="italicPercent">(0.58)</span></td>
+<td>00:04:04 <span class="italicPercent">(0.58)</span></td>
+
+<td>0.02</td>
+<td>10:44:35</td>
+
+<td>10:38:55</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">youtube.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>3.15</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>3.15 <span class="italicPercent">(1.35)</span></td>
+<td>24 <span class="italicPercent">(1.16)</span></td>
+<td>00:01:53 <span class="italicPercent">(0.27)</span></td>
+
+<td>0.03</td>
+<td>10:55:05</td>
+
+<td>10:34:04</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">mail.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>sgolota@tp.oil</td><td>1.91</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>0.39</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.07</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>2.38 <span class="italicPercent">(1.02)</span></td>
+<td>187 <span class="italicPercent">(9.04)</span></td>
+<td>00:51:45 <span class="italicPercent">(7.32)</span></td>
+
+<td>0.00</td>
+<td>17:47:08</td>
+
+<td>09:43:23</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">gstatic.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>192.168.11.38</td><td>0.86</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>0.76</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.26</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>0.17</td></td></tr>
+<tr><td>192.168.10.41</td><td>0.03</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>2.08 <span class="italicPercent">(0.89)</span></td>
+<td>43 <span class="italicPercent">(2.08)</span></td>
+<td>00:02:02 <span class="italicPercent">(0.29)</span></td>
+
+<td>0.02</td>
+<td>17:45:03</td>
+
+<td>10:30:17</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">sanity.io</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>sgolota@tp.oil</td><td>2.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>2.01 <span class="italicPercent">(0.87)</span></td>
+<td>8 <span class="italicPercent">(0.39)</span></td>
+<td>00:00:16 <span class="italicPercent">(0.04)</span></td>
+
+<td>0.12</td>
+<td>10:39:05</td>
+
+<td>10:38:51</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">cdnst.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>sgolota@tp.oil</td><td>1.84</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1.84 <span class="italicPercent">(0.79)</span></td>
+<td>3 <span class="italicPercent">(0.15)</span></td>
+<td>00:00:23 <span class="italicPercent">(0.06)</span></td>
+
+<td>0.08</td>
+<td>10:30:34</td>
+
+<td>10:30:21</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">s-microsoft.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>1.57</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1.57 <span class="italicPercent">(0.68)</span></td>
+<td>15 <span class="italicPercent">(0.73)</span></td>
+<td>00:02:07 <span class="italicPercent">(0.30)</span></td>
+
+<td>0.01</td>
+<td>17:42:54</td>
+
+<td>17:42:34</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">ytimg.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>1.26</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1.26 <span class="italicPercent">(0.54)</span></td>
+<td>15 <span class="italicPercent">(0.73)</span></td>
+<td>00:00:45 <span class="italicPercent">(0.11)</span></td>
+
+<td>0.03</td>
+<td>10:54:56</td>
+
+<td>10:34:04</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">unknown</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.83</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>0.20</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>0.11</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1.14 <span class="italicPercent">(0.49)</span></td>
+<td>10 <span class="italicPercent">(0.48)</span></td>
+<td>00:40:46 <span class="italicPercent">(5.76)</span></td>
+
+<td>0.00</td>
+<td>20:21:33</td>
+
+<td>00:27:42</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yandex.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.86</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>0.10</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>0.03</td></td></tr>
+<tr><td>192.168.10.41</td><td>0.02</td></td></tr>
+<tr><td>192.168.11.38</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>1.02 <span class="italicPercent">(0.44)</span></td>
+<td>56 <span class="italicPercent">(2.71)</span></td>
+<td>00:11:05 <span class="italicPercent">(1.57)</span></td>
+
+<td>0.00</td>
+<td>17:47:16</td>
+
+<td>09:41:03</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">online-red.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>192.168.11.38</td><td>0.98</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.98 <span class="italicPercent">(0.42)</span></td>
+<td>14 <span class="italicPercent">(0.68)</span></td>
+<td>00:01:54 <span class="italicPercent">(0.27)</span></td>
+
+<td>0.01</td>
+<td>16:57:30</td>
+
+<td>16:13:32</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">azurefd.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.79</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.79 <span class="italicPercent">(0.34)</span></td>
+<td>7 <span class="italicPercent">(0.34)</span></td>
+<td>00:00:11 <span class="italicPercent">(0.03)</span></td>
+
+<td>0.07</td>
+<td>17:42:44</td>
+
+<td>17:42:21</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">userapi.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>0.46</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>0.15</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.14</td></td></tr>
+<tr><td>192.168.11.38</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.76 <span class="italicPercent">(0.33)</span></td>
+<td>46 <span class="italicPercent">(2.22)</span></td>
+<td>00:03:09 <span class="italicPercent">(0.45)</span></td>
+
+<td>0.00</td>
+<td>17:45:14</td>
+
+<td>11:53:30</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">statically.io</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.64</td></td></tr>
+<tr><td>192.168.11.38</td><td>0.01</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.65 <span class="italicPercent">(0.28)</span></td>
+<td>4 <span class="italicPercent">(0.19)</span></td>
+<td>00:07:51 <span class="italicPercent">(1.11)</span></td>
+
+<td>0.00</td>
+<td>17:47:36</td>
+
+<td>10:09:53</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">azureedge.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.50</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>0.03</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>0.02</td></td></tr>
+<tr><td>192.168.11.38</td><td>0.01</td></td></tr>
+<tr><td>192.168.10.41</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.56 <span class="italicPercent">(0.24)</span></td>
+<td>20 <span class="italicPercent">(0.97)</span></td>
+<td>00:04:43 <span class="italicPercent">(0.67)</span></td>
+
+<td>0.00</td>
+<td>17:57:17</td>
+
+<td>08:07:14</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">jsdelivr.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>sgolota@tp.oil</td><td>0.54</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>0.00</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.54 <span class="italicPercent">(0.23)</span></td>
+<td>8 <span class="italicPercent">(0.39)</span></td>
+<td>00:10:28 <span class="italicPercent">(1.48)</span></td>
+
+<td>0.00</td>
+<td>08:06:34</td>
+
+<td>01:31:20</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">wikipedia.org</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>sgolota@tp.oil</td><td>0.38</td></td></tr>
+<tr><td>192.168.10.41</td><td>0.05</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.43 <span class="italicPercent">(0.18)</span></td>
+<td>14 <span class="italicPercent">(0.68)</span></td>
+<td>00:04:55 <span class="italicPercent">(0.70)</span></td>
+
+<td>0.00</td>
+<td>16:02:31</td>
+
+<td>10:30:11</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">githubusercontent.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.40</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>0.01</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.43 <span class="italicPercent">(0.18)</span></td>
+<td>4 <span class="italicPercent">(0.19)</span></td>
+<td>00:11:09 <span class="italicPercent">(1.58)</span></td>
+
+<td>0.00</td>
+<td>17:47:16</td>
+
+<td>06:31:21</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">dsp-rambler.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.39</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.39 <span class="italicPercent">(0.17)</span></td>
+<td>8 <span class="italicPercent">(0.39)</span></td>
+<td>00:00:27 <span class="italicPercent">(0.07)</span></td>
+
+<td>0.01</td>
+<td>17:47:16</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">github.io</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.19</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>0.10</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>0.09</td></td></tr>
+<tr><td>192.168.11.38</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.39 <span class="italicPercent">(0.17)</span></td>
+<td>10 <span class="italicPercent">(0.48)</span></td>
+<td>00:40:59 <span class="italicPercent">(5.79)</span></td>
+
+<td>0.00</td>
+<td>20:57:47</td>
+
+<td>10:55:46</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">speedtest.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>192.168.10.41</td><td>0.37</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.37 <span class="italicPercent">(0.16)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>00:00:14 <span class="italicPercent">(0.03)</span></td>
+
+<td>0.03</td>
+<td>10:30:34</td>
+
+<td>10:30:24</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">wikimedia.org</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>sgolota@tp.oil</td><td>0.33</td></td></tr>
+<tr><td>192.168.10.41</td><td>0.00</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.34 <span class="italicPercent">(0.15)</span></td>
+<td>11 <span class="italicPercent">(0.53)</span></td>
+<td>00:02:31 <span class="italicPercent">(0.36)</span></td>
+
+<td>0.00</td>
+<td>16:02:31</td>
+
+<td>10:30:10</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">twitter.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>0.17</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.16</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.33 <span class="italicPercent">(0.14)</span></td>
+<td>9 <span class="italicPercent">(0.44)</span></td>
+<td>00:00:51 <span class="italicPercent">(0.12)</span></td>
+
+<td>0.01</td>
+<td>17:45:14</td>
+
+<td>11:54:10</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">googleapis.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>0.13</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.06</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>0.06</td></td></tr>
+<tr><td>192.168.11.38</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.25 <span class="italicPercent">(0.11)</span></td>
+<td>16 <span class="italicPercent">(0.77)</span></td>
+<td>00:01:56 <span class="italicPercent">(0.28)</span></td>
+
+<td>0.00</td>
+<td>17:47:16</td>
+
+<td>08:02:09</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">wi-fi.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.20</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.20 <span class="italicPercent">(0.09)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>00:00:01 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.12</td>
+<td>17:47:08</td>
+
+<td>17:45:03</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yoyo.org</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>sgolota@tp.oil</td><td>0.09</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.09</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.18 <span class="italicPercent">(0.08)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>00:00:16 <span class="italicPercent">(0.04)</span></td>
+
+<td>0.01</td>
+<td>17:47:26</td>
+
+<td>08:02:29</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">ziffstatic.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>sgolota@tp.oil</td><td>0.18</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.18 <span class="italicPercent">(0.08)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>00:00:14 <span class="italicPercent">(0.03)</span></td>
+
+<td>0.01</td>
+<td>10:30:34</td>
+
+<td>10:30:34</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">googleusercontent.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.17</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.17 <span class="italicPercent">(0.07)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>00:00:01 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.12</td>
+<td>17:20:42</td>
+
+<td>17:20:42</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">ggpht.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>0.14</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.14 <span class="italicPercent">(0.06)</span></td>
+<td>5 <span class="italicPercent">(0.24)</span></td>
+<td>00:00:33 <span class="italicPercent">(0.08)</span></td>
+
+<td>0.00</td>
+<td>10:54:56</td>
+
+<td>10:34:07</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">ad-tech.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.11</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.11 <span class="italicPercent">(0.05)</span></td>
+<td>17 <span class="italicPercent">(0.82)</span></td>
+<td>00:00:13 <span class="italicPercent">(0.03)</span></td>
+
+<td>0.01</td>
+<td>17:47:16</td>
+
+<td>17:47:06</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">top100.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>0.05</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.05</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.10 <span class="italicPercent">(0.04)</span></td>
+<td>3 <span class="italicPercent">(0.15)</span></td>
+<td>00:00:14 <span class="italicPercent">(0.03)</span></td>
+
+<td>0.01</td>
+<td>17:47:05</td>
+
+<td>10:54:16</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">ya.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>0.04</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.02</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>0.02</td></td></tr>
+<tr><td>192.168.10.41</td><td>0.01</td></td></tr>
+<tr><td>192.168.11.38</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.10 <span class="italicPercent">(0.04)</span></td>
+<td>22 <span class="italicPercent">(1.06)</span></td>
+<td>00:08:55 <span class="italicPercent">(1.26)</span></td>
+
+<td>0.00</td>
+<td>17:47:16</td>
+
+<td>09:41:03</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">msn.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.08</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.09 <span class="italicPercent">(0.04)</span></td>
+<td>9 <span class="italicPercent">(0.44)</span></td>
+<td>00:11:22 <span class="italicPercent">(1.61)</span></td>
+
+<td>0.00</td>
+<td>18:01:29</td>
+
+<td>08:02:19</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">publicsuffix.org</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.09</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.09 <span class="italicPercent">(0.04)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>00:00:04 <span class="italicPercent">(0.01)</span></td>
+
+<td>0.02</td>
+<td>17:47:36</td>
+
+<td>17:47:36</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">cookielaw.org</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>sgolota@tp.oil</td><td>0.08</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.08 <span class="italicPercent">(0.03)</span></td>
+<td>3 <span class="italicPercent">(0.15)</span></td>
+<td>00:00:18 <span class="italicPercent">(0.04)</span></td>
+
+<td>0.00</td>
+<td>10:30:34</td>
+
+<td>10:30:24</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">msedge.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.04</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.04 <span class="italicPercent">(0.02)</span></td>
+<td>5 <span class="italicPercent">(0.24)</span></td>
+<td>00:10:22 <span class="italicPercent">(1.47)</span></td>
+
+<td>0.00</td>
+<td>17:41:58</td>
+
+<td>17:40:57</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">jquery.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>192.168.11.38</td><td>0.03</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.03 <span class="italicPercent">(0.01)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>00:00:07 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>16:13:42</td>
+
+<td>16:13:42</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">office.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.03</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.03 <span class="italicPercent">(0.01)</span></td>
+<td>4 <span class="italicPercent">(0.19)</span></td>
+<td>00:00:31 <span class="italicPercent">(0.07)</span></td>
+
+<td>0.00</td>
+<td>17:44:24</td>
+
+<td>17:42:44</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">microsoftonline.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.03</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.03 <span class="italicPercent">(0.01)</span></td>
+<td>5 <span class="italicPercent">(0.24)</span></td>
+<td>00:00:09 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>17:46:59</td>
+
+<td>17:21:19</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">cdn-apple.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>sgolota@tp.oil</td><td>0.03</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.03 <span class="italicPercent">(0.01)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>00:00:10 <span class="italicPercent">(0.03)</span></td>
+
+<td>0.00</td>
+<td>10:30:34</td>
+
+<td>10:30:25</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">tns-counter.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.03</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.03 <span class="italicPercent">(0.01)</span></td>
+<td>6 <span class="italicPercent">(0.29)</span></td>
+<td>00:00:05 <span class="italicPercent">(0.01)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:03</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">skype.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.02</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.02 <span class="italicPercent">(0.01)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.02</td>
+<td>17:43:45</td>
+
+<td>17:38:45</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">adhigh.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>00:00:10 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>17:47:08</td>
+
+<td>17:46:14</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">google.kz</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>0.01</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>0.00</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>00:00:11 <span class="italicPercent">(0.03)</span></td>
+
+<td>0.00</td>
+<td>12:02:01</td>
+
+<td>09:40:48</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yandex.md</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>00:00:01 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:16</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">adriver.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>3 <span class="italicPercent">(0.15)</span></td>
+<td>00:00:10 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>17:47:08</td>
+
+<td>17:45:34</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">otclick-adv.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>00:00:09 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>17:46:14</td>
+
+<td>17:45:34</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">amgradio.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>192.168.11.38</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>3 <span class="italicPercent">(0.15)</span></td>
+<td>00:00:20 <span class="italicPercent">(0.05)</span></td>
+
+<td>0.00</td>
+<td>16:57:30</td>
+
+<td>16:13:42</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">mos.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">hybrid.ai</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>00:00:09 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>17:46:14</td>
+
+<td>17:46:14</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">aidata.io</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">buzzoola.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>00:00:10 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>17:47:08</td>
+
+<td>17:46:14</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">betweendigital.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yadro.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>00:00:12 <span class="italicPercent">(0.03)</span></td>
+
+<td>0.00</td>
+<td>17:47:03</td>
+
+<td>17:45:14</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">googleadservices.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>00:00:06 <span class="italicPercent">(0.01)</span></td>
+
+<td>0.00</td>
+<td>17:45:03</td>
+
+<td>17:45:03</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">weborama.fr</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.00</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">bumlam.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.00</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">vk.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vrogov@tp.oil</td><td>0.00</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>00:00:09 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>11:53:30</td>
+
+<td>11:53:30</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">alfasense.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.00</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>00:00:19 <span class="italicPercent">(0.05)</span></td>
+
+<td>0.00</td>
+<td>17:46:14</td>
+
+<td>17:45:44</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">digitaltarget.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.00</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">skcrtxr.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.00</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>00:00:09 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>17:46:14</td>
+
+<td>17:46:14</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">24smi.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Мегабайты</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>0.00</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>00:00:09 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>17:46:14</td>
+
+<td>17:46:14</td>
+
+</tr></tbody></table><h4>100 доменов с наибольшей продолжительностью за 2025-10-13</h4><div class="line-separator"></div>
+
+<table class="sortable stata">
+<thead>
+<tr>
+<th>URL</th>
+
+<th>Продолжительность (%)</th>
+<th>Запросы (%)</th>
+<th>Мегабайт (%)</th>
+
+<th>Пропускная способность (MB/s)</th>
+<th>Последнее посещение</th>
+
+<th>Первое посещение</th>
+
+</tr>
+</thead>
+<tbody>
+<tr><td>
+<div class="tooltipLink"><span class="information">vk.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>192.168.10.41</td><td>01:20:59</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>00:37:40</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>00:14:40</td></td></tr>
+<tr><td>192.168.11.38</td><td>00:02:44</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:46</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>02:16:51 <span class="italicPercent">(19.34)</span></td>
+<td>145 <span class="italicPercent">(7.01)</span></td>
+<td>12.81 <span class="italicPercent">(5.51)</span></td>
+
+<td>0.00</td>
+<td>17:46:14</td>
+
+<td>10:33:54</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">rambler.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:35:35</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:33:11</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>00:10:46</td></td></tr>
+<tr><td>192.168.11.38</td><td>00:02:58</td></td></tr>
+<tr><td>192.168.10.41</td><td>00:02:37</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>01:25:08 <span class="italicPercent">(12.03)</span></td>
+<td>492 <span class="italicPercent">(23.79)</span></td>
+<td>15.43 <span class="italicPercent">(6.64)</span></td>
+
+<td>0.00</td>
+<td>18:27:53</td>
+
+<td>09:40:42</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">microsoft.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vrogov@tp.oil</td><td>00:33:49</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>00:23:21</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:15:45</td></td></tr>
+<tr><td>192.168.10.41</td><td>00:06:18</td></td></tr>
+<tr><td>192.168.11.38</td><td>00:05:29</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>01:24:44 <span class="italicPercent">(11.98)</span></td>
+<td>92 <span class="italicPercent">(4.45)</span></td>
+<td>4.55 <span class="italicPercent">(1.96)</span></td>
+
+<td>0.00</td>
+<td>23:49:04</td>
+
+<td>00:17:43</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">mail.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:49:35</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>00:01:46</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:23</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:51:45 <span class="italicPercent">(7.32)</span></td>
+<td>187 <span class="italicPercent">(9.04)</span></td>
+<td>2.38 <span class="italicPercent">(1.02)</span></td>
+
+<td>0.00</td>
+<td>17:47:08</td>
+
+<td>09:43:23</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">github.io</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:20:34</td></td></tr>
+<tr><td>192.168.11.38</td><td>00:10:10</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>00:10:10</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>00:00:03</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:40:59 <span class="italicPercent">(5.79)</span></td>
+<td>10 <span class="italicPercent">(0.48)</span></td>
+<td>0.39 <span class="italicPercent">(0.17)</span></td>
+
+<td>0.00</td>
+<td>20:57:47</td>
+
+<td>10:55:46</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">unknown</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:20:31</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>00:20:00</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:14</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:40:46 <span class="italicPercent">(5.76)</span></td>
+<td>10 <span class="italicPercent">(0.48)</span></td>
+<td>1.14 <span class="italicPercent">(0.49)</span></td>
+
+<td>0.00</td>
+<td>20:21:33</td>
+
+<td>00:27:42</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yandex.kz</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:13:30</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>00:11:58</td></td></tr>
+<tr><td>192.168.10.41</td><td>00:02:54</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:01:33</td></td></tr>
+<tr><td>192.168.11.38</td><td>00:01:02</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:30:58 <span class="italicPercent">(4.38)</span></td>
+<td>160 <span class="italicPercent">(7.74)</span></td>
+<td>4.98 <span class="italicPercent">(2.14)</span></td>
+
+<td>0.00</td>
+<td>17:47:26</td>
+
+<td>09:40:48</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">hostingradio.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>192.168.11.38</td><td>00:28:47</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:28:47 <span class="italicPercent">(4.07)</span></td>
+<td>3 <span class="italicPercent">(0.15)</span></td>
+<td>8.76 <span class="italicPercent">(3.77)</span></td>
+
+<td>0.01</td>
+<td>17:02:50</td>
+
+<td>16:36:39</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yandex.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:19:16</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>00:03:41</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:02:22</td></td></tr>
+<tr><td>192.168.10.41</td><td>00:01:16</td></td></tr>
+<tr><td>192.168.11.38</td><td>00:00:19</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:26:56 <span class="italicPercent">(3.81)</span></td>
+<td>112 <span class="italicPercent">(5.42)</span></td>
+<td>4.48 <span class="italicPercent">(1.93)</span></td>
+
+<td>0.00</td>
+<td>17:47:08</td>
+
+<td>09:40:42</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">imgsmail.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:17:24</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>00:00:55</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:18:19 <span class="italicPercent">(2.59)</span></td>
+<td>80 <span class="italicPercent">(3.87)</span></td>
+<td>40.42 <span class="italicPercent">(17.39)</span></td>
+
+<td>0.04</td>
+<td>12:14:34</td>
+
+<td>09:43:20</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">bing.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:10:15</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>00:03:12</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>00:02:25</td></td></tr>
+<tr><td>192.168.11.38</td><td>00:00:03</td></td></tr>
+<tr><td>192.168.10.41</td><td>00:00:00</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:15:57 <span class="italicPercent">(2.26)</span></td>
+<td>31 <span class="italicPercent">(1.50)</span></td>
+<td>4.34 <span class="italicPercent">(1.87)</span></td>
+
+<td>0.00</td>
+<td>17:48:57</td>
+
+<td>08:01:15</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">google.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:10:15</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>00:02:34</td></td></tr>
+<tr><td>192.168.11.38</td><td>00:00:47</td></td></tr>
+<tr><td>192.168.10.41</td><td>00:00:39</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:34</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:14:51 <span class="italicPercent">(2.10)</span></td>
+<td>73 <span class="italicPercent">(3.53)</span></td>
+<td>11.44 <span class="italicPercent">(4.92)</span></td>
+
+<td>0.01</td>
+<td>17:45:03</td>
+
+<td>08:06:34</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">msn.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:11:14</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>00:00:08</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:11:22 <span class="italicPercent">(1.61)</span></td>
+<td>9 <span class="italicPercent">(0.44)</span></td>
+<td>0.09 <span class="italicPercent">(0.04)</span></td>
+
+<td>0.00</td>
+<td>18:01:29</td>
+
+<td>08:02:19</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">githubusercontent.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vrogov@tp.oil</td><td>00:10:12</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>00:00:51</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:06</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:11:09 <span class="italicPercent">(1.58)</span></td>
+<td>4 <span class="italicPercent">(0.19)</span></td>
+<td>0.43 <span class="italicPercent">(0.18)</span></td>
+
+<td>0.00</td>
+<td>17:47:16</td>
+
+<td>06:31:21</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yandex.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:07:13</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:02:14</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>00:00:46</td></td></tr>
+<tr><td>192.168.10.41</td><td>00:00:45</td></td></tr>
+<tr><td>192.168.11.38</td><td>00:00:06</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:11:05 <span class="italicPercent">(1.57)</span></td>
+<td>56 <span class="italicPercent">(2.71)</span></td>
+<td>1.02 <span class="italicPercent">(0.44)</span></td>
+
+<td>0.00</td>
+<td>17:47:16</td>
+
+<td>09:41:03</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">jsdelivr.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vrogov@tp.oil</td><td>00:10:10</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>00:00:18</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:10:28 <span class="italicPercent">(1.48)</span></td>
+<td>8 <span class="italicPercent">(0.39)</span></td>
+<td>0.54 <span class="italicPercent">(0.23)</span></td>
+
+<td>0.00</td>
+<td>08:06:34</td>
+
+<td>01:31:20</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">msedge.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:10:22</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:10:22 <span class="italicPercent">(1.47)</span></td>
+<td>5 <span class="italicPercent">(0.24)</span></td>
+<td>0.04 <span class="italicPercent">(0.02)</span></td>
+
+<td>0.00</td>
+<td>17:41:58</td>
+
+<td>17:40:57</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yaplakal.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>192.168.10.41</td><td>00:07:12</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>00:00:59</td></td></tr>
+<tr><td>192.168.11.38</td><td>00:00:28</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:24</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>00:00:21</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:09:26 <span class="italicPercent">(1.33)</span></td>
+<td>44 <span class="italicPercent">(2.13)</span></td>
+<td>6.11 <span class="italicPercent">(2.63)</span></td>
+
+<td>0.01</td>
+<td>17:45:14</td>
+
+<td>11:54:10</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">ya.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:07:04</td></td></tr>
+<tr><td>192.168.10.41</td><td>00:00:43</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>00:00:41</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:19</td></td></tr>
+<tr><td>192.168.11.38</td><td>00:00:06</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:08:55 <span class="italicPercent">(1.26)</span></td>
+<td>22 <span class="italicPercent">(1.06)</span></td>
+<td>0.10 <span class="italicPercent">(0.04)</span></td>
+
+<td>0.00</td>
+<td>17:47:16</td>
+
+<td>09:41:03</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">statically.io</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:07:26</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:14</td></td></tr>
+<tr><td>192.168.11.38</td><td>00:00:10</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:07:51 <span class="italicPercent">(1.11)</span></td>
+<td>4 <span class="italicPercent">(0.19)</span></td>
+<td>0.65 <span class="italicPercent">(0.28)</span></td>
+
+<td>0.00</td>
+<td>17:47:36</td>
+
+<td>10:09:53</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yapfiles.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>192.168.10.41</td><td>00:02:39</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>00:02:06</td></td></tr>
+<tr><td>192.168.11.38</td><td>00:00:56</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>00:00:32</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:31</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:06:47 <span class="italicPercent">(0.96)</span></td>
+<td>79 <span class="italicPercent">(3.82)</span></td>
+<td>42.23 <span class="italicPercent">(18.17)</span></td>
+
+<td>0.10</td>
+<td>17:45:14</td>
+
+<td>11:54:10</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">wikipedia.org</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:04:39</td></td></tr>
+<tr><td>192.168.10.41</td><td>00:00:16</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:04:55 <span class="italicPercent">(0.70)</span></td>
+<td>14 <span class="italicPercent">(0.68)</span></td>
+<td>0.43 <span class="italicPercent">(0.18)</span></td>
+
+<td>0.00</td>
+<td>16:02:31</td>
+
+<td>10:30:11</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">azureedge.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vrogov@tp.oil</td><td>00:02:42</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>00:01:05</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:32</td></td></tr>
+<tr><td>192.168.11.38</td><td>00:00:18</td></td></tr>
+<tr><td>192.168.10.41</td><td>00:00:04</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:04:43 <span class="italicPercent">(0.67)</span></td>
+<td>20 <span class="italicPercent">(0.97)</span></td>
+<td>0.56 <span class="italicPercent">(0.24)</span></td>
+
+<td>0.00</td>
+<td>17:57:17</td>
+
+<td>08:07:14</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yastatic.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:01:30</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>00:01:28</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:01:02</td></td></tr>
+<tr><td>192.168.11.38</td><td>00:00:20</td></td></tr>
+<tr><td>192.168.10.41</td><td>00:00:17</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:04:39 <span class="italicPercent">(0.66)</span></td>
+<td>75 <span class="italicPercent">(3.63)</span></td>
+<td>7.55 <span class="italicPercent">(3.25)</span></td>
+
+<td>0.03</td>
+<td>17:45:14</td>
+
+<td>09:40:40</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">figma.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:04:04</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:04:04 <span class="italicPercent">(0.58)</span></td>
+<td>12 <span class="italicPercent">(0.58)</span></td>
+<td>4.32 <span class="italicPercent">(1.86)</span></td>
+
+<td>0.02</td>
+<td>10:44:35</td>
+
+<td>10:38:55</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">userapi.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:01:21</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>00:00:55</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>00:00:42</td></td></tr>
+<tr><td>192.168.11.38</td><td>00:00:09</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:03:09 <span class="italicPercent">(0.45)</span></td>
+<td>46 <span class="italicPercent">(2.22)</span></td>
+<td>0.76 <span class="italicPercent">(0.33)</span></td>
+
+<td>0.00</td>
+<td>17:45:14</td>
+
+<td>11:53:30</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">wikimedia.org</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:02:23</td></td></tr>
+<tr><td>192.168.10.41</td><td>00:00:08</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:02:31 <span class="italicPercent">(0.36)</span></td>
+<td>11 <span class="italicPercent">(0.53)</span></td>
+<td>0.34 <span class="italicPercent">(0.15)</span></td>
+
+<td>0.00</td>
+<td>16:02:31</td>
+
+<td>10:30:10</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">s-microsoft.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:02:07</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:02:07 <span class="italicPercent">(0.30)</span></td>
+<td>15 <span class="italicPercent">(0.73)</span></td>
+<td>1.57 <span class="italicPercent">(0.68)</span></td>
+
+<td>0.01</td>
+<td>17:42:54</td>
+
+<td>17:42:34</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">gstatic.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vrogov@tp.oil</td><td>00:00:54</td></td></tr>
+<tr><td>192.168.11.38</td><td>00:00:26</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:20</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>00:00:13</td></td></tr>
+<tr><td>192.168.10.41</td><td>00:00:08</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:02:02 <span class="italicPercent">(0.29)</span></td>
+<td>43 <span class="italicPercent">(2.08)</span></td>
+<td>2.08 <span class="italicPercent">(0.89)</span></td>
+
+<td>0.02</td>
+<td>17:45:03</td>
+
+<td>10:30:17</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">googleapis.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:00:44</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>00:00:36</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:25</td></td></tr>
+<tr><td>192.168.11.38</td><td>00:00:10</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:01:56 <span class="italicPercent">(0.28)</span></td>
+<td>16 <span class="italicPercent">(0.77)</span></td>
+<td>0.25 <span class="italicPercent">(0.11)</span></td>
+
+<td>0.00</td>
+<td>17:47:16</td>
+
+<td>08:02:09</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">online-red.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>192.168.11.38</td><td>00:01:54</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:01:54 <span class="italicPercent">(0.27)</span></td>
+<td>14 <span class="italicPercent">(0.68)</span></td>
+<td>0.98 <span class="italicPercent">(0.42)</span></td>
+
+<td>0.01</td>
+<td>16:57:30</td>
+
+<td>16:13:32</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">youtube.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vrogov@tp.oil</td><td>00:01:53</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:01:53 <span class="italicPercent">(0.27)</span></td>
+<td>24 <span class="italicPercent">(1.16)</span></td>
+<td>3.15 <span class="italicPercent">(1.35)</span></td>
+
+<td>0.03</td>
+<td>10:55:05</td>
+
+<td>10:34:04</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">twitter.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:34</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>00:00:17</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:51 <span class="italicPercent">(0.12)</span></td>
+<td>9 <span class="italicPercent">(0.44)</span></td>
+<td>0.33 <span class="italicPercent">(0.14)</span></td>
+
+<td>0.01</td>
+<td>17:45:14</td>
+
+<td>11:54:10</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">ytimg.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vrogov@tp.oil</td><td>00:00:45</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:45 <span class="italicPercent">(0.11)</span></td>
+<td>15 <span class="italicPercent">(0.73)</span></td>
+<td>1.26 <span class="italicPercent">(0.54)</span></td>
+
+<td>0.03</td>
+<td>10:54:56</td>
+
+<td>10:34:04</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">googlevideo.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vrogov@tp.oil</td><td>00:00:35</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:35 <span class="italicPercent">(0.08)</span></td>
+<td>10 <span class="italicPercent">(0.48)</span></td>
+<td>8.97 <span class="italicPercent">(3.86)</span></td>
+
+<td>0.25</td>
+<td>10:54:56</td>
+
+<td>10:34:24</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">ggpht.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vrogov@tp.oil</td><td>00:00:33</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:33 <span class="italicPercent">(0.08)</span></td>
+<td>5 <span class="italicPercent">(0.24)</span></td>
+<td>0.14 <span class="italicPercent">(0.06)</span></td>
+
+<td>0.00</td>
+<td>10:54:56</td>
+
+<td>10:34:07</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">office.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:31</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:31 <span class="italicPercent">(0.07)</span></td>
+<td>4 <span class="italicPercent">(0.19)</span></td>
+<td>0.03 <span class="italicPercent">(0.01)</span></td>
+
+<td>0.00</td>
+<td>17:44:24</td>
+
+<td>17:42:44</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">datacloudmail.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:00:28</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:28 <span class="italicPercent">(0.07)</span></td>
+<td>4 <span class="italicPercent">(0.19)</span></td>
+<td>30.57 <span class="italicPercent">(13.15)</span></td>
+
+<td>1.09</td>
+<td>12:11:44</td>
+
+<td>09:43:43</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">dsp-rambler.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:27</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:27 <span class="italicPercent">(0.07)</span></td>
+<td>8 <span class="italicPercent">(0.39)</span></td>
+<td>0.39 <span class="italicPercent">(0.17)</span></td>
+
+<td>0.01</td>
+<td>17:47:16</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">cdnst.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:00:23</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:23 <span class="italicPercent">(0.06)</span></td>
+<td>3 <span class="italicPercent">(0.15)</span></td>
+<td>1.84 <span class="italicPercent">(0.79)</span></td>
+
+<td>0.08</td>
+<td>10:30:34</td>
+
+<td>10:30:21</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">amgradio.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>192.168.11.38</td><td>00:00:20</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:20 <span class="italicPercent">(0.05)</span></td>
+<td>3 <span class="italicPercent">(0.15)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.00</td>
+<td>16:57:30</td>
+
+<td>16:13:42</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">alfasense.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:19</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:19 <span class="italicPercent">(0.05)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.00</td>
+<td>17:46:14</td>
+
+<td>17:45:44</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">cookielaw.org</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:00:18</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:18 <span class="italicPercent">(0.04)</span></td>
+<td>3 <span class="italicPercent">(0.15)</span></td>
+<td>0.08 <span class="italicPercent">(0.03)</span></td>
+
+<td>0.00</td>
+<td>10:30:34</td>
+
+<td>10:30:24</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">sanity.io</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:00:16</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:16 <span class="italicPercent">(0.04)</span></td>
+<td>8 <span class="italicPercent">(0.39)</span></td>
+<td>2.01 <span class="italicPercent">(0.87)</span></td>
+
+<td>0.12</td>
+<td>10:39:05</td>
+
+<td>10:38:51</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yoyo.org</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:09</td></td></tr>
+<tr><td>sgolota@tp.oil</td><td>00:00:06</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:16 <span class="italicPercent">(0.04)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.18 <span class="italicPercent">(0.08)</span></td>
+
+<td>0.01</td>
+<td>17:47:26</td>
+
+<td>08:02:29</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">speedtest.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>192.168.10.41</td><td>00:00:14</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:14 <span class="italicPercent">(0.03)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.37 <span class="italicPercent">(0.16)</span></td>
+
+<td>0.03</td>
+<td>10:30:34</td>
+
+<td>10:30:24</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">ziffstatic.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:00:14</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:14 <span class="italicPercent">(0.03)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.18 <span class="italicPercent">(0.08)</span></td>
+
+<td>0.01</td>
+<td>10:30:34</td>
+
+<td>10:30:34</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">top100.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vrogov@tp.oil</td><td>00:00:11</td></td></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:02</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:14 <span class="italicPercent">(0.03)</span></td>
+<td>3 <span class="italicPercent">(0.15)</span></td>
+<td>0.10 <span class="italicPercent">(0.04)</span></td>
+
+<td>0.01</td>
+<td>17:47:05</td>
+
+<td>10:54:16</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">ad-tech.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:13</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:13 <span class="italicPercent">(0.03)</span></td>
+<td>17 <span class="italicPercent">(0.82)</span></td>
+<td>0.11 <span class="italicPercent">(0.05)</span></td>
+
+<td>0.01</td>
+<td>17:47:16</td>
+
+<td>17:47:06</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yadro.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:12</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:12 <span class="italicPercent">(0.03)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.00</td>
+<td>17:47:03</td>
+
+<td>17:45:14</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">google.kz</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:00:06</td></td></tr>
+<tr><td>vrogov@tp.oil</td><td>00:00:05</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:11 <span class="italicPercent">(0.03)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.00</td>
+<td>12:02:01</td>
+
+<td>09:40:48</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">azurefd.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:11</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:11 <span class="italicPercent">(0.03)</span></td>
+<td>7 <span class="italicPercent">(0.34)</span></td>
+<td>0.79 <span class="italicPercent">(0.34)</span></td>
+
+<td>0.07</td>
+<td>17:42:44</td>
+
+<td>17:42:21</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">cdn-apple.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>sgolota@tp.oil</td><td>00:00:10</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:10 <span class="italicPercent">(0.03)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.03 <span class="italicPercent">(0.01)</span></td>
+
+<td>0.00</td>
+<td>10:30:34</td>
+
+<td>10:30:25</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">adriver.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:10</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:10 <span class="italicPercent">(0.02)</span></td>
+<td>3 <span class="italicPercent">(0.15)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.00</td>
+<td>17:47:08</td>
+
+<td>17:45:34</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">buzzoola.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:10</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:10 <span class="italicPercent">(0.02)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.00</td>
+<td>17:47:08</td>
+
+<td>17:46:14</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">adhigh.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:10</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:10 <span class="italicPercent">(0.02)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.00</td>
+<td>17:47:08</td>
+
+<td>17:46:14</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">otclick-adv.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:09</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:09 <span class="italicPercent">(0.02)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.00</td>
+<td>17:46:14</td>
+
+<td>17:45:34</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">microsoftonline.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:09</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:09 <span class="italicPercent">(0.02)</span></td>
+<td>5 <span class="italicPercent">(0.24)</span></td>
+<td>0.03 <span class="italicPercent">(0.01)</span></td>
+
+<td>0.00</td>
+<td>17:46:59</td>
+
+<td>17:21:19</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">vk.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vrogov@tp.oil</td><td>00:00:09</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:09 <span class="italicPercent">(0.02)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.00</td>
+<td>11:53:30</td>
+
+<td>11:53:30</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">hybrid.ai</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:09</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:09 <span class="italicPercent">(0.02)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.00</td>
+<td>17:46:14</td>
+
+<td>17:46:14</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">skcrtxr.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:09</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:09 <span class="italicPercent">(0.02)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.00</td>
+<td>17:46:14</td>
+
+<td>17:46:14</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">24smi.net</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:09</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:09 <span class="italicPercent">(0.02)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.00</td>
+<td>17:46:14</td>
+
+<td>17:46:14</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">jquery.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>192.168.11.38</td><td>00:00:07</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:07 <span class="italicPercent">(0.02)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.03 <span class="italicPercent">(0.01)</span></td>
+
+<td>0.00</td>
+<td>16:13:42</td>
+
+<td>16:13:42</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">googleadservices.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:06</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:06 <span class="italicPercent">(0.01)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.00</td>
+<td>17:45:03</td>
+
+<td>17:45:03</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">tns-counter.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:05</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:05 <span class="italicPercent">(0.01)</span></td>
+<td>6 <span class="italicPercent">(0.29)</span></td>
+<td>0.03 <span class="italicPercent">(0.01)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:03</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">publicsuffix.org</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:04</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:04 <span class="italicPercent">(0.01)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.09 <span class="italicPercent">(0.04)</span></td>
+
+<td>0.02</td>
+<td>17:47:36</td>
+
+<td>17:47:36</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">wi-fi.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:01 <span class="italicPercent">(0.00)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.20 <span class="italicPercent">(0.09)</span></td>
+
+<td>0.12</td>
+<td>17:47:08</td>
+
+<td>17:45:03</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">yandex.md</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:01 <span class="italicPercent">(0.00)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:16</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">googleusercontent.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:01</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:01 <span class="italicPercent">(0.00)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.17 <span class="italicPercent">(0.07)</span></td>
+
+<td>0.12</td>
+<td>17:20:42</td>
+
+<td>17:20:42</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">aidata.io</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:00</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">mos.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:00</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">skype.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:00</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+<td>2 <span class="italicPercent">(0.10)</span></td>
+<td>0.02 <span class="italicPercent">(0.01)</span></td>
+
+<td>0.02</td>
+<td>17:43:45</td>
+
+<td>17:38:45</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">weborama.fr</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:00</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">bumlam.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:00</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">betweendigital.com</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:00</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.01 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:08</td>
+
+</tr><tr><td>
+<div class="tooltipLink"><span class="information">digitaltarget.ru</span><div class="tooltip"><table><tr><th>Пользователь</th><th>Продолжительность</th></tr>
+<tr><td>vpupkin@tp.oil</td><td>00:00:00</td></td></tr>
+</table>
+
+</div></div>
+</td>
+
+<td>00:00:00 <span class="italicPercent">(0.00)</span></td>
+<td>1 <span class="italicPercent">(0.05)</span></td>
+<td>0.00 <span class="italicPercent">(0.00)</span></td>
+
+<td>0.01</td>
+<td>17:47:08</td>
+
+<td>17:47:08</td>
+
+</tr></tbody></table>
+<div class="uplink">
+<a href="#atop"><span class="iconUpArrow">Вверх</span></a>
+</div>
+
+	</div>
+	<div id="footer">
+		<h4>
+		Отчет сгенерирован программой <a href="http://squidanalyzer.darold.net/">SquidAnalyzer v6.6</a>
+		</h4>
+	</div>
+</div>
+</body>
+</html>

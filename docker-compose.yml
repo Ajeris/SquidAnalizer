@@ -1,0 +1,35 @@
+services:
+  squid-analytics:
+    image: squid-analytics:2.5
+    container_name: squid-analytics
+    restart: unless-stopped
+    # ports:
+      # - "8078:80"
+    volumes:
+      # Required: Squid logs directory
+      - ./logs:/var/log/squid:ro
+      # Optional: Persist configuration (will be auto-created with defaults)
+      - ./squidanalyzer:/etc/squidanalyzer
+      # Optional: Persist web content (will be auto-created with defaults) 
+      - ./apache-webdata:/var/www/html
+    environment:
+      - TZ=Asia/Qyzylorda
+    networks:
+      squid-net:
+        ipv4_address: 192.168.10.22
+    healthcheck:
+      test: ["CMD", "apache2ctl", "configtest"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  squid-net:
+    driver: macvlan
+    driver_opts:
+      parent: eth0  # Change to your network interface
+    ipam:
+      config:
+        - subnet: 192.168.10.0/24
+          gateway: 192.168.10.1
+          ip_range: 192.168.10.22/32

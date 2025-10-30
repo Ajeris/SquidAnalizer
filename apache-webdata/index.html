@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Squid Log Analyzers</title>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; background-color: #f5f5f5; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #333; text-align: center; margin-bottom: 10px; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 30px; }
+        .link-box { 
+            display: inline-block; 
+            margin: 20px; 
+            padding: 25px; 
+            border: 2px solid #ddd; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            color: #333; 
+            width: 300px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .link-box:hover { 
+            background-color: #f8f9fa; 
+            border-color: #007bff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .link-box h3 { margin: 0 0 10px 0; color: #007bff; }
+        .link-box p { margin: 0; font-size: 14px; }
+        .direct-links {
+            text-align: center;
+            margin: 20px 0;
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ffeaa7;
+        }
+        .direct-links a {
+            color: #856404;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        .direct-links a:hover { text-decoration: underline; }
+        .status {
+            background: #d4edda;
+            color: #155724;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Squid Log Analysis Tools</h1>
+        <p class="subtitle">Welcome to the Squid log analysis interface</p>
+        
+        <div class="status">
+            <strong>Status:</strong> Container initialized successfully
+        </div>
+        
+        <div class="direct-links">
+            <strong>Quick Access:</strong><br>
+            <a href="/sqstat/" target="_blank">SqStat Dashboard</a> | 
+            <a href="/squidanalyzer/" target="_blank">SquidAnalyzer Reports</a>
+        </div>
+
+        <div style="text-align: center;">
+            <div class="link-box" onclick="window.open('/sqstat/', '_blank')">
+                <h3>SqStat</h3>
+                <p>Real-time monitoring dashboard<br>Live connections and bandwidth</p>
+            </div>
+            <div class="link-box" onclick="window.open('/squidanalyzer/', '_blank')">
+                <h3>SquidAnalyzer</h3>
+                <p>Comprehensive log analysis<br>Daily, weekly, monthly reports</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

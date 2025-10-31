@@ -1,0 +1,39 @@
+# Multi-Squid Analytics Configuration (macvlan)
+# Supports logs from multiple Docker hosts and Squid servers
+
+services:
+  squid-analytics:
+    image: squid-analytics:2.5
+    container_name: squid-analytics
+    restart: unless-stopped
+    # ports not needed with macvlan
+    volumes:
+      # Logs from multiple Squid servers (mounted from different hosts)
+      - ./logs/squid1:/var/log/squid1:ro     # First Squid server logs
+      - ./logs/squid2:/var/log/squid2:ro     # Second Squid server logs
+      #- ./logs/squid3:/var/log/squid3:ro     # Third Squid server logs
+      
+      # Configuration and web data
+      - ./squidanalyzer:/etc/squidanalyzer
+      - ./apache-webdata:/var/www/html
+    environment:
+      - TZ=Asia/Qyzylorda
+    networks:
+      squid-net:
+        ipv4_address: 192.168.10.22
+    healthcheck:
+      test: ["CMD", "apache2ctl", "configtest"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  squid-net:
+    driver: macvlan
+    driver_opts:
+      parent: eth0  # Change to your network interface
+    ipam:
+      config:
+        - subnet: 192.168.10.0/24
+          gateway: 192.168.10.1
+          ip_range: 192.168.10.22/32

@@ -1,0 +1,41 @@
+# SquidAnalyzer Multi-Squid Configuration Example
+# Copy to ./squidanalyzer/squidanalyzer.conf after first container run
+
+# Multiple log files (comma-separated)
+LogFile /var/log/squid1/access.log,/var/log/squid2/access.log,/var/log/squid3/access.log
+
+# Output directory (container path)
+Output /var/www/html/squidanalyzer
+
+# Web URL prefix
+WebUrl /squidanalyzer
+
+# Language support
+Lang en_US
+
+# Report options
+TopNumber 100
+TopUrlUser 10
+UserReport 1
+UrlReport 1
+NetworkReport 1
+
+# Network aliases for different subnets
+# Edit ./squidanalyzer/network-aliases for subnet naming:
+# 192.168.10.0/24 Office Network Subnet1
+# 192.168.20.0/24 Office Network Subnet2
+# 10.0.0.0/8 Internal Network
+
+# User domain handling (if users from same domain but different subnets)
+UseClientDNSName 0
+StoreUserIp 1
+
+# Time zone
+TimeZone auto
+
+# Performance options for multiple large logs
+RefreshTime 300
+MaxFormatError 1000
+
+# Report retention
+TopStorage 30

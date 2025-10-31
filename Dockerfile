@@ -4,7 +4,7 @@ FROM debian:bookworm-slim
 # Image metadata
 LABEL maintainer="Ajeris"
 LABEL description="Apache server with SquidAnalyzer and SqStat for Squid log analysis"
-LABEL version="2.5"
+LABEL version="2.6"
 
 # Environment configuration
 ENV DEBIAN_FRONTEND=noninteractive
@@ -67,6 +67,13 @@ RUN if [ -d "/opt/soft/squidanalyzer-master/etc" ]; then \
     fi
 
 # Save default SquidAnalyzer language files
+
+# Save default SquidAnalyzer resources (CSS, JS, images)
+RUN if [ -d "/opt/soft/squidanalyzer-master/resources" ]; then \
+        mkdir -p /opt/squidanalyzer-resources && \
+        cp -r /opt/soft/squidanalyzer-master/resources/* /opt/squidanalyzer-resources/; \
+        echo "Default SquidAnalyzer resources saved to /opt/squidanalyzer-resources/"; \
+    fi
 RUN if [ -d "/opt/soft/squidanalyzer-master/lang" ]; then \
         mkdir -p /opt/squidanalyzer-defaults/lang && \
         cp -r /opt/soft/squidanalyzer-master/lang/* /opt/squidanalyzer-defaults/lang/; \

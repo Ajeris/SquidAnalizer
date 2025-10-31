@@ -208,3 +208,85 @@ This project bundles and configures open-source tools under their respective lic
 
 - **SquidAnalyzer** — GPLv3 ([GitHub](https://github.com/darold/squidanalyzer))  
 - **SqStat** — GPLv2 ([GitHub](https://github.com/CrashX/SqStat))
+
+---
+
+## Multi-Squid Server Setup
+
+### Multiple Log Sources Support
+
+SquidAnalyzer can process logs from multiple Squid servers simultaneously. This is useful for:
+- **Multiple Docker hosts** with Squid containers
+- **Users from same domain** but different subnets  
+- **Centralized reporting** across distributed Squid infrastructure
+
+### Configuration Options
+
+**Option 1: Log Shipping (Recommended)**
+```bash
+# Use the provided sync script
+./sync-logs.sh
+
+# Or setup cron for automatic sync
+*/10 * * * * /path/to/sync-logs.sh > /dev/null 2>&1
+```
+
+**Option 2: Network Mounts (NFS/CIFS)**
+```yaml
+# docker-compose.multi-squid.yml
+volumes:
+  - nfs-squid1:/var/log/squid1:ro
+  - nfs-squid2:/var/log/squid2:ro
+```
+
+**Option 3: SSH File System (SSHFS)**
+```bash
+# Mount remote logs locally
+sshfs user@squid-host1:/var/log/squid ./logs/squid1
+sshfs user@squid-host2:/var/log/squid ./logs/squid2
+```
+
+### Multi-Log SquidAnalyzer Configuration
+
+Edit `./squidanalyzer/squidanalyzer.conf`:
+```conf
+# Multiple log files (comma-separated)
+LogFile /var/log/squid1/access.log,/var/log/squid2/access.log,/var/log/squid3/access.log
+
+# Enable network reporting for subnet analysis
+NetworkReport 1
+
+# Store user IPs for cross-subnet user tracking
+StoreUserIp 1
+UseClientDNSName 0
+```
+
+### Network Aliases for Multi-Subnet
+
+Edit `./squidanalyzer/network-aliases`:
+```
+# Format: network/mask friendly_name
+192.168.10.0/24 Office Network Subnet1
+192.168.20.0/24 Office Network Subnet2  
+10.0.0.0/8 Internal Network
+172.16.0.0/12 DMZ Network
+```
+
+### SqStat Multi-Server Configuration
+
+Edit `./apache-webdata/sqstat/config.inc.php`:
+```php
+// Multiple Squid servers monitoring
+$squidhost[0] = "192.168.10.11"; $squidport[0] = 8080; $cachemgr_passwd[0] = "secret";
+$squidhost[1] = "192.168.10.12"; $squidport[1] = 8080; $cachemgr_passwd[1] = "secret"; 
+$squidhost[2] = "192.168.20.10"; $squidport[2] = 3128; $cachemgr_passwd[2] = "secret";
+```
+
+### Benefits of Multi-Squid Setup
+
+- ??? **Unified reporting** across all Squid instances
+- ??? **Cross-subnet user tracking** (same domain users)
+- ??? **Network-based analytics** with subnet grouping
+- ??? **Real-time monitoring** of all servers via SqStat
+- ??? **Centralized management** from single interface
+

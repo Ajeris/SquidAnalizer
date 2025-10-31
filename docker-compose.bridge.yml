@@ -1,0 +1,28 @@
+services:
+  squid-analytics:
+    image: ajeris/squid-analytics:2.5
+    container_name: squid-analytics
+    restart: unless-stopped
+    ports:
+      - "8078:80"
+    volumes:
+      # Required: Squid logs directory
+      - ./logs:/var/log/squid:ro
+      # Optional: Persist configuration (will be auto-created with defaults)
+      - ./squidanalyzer:/etc/squidanalyzer
+      # Optional: Persist web content (will be auto-created with defaults) 
+      - ./apache-webdata:/var/www/html
+    environment:
+      - TZ=Asia/Qyzylorda
+    # Use host network for Squid server access (alternative to macvlan)
+    # network_mode: host
+    healthcheck:
+      test: ["CMD", "apache2ctl", "configtest"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+# For simple deployment without Squid server connectivity
+# networks:
+#   default:
+#     driver: bridge
